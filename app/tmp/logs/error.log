@@ -1,0 +1,774 @@
+2013-04-22 14:02:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:02:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:02:43 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:02:43 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/News
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:02:47 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:02:47 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:03:35 Error: [MissingControllerException] Controller class NewsController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:04:52 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:04:52 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:05:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:05:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:14:08 Error: [MissingControllerException] Controller class NewsController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:15:00 Error: [MissingControllerException] Controller class NewsController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:15:05 Error: [MissingControllerException] Controller class TestsController could not be found.
+Exception Attributes: array (
+  'class' => 'TestsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:15:38 Error: [MissingControllerException] Controller class TestsController could not be found.
+Exception Attributes: array (
+  'class' => 'TestsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:15:41 Error: [MissingControllerException] Controller class TestsController could not be found.
+Exception Attributes: array (
+  'class' => 'TestsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:16:09 Error: [MissingControllerException] Controller class TestsController could not be found.
+Exception Attributes: array (
+  'class' => 'TestsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:16:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\TestsController.php, line 9]
+2013-04-22 14:16:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:19:13 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\TestsController.php, line 9]
+2013-04-22 14:19:13 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:19:24 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\TestsController.php, line 9]
+2013-04-22 14:19:24 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:23:20 Error: [MissingControllerException] Controller class TestsController could not be found.
+Exception Attributes: array (
+  'class' => 'TestsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/tests
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:23:29 Error: [MissingControllerException] Controller class NewsController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:24:21 Error: [MissingControllerException] Controller class NewsController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:26:07 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:07 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:26 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:28 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:28 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:29 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:29 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:37 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:37 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:39 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:39 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:40 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:41 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:43 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:43 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:43 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:43 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:26:44 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:26:44 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:27:28 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:27:28 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:27:29 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:27:29 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:27:30 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:27:30 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:27:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:27:31 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:27:47 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:27:47 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:27:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:27:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:28:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:28:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:28:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:28:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:28:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:28:31 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:33:59 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:33:59 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/news
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:34:03 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\NewsController.php, line 9]
+2013-04-22 14:34:03 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/News
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:42:49 Error: [MissingControllerException] Controller class ActualiteController could not be found.
+Exception Attributes: array (
+  'class' => 'ActualiteController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/actualite
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:42:54 Error: [MissingControllerException] Controller class ActualitesController could not be found.
+Exception Attributes: array (
+  'class' => 'ActualitesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:43:13 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Actualites\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Actualites\\index.ctp',
+)
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 14:48:57 Error: Fatal Error (64): Cannot redeclare class Actualites in [C:\wamp\www\tuc\app\Model\Actualite.php, line 6]
+2013-04-22 14:48:57 Error: [FatalErrorException] Cannot redeclare class Actualites
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\tuc...', 6)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\tuc...', 6, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\tuc...', 6, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:49:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\ActualitesController.php, line 8]
+2013-04-22 14:49:25 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 8, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 8, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:18:21 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW, expecting ',' or ';' in [C:\wamp\www\tuc\app\Controller\ActualitesController.php, line 9]
+2013-04-22 15:18:21 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW, expecting ',' or ';'
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:19:19 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [C:\wamp\www\tuc\app\Controller\ActualitesController.php, line 10]
+2013-04-22 15:19:19 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 10, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 10, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:24:58 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:24:58 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:28:33 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:28:33 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:29:17 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:29:17 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:29:19 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:29:19 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:32:42 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:32:42 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:32:49 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:32:49 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:30 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:30 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:31 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:31 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:31 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:31 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:31 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:31 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:31 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:31 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:32 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:32 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:32 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:32 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:32 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:32 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:33 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:33 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:33 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:33 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:33:34 Error: Fatal Error (1): Call to a member function numbers() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\index.ctp, line 3]
+2013-04-22 15:33:34 Error: [FatalErrorException] Call to a member function numbers() on a non-object
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 15:57:09 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Actualites\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Actualites\\edit.ctp',
+)
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 16:01:41 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 3]
+2013-04-22 16:01:41 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:04:40 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 3]
+2013-04-22 16:04:40 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:08:38 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 3]
+2013-04-22 16:08:38 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:08:40 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 3]
+2013-04-22 16:08:40 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:08:41 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 3]
+2013-04-22 16:08:41 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:08:43 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 3]
+2013-04-22 16:08:43 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:23:01 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ')' in [C:\wamp\www\tuc\app\View\Actualites\edit.ctp, line 7]
+2013-04-22 16:23:01 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ')'
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 7, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 7, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:32:20 Error: [MissingActionException] Action ActualitesController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'edit',
+)
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-22 16:32:45 Error: [MissingActionException] Action ActualitesController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'edit',
+)
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-22 16:34:07 Error: [MissingActionException] Action ActualitesController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'edit',
+)
+Request URL: /tuc/actualites/edit
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-29 18:35:07 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/index
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
