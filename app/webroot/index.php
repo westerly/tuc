@@ -60,9 +60,9 @@ if (!defined('APP_DIR')) {
  * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
  *
  * The following line differs from its sibling
- * /lib/Cake/Console/Templates/skel/webroot/index.php
+ * /app/webroot/index.php
  */
-//define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+//define('CAKE_CORE_INCLUDE_PATH', 'C:' . DS . 'wamp' . DS . 'www' . DS . 'tuc' . DS . 'lib');
 
 /**
  * Editing below this line should NOT be necessary.
@@ -77,7 +77,7 @@ if (!defined('WWW_ROOT')) {
 }
 
 // for built-in server
-if (php_sapi_name() == 'cli-server') {
+if (php_sapi_name() === 'cli-server') {
 	if ($_SERVER['REQUEST_URI'] !== '/' && file_exists(WWW_ROOT . $_SERVER['REQUEST_URI'])) {
 		return false;
 	}

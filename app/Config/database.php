@@ -62,7 +62,7 @@ class DATABASE_CONFIG {
 		'login' => 'root',
 		'password' => '',
 		'database' => 'tuc',
-		'prefix' => '',
-		//'encoding' => 'utf8',
+		'prefix' => 'form_',
+		'encoding' => 'utf8',
 	);
 }

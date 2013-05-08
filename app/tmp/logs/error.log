@@ -772,3 +772,1580 @@ Request URL: /tuc/index
 Stack Trace:
 #0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-05-02 09:54:03 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/index
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 16:49:19 Error: [MissingActionException] Action ActualitesController::ass() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'ass',
+)
+Request URL: /tuc/actualites/ass
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 18:33:07 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\tuc\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('actualites')
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1402): Model->schema()
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Component\PaginatorComponent.php(387): Model->hasField('date_creation')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Component\PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(Actualite), Array, Array)
+#9 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Actualite', Array, Array)
+#10 C:\wamp\www\tuc\app\Controller\ActualitesController.php(20): Controller->paginate('Actualite')
+#11 [internal function]: ActualitesController->index()
+#12 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ActualitesController), Array)
+#13 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-05-02 19:19:11 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 19:19:17 Error: [MissingControllerException] Controller class PhotodController could not be found.
+Exception Attributes: array (
+  'class' => 'PhotodController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/photod
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 19:19:29 Error: [MissingControllerException] Controller class ClansController could not be found.
+Exception Attributes: array (
+  'class' => 'ClansController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/clans
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 19:19:34 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 50]
+2013-05-02 19:19:34 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 19:21:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 50]
+2013-05-02 19:21:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 19:25:09 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 50]
+2013-05-02 19:25:09 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 19:25:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 50]
+2013-05-02 19:25:11 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 19:25:18 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Clans\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Clans\\admin_index.ctp',
+)
+Request URL: /tuc/admin/clans
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ClansController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 19:26:03 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Clans\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Clans\\admin_index.ctp',
+)
+Request URL: /tuc/admin/clans
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ClansController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 19:26:14 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Clans\admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Clans\\admin_add.ctp',
+)
+Request URL: /tuc/admin/clans/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ClansController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 09:11:20 Error: [MissingActionException] Action ActualitesController::admin() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'admin',
+)
+Request URL: /tuc/actualites/admin
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-03 09:11:28 Error: [MissingActionException] Action ActualitesController::admin() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'admin',
+)
+Request URL: /tuc/actualites/admin/posts
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-03 09:12:52 Error: [MissingActionException] Action ActualitesController::admin() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'admin',
+)
+Request URL: /tuc/actualites/admin/posts
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-03 09:14:40 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Actualites\admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Actualites\\admin.ctp',
+)
+Request URL: /tuc/actualites/admin/posts
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 09:17:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`test2`.`posts`, CONSTRAINT `fk_posts_category` FOREIGN KEY (`category_id`) REFERENCES `mydb`.`category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tuc/admin/posts/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `te...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Post), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PostsController.php(43): Model->save(Array)
+#5 [internal function]: PostsController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-03 09:17:29 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`test2`.`posts`, CONSTRAINT `fk_posts_category` FOREIGN KEY (`category_id`) REFERENCES `mydb`.`category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tuc/admin/posts/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `te...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Post), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PostsController.php(43): Model->save(Array)
+#5 [internal function]: PostsController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-03 09:18:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`test2`.`posts`, CONSTRAINT `fk_posts_category` FOREIGN KEY (`category_id`) REFERENCES `mydb`.`category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tuc/admin/posts/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `te...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Post), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PostsController.php(43): Model->save(Array)
+#5 [internal function]: PostsController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-03 09:20:29 Error: [MissingTableException] Table categories for model Category was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/posts/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('categories')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): Model->getDataSource()
+#2 C:\wamp\www\tuc\app\Controller\PostsController.php(50): Model->find('list')
+#3 [internal function]: PostsController->admin_add()
+#4 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-05-03 09:20:50 Error: [MissingTableException] Table categories for model Category was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/categories
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('categories')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): Model->getDataSource()
+#2 C:\wamp\www\tuc\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#3 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\CategoriesController.php(17): Controller->paginate()
+#5 [internal function]: CategoriesController->admin_index()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-03 09:20:54 Error: [MissingTableException] Table categories for model Category was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/posts/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('categories')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): Model->getDataSource()
+#2 C:\wamp\www\tuc\app\Controller\PostsController.php(50): Model->find('list')
+#3 [internal function]: PostsController->admin_add()
+#4 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-05-03 09:21:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`test2`.`posts`, CONSTRAINT `fk_posts_category` FOREIGN KEY (`category_id`) REFERENCES `mydb`.`category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tuc/admin/posts/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `te...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Post), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PostsController.php(43): Model->save(Array)
+#5 [internal function]: PostsController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-03 11:15:20 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 11:50:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'horaire.id' in 'on clause'
+Request URL: /tuc/admin/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Defi`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Defi`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Defi`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\wamp\www\tuc\app\Controller\DefisController.php(17): Controller->paginate()
+#8 [internal function]: DefisController->admin_index()
+#9 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-03 11:55:59 Error: [MissingControllerException] Controller class LocalisationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocalisationsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/localisations
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 11:56:07 Error: [MissingControllerException] Controller class HorairesController could not be found.
+Exception Attributes: array (
+  'class' => 'HorairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/horaires
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 11:56:14 Error: [MissingControllerException] Controller class HorairesController could not be found.
+Exception Attributes: array (
+  'class' => 'HorairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/horaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 11:56:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 51]
+2013-05-03 11:56:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/admin/defis/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 51)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 51, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 51, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-03 12:33:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 78]
+2013-05-03 12:33:35 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/admin/defis/edit/20
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 78, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 78, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-03 12:34:48 Error: [MissingControllerException] Controller class LocalisationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocalisationsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/localisations
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:34:58 Error: [MissingControllerException] Controller class LocalisationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocalisationsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/localisations
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:36:45 Error: [MissingControllerException] Controller class LocalisationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocalisationsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/localisations/add
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:39:29 Error: [MissingControllerException] Controller class LocalisationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocalisationsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/localisations
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:40:00 Error: [MissingControllerException] Controller class LocalisationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocalisationsController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/localisations/view/12
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:40:07 Error: [MissingControllerException] Controller class HorairesController could not be found.
+Exception Attributes: array (
+  'class' => 'HorairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/horaires/view/2
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:40:54 Error: [MissingControllerException] Controller class HorairesController could not be found.
+Exception Attributes: array (
+  'class' => 'HorairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/horaires
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:41:18 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Localisations\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Localisations\\admin_index.ctp',
+)
+Request URL: /tuc/admin/localisations
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LocalisationsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 12:41:57 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 12:52:10 Error: [MissingControllerException] Controller class HorairesController could not be found.
+Exception Attributes: array (
+  'class' => 'HorairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/horaires/view/2
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 13:44:53 Error: [MissingControllerException] Controller class PartenaireController could not be found.
+Exception Attributes: array (
+  'class' => 'PartenaireController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/partenaire
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 13:44:56 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Partenaires\\admin_index.ctp',
+)
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 13:56:42 Error: [MissingControllerException] Controller class DefisPartenairesController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisPartenairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/defis_partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 13:56:50 Error: [MissingControllerException] Controller class DefisPartenairesController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisPartenairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/defis_partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 14:14:10 Error: [MissingControllerException] Controller class DefisPartenairesController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisPartenairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/defis_partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 14:14:14 Error: [MissingControllerException] Controller class DefisPartenairesController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisPartenairesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/defis_partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 14:15:11 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\DefisPartenaires\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\DefisPartenaires\\admin_index.ctp',
+)
+Request URL: /tuc/admin/defis_partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisPartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 14:18:57 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-03 14:26:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nbr_etu' cannot be null
+Request URL: /tuc/admin/defis/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Defi), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\DefisController.php(43): Model->save(Array)
+#5 [internal function]: DefisController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-03 14:30:53 Error: [NotFoundException] Invalid defis partenaire
+Request URL: /tuc/admin/defis_partenaires/view
+Stack Trace:
+#0 [internal function]: DefisPartenairesController->admin_view()
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisPartenairesController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisPartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 14:34:29 Error: [NotFoundException] Invalid defis partenaire
+Request URL: /tuc/admin/defis_partenaires/view
+Stack Trace:
+#0 [internal function]: DefisPartenairesController->admin_view()
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisPartenairesController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisPartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-03 14:49:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'DefisPartenaire.id' in 'field list'
+Request URL: /tuc/admin/defispartenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `DefisPa...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `DefisPa...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `DefisPa...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(DefisPartenaire), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\wamp\www\tuc\app\Controller\DefisPartenairesController.php(17): Controller->paginate()
+#8 [internal function]: DefisPartenairesController->admin_index()
+#9 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisPartenairesController), Array)
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisPartenairesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-04 13:58:09 Error: [MissingControllerException] Controller class SuperbiseursController could not be found.
+Exception Attributes: array (
+  'class' => 'SuperbiseursController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/superbiseurs
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 13:58:12 Error: [MissingControllerException] Controller class SuperviseursController could not be found.
+Exception Attributes: array (
+  'class' => 'SuperviseursController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/superviseurs
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 13:58:16 Error: [MissingControllerException] Controller class SuperviseurController could not be found.
+Exception Attributes: array (
+  'class' => 'SuperviseurController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/superviseur
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 14:09:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'DefisClan.defi_id' in 'on clause'
+Request URL: /tuc/admin/defis/view/19
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Clan`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Clan`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Clan`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Clan), 'hasAndBelongsTo...', 'Clan', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(32): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_view('19')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-04 14:34:20 Error: [MissingControllerException] Controller class PhotosController could not be found.
+Exception Attributes: array (
+  'class' => 'PhotosController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 15:11:19 Error: [MissingControllerException] Controller class DefisClansController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisClansController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/defis_clans
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 15:12:52 Error: [MissingControllerException] Controller class DefisClansController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisClansController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/defis_clans/view/3
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 15:18:15 Error: [MissingActionException] Action ClansController::admin_photos() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClansController',
+  'action' => 'admin_photos',
+)
+Request URL: /tuc/admin/clans/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ClansController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 15:54:54 Error: [MissingActionException] Action ActualitesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'index',
+)
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 15:58:22 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/index
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 16:05:19 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:05:19 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:07:13 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:07:13 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:07:15 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:07:15 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:07:35 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:07:35 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:07:37 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:07:37 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:08:28 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:08:28 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:08:30 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:08:30 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:08:32 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:08:32 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:08:34 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:08:34 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:08:35 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:08:35 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:08:36 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:08:36 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:12:32 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 11]
+2013-05-04 16:12:32 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:16:41 Error: [MissingControllerException] Controller class DefisfController could not be found.
+Exception Attributes: array (
+  'class' => 'DefisfController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/defisf
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 16:17:07 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 16:29:52 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 16:36:11 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-04 16:36:18 Error: Fatal Error (4): syntax error, unexpected T_FUNCTION, expecting ',' or ';' in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 7]
+2013-05-04 16:36:18 Error: [FatalErrorException] syntax error, unexpected T_FUNCTION, expecting ',' or ';'
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 7, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 7, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:36:47 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 16:37:21 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Users\admin_login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Users\\admin_login.ctp',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-04 16:48:57 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Users\admin_login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Users\\admin_login.ctp',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-04 16:54:14 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\wamp\www\tuc\app\View\Users\admin_login.ctp, line 3]
+2013-05-04 16:54:14 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 3, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 16:59:00 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 16:59:32 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:00:37 Error: [MissingActionException] Action ActualitesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'index',
+)
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:01:03 Error: [MissingActionException] Action ActualitesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'add',
+)
+Request URL: /tuc/actualites/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:01:47 Error: [MissingActionException] Action ActualitesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'index',
+)
+Request URL: /tuc/actualites
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:10:23 Error: Fatal Error (1): Class 'Security' not found in [C:\wamp\www\tuc\app\Model\User.php, line 19]
+2013-05-04 17:10:23 Error: [FatalErrorException] Class 'Security' not found
+Request URL: /tuc/admin/Users/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Security...', 'C:\wamp\www\tuc...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Security...', 'C:\wamp\www\tuc...', 19, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Security...', 'C:\wamp\www\tuc...', 19, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 17:13:13 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:14:47 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Users\\login.ctp',
+)
+Request URL: /tuc/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-04 17:15:41 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:17:06 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-04 17:19:31 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 12]
+2013-05-04 17:19:31 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/admin/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 17:56:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Model.php(800): DboSource->query('findByUsernameA...', Array, Object(User))
+#7 C:\wamp\www\tuc\app\Controller\UsersController.php(18): Model->__call('findByUsernameA...', Array)
+#8 C:\wamp\www\tuc\app\Controller\UsersController.php(18): User->findByUsernameAndPassword(NULL, 'b15a996aed76f1d...')
+#9 [internal function]: UsersController->admin_login()
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-04 17:57:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Model.php(800): DboSource->query('findByUsernameA...', Array, Object(User))
+#7 C:\wamp\www\tuc\app\Controller\UsersController.php(18): Model->__call('findByUsernameA...', Array)
+#8 C:\wamp\www\tuc\app\Controller\UsersController.php(18): User->findByUsernameAndPassword(NULL, 'b15a996aed76f1d...')
+#9 [internal function]: UsersController->admin_login()
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-04 18:21:06 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 17]
+2013-05-04 18:21:06 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 18:22:25 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 17]
+2013-05-04 18:22:25 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-04 18:50:29 Error: Fatal Error (1): Call to undefined method UsersController::element() in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 22]
+2013-05-04 18:50:29 Error: [FatalErrorException] Call to undefined method UsersController::element()
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\tuc...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\tuc...', 22, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\tuc...', 22, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:49:36 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\tuc\app\View\Users\admin_login.ctp, line 15]
+2013-05-05 14:49:36 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 15, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 15, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:49:57 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in [C:\wamp\www\tuc\app\View\Users\admin_login.ctp, line 32]
+2013-05-05 14:49:57 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';'
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 32, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 32, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:52:10 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 12]
+2013-05-05 14:52:10 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting T_FUNCTION
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:52:25 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 12]
+2013-05-05 14:52:25 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting T_FUNCTION
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:52:26 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 12]
+2013-05-05 14:52:26 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting T_FUNCTION
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:52:27 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 12]
+2013-05-05 14:52:27 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting T_FUNCTION
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:52:28 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 12]
+2013-05-05 14:52:28 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting T_FUNCTION
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 14:59:27 Error: [MissingControllerException] Controller class UsersControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersControllerController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/UsersController/ajaxProcessing?UserLogin=admin&UserPassword=VUMcid38
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-05 15:32:14 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 12]
+2013-05-05 15:32:14 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/admin/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 15:32:15 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\wamp\www\tuc\app\Controller\DefisController.php, line 12]
+2013-05-05 15:32:15 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /tuc/admin/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 12, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:28:04 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\AppController.php, line 40]
+2013-05-05 16:28:04 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:28:05 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\AppController.php, line 40]
+2013-05-05 16:28:05 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:28:28 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\AppController.php, line 40]
+2013-05-05 16:28:28 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /tuc/admin/users
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:28:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-05 16:28:33 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\AppController.php, line 40]
+2013-05-05 16:28:33 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:29:12 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-05 16:50:20 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 26]
+2013-05-05 16:50:20 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 26, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 26, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:55:25 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 26]
+2013-05-05 16:55:25 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 26, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 26, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 16:56:05 Error: [MissingComponentException] Component class authenticateComponent could not be found.
+Exception Attributes: array (
+  'class' => 'authenticateComponent',
+  'plugin' => false,
+)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('authenticate', Array)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(635): ComponentCollection->init(Object(UsersController))
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(183): Controller->constructClasses()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-05 17:38:31 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Users\admin_logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Users\\admin_logout.ctp',
+)
+Request URL: /tuc/admin/users/logout
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-05 17:41:14 Error: [MissingActionException] Action PagesController::admin_display() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'admin_display',
+)
+Request URL: /tuc/admin/pages/display/home
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-05 17:49:33 Error: [MissingActionException] Action DefisController::admin_indexzeff() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => 'admin_indexzeff',
+)
+Request URL: /tuc/admin/defis/indexzeff
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-05 17:58:15 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\wamp\www\tuc\app\Controller\AppController.php, line 66]
+2013-05-05 17:58:15 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /tuc/admin/defis/
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 66, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 66, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:03:36 Error: [MissingActionException] Action DefisController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => 'logout',
+)
+Request URL: /tuc/defis/logout
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-05 18:06:39 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-05 18:16:28 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\AppController.php, line 84]
+2013-05-05 18:16:28 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:17:15 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\AppController.php, line 84]
+2013-05-05 18:17:15 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:17:16 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\AppController.php, line 84]
+2013-05-05 18:17:16 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:17:17 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\AppController.php, line 84]
+2013-05-05 18:17:17 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:17:17 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\AppController.php, line 84]
+2013-05-05 18:17:17 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:17:17 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\tuc\app\Controller\AppController.php, line 84]
+2013-05-05 18:17:17 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /tuc/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\tuc...', 84, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:27:01 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /tuc/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-05 18:44:26 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 62914560 bytes) in [C:\wamp\www\tuc\lib\Cake\basics.php, line 117]
+2013-05-05 18:44:26 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 62914560 bytes)
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\tuc...', 117)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\tuc...', 117, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\tuc...', 117, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 18:50:15 Error: Fatal Error (4): syntax error, unexpected '[' in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 16]
+2013-05-05 18:50:15 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 16, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 16, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 20:31:51 Error: Fatal Error (1): Cannot use object of type AuthComponent as array in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 16]
+2013-05-05 20:31:51 Error: [FatalErrorException] Cannot use object of type AuthComponent as array
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\tuc...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\tuc...', 16, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\tuc...', 16, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 20:42:15 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/login
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-05 20:42:20 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/user/login
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-05 20:42:32 Error: [MissingActionException] Action DefisController::admin_defis() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => 'admin_defis',
+)
+Request URL: /tuc/admin/defis/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-05 20:55:28 Error: [MissingActionException] Action DefisController::admin_users() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => 'admin_users',
+)
+Request URL: /tuc/admin/defis/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-05 21:25:28 Error: Fatal Error (4): syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 20]
+2013-05-05 21:25:28 Error: [FatalErrorException] syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM
+Request URL: /tuc/admin/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 20)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 20, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 20, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 21:33:12 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\tuc\app\Controller\UsersController.php, line 40]
+2013-05-05 21:33:12 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /tuc/admin/users/logout
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 40, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-06 08:11:08 Error: [MissingActionException] Action PartenairesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => 'index',
+)
+Request URL: /tuc/partenaires/index
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-07 07:52:16 Error: [MissingActionException] Action AppController::Controller() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Controller',
+)
+Request URL: /tuc/app/Controller/DefisController.php?debug_host=192.168.1.11%2C192.168.56.1%2C127.0.0.1&debug_fastfile=1&start_debug=1&debug_port=10137&use_remote=1&original_url=http%3A%2F%2Flocalhost%2Ftuc%2Fapp%2FController%2FDefisController.php&send_sess_end=1&debug_stop=1&debug_start_session=1&debug_no_cache=1367913126458&debug_session_id=1000
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-07 17:14:31 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/index
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-07 17:14:41 Error: [MissingControllerException] Controller class AccueilController could not be found.
+Exception Attributes: array (
+  'class' => 'AccueilController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/Accueil
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 12:22:29 Error: [MissingControllerException] Controller class AccueilController could not be found.
+Exception Attributes: array (
+  'class' => 'AccueilController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 12:22:35 Error: [MissingControllerException] Controller class AccueilController could not be found.
+Exception Attributes: array (
+  'class' => 'AccueilController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 12:23:02 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Controller\AccueilController.php, line 9]
+2013-05-08 12:23:02 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting T_FUNCTION
+Request URL: /tuc/
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 9, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 9, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

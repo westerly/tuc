@@ -121,7 +121,7 @@
  *	`manager_index()` and `/manager/controller/index`
  *
  */
-	//Configure::write('Routing.prefixes', array('admin'));
+Configure::write('Routing.prefixes', array('admin'));
 
 /**
  * Turn off all caching application-wide.
@@ -199,13 +199,11 @@
 
 /**
  * A random string used in security hashing methods.
- */
-	Configure::write('Security.salt', 'DYhG93b0qyJfeffefIxfs2guVoUubWwvniR2G0FgaC9mi');
+ */	Configure::write('Security.salt', 'e8ee7f271ce34f2215e826c6a50d8f7c87785c19');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
- */
-	Configure::write('Security.cipherSeed', '76859309645457453542496749683645');
+ */	Configure::write('Security.cipherSeed', '343039616130343631306336643434');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -327,7 +325,7 @@ if (Configure::read('debug') > 0) {
 }
 
 // Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
-$prefix = 'myapp_';
+$prefix = 'app_';
 
 /**
  * Configure the cache used for general framework caching. Path information,

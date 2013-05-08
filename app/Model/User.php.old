@@ -1,0 +1,33 @@
+<?php
+App::uses('AppModel', 'Model');
+App::uses('Security', 'Utility');
+/**
+ * User Model
+ *
+ */
+class User extends AppModel {
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'login';
+	
+	// Permet de crypter le mot de passe avant de l'enregistrer en base de données
+	function beforeSave()
+	{
+		$this->data['User']['password'] = Security::hash($this->data['User']['password'],null,true);
+	}
+	
+	public $belongsTo = array(
+		'Clan' => array(
+			'className' => 'Clan',
+			'foreignKey' => 'clan_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+}

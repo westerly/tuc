@@ -32,4 +32,70 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
+	// public $components = array(
+        // 'Auth' => array('authorize' => 'Controller'),
+    // );
+	
+	// $this->Auth->authenticate = array(
+		// AuthComponent::ALL => array('userModel' => 'Membre'),
+		// 'Form',
+		// 'Basic'
+	// );
+	
+	public $components = array(
+		'Session',
+		'Auth' => array(
+			//'loginRedirect' => array('admin'=>true, 'controller' => 'defis', 'action' => 'index'),
+			//'logoutRedirect' => array('admin'=>false, 'controller'=>'defis','action'=>'index'),
+			'authorize' => array('Controller'), // Ligne ajoutée
+			'loginAction' => array('admin' => true, 'controller' => 'users', 'action' => 'login'),
+			'userModel' => "User",
+			
+			'authenticate' => array(
+				'Form' => array(
+					'userModel' => 'User',
+					// Map les champs de la BD avec les champs conventionelles de l'authentification CakePHP
+					'fields' => array(
+						'username' => 'login',
+						'password' => 'password'
+					)
+				)
+			)
+		)
+	);
+	
+
+	public function isAuthorized($user) {
+		$user = $this->Auth->user();
+		// Admin peut accéder à toute action (Compte non associé à un clan, champ clan_id = NULL)
+		if(!isset($user['clan_id'])){
+			return true;
+		}
+		
+		// if (!isset($user['clan_id'])) {
+			// return true;
+		// }
+
+		// Refus par défaut
+		return false;
+	}
+	
+	// Permet de rendre accessible toutes las actions index, view... de l'ensemble des controllers de l'application
+	public function beforeFilter() {
+        $this->Auth->allow('index', 'view','admin_login');
+		
+		$this->log("Here: {$this->here}, coming from: " . $this->referer(), LOG_DEBUG);
+		
+		// L'user connecté est un admin
+		//if($this->Auth->user('clan_id') == NULL){
+			 //$this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'defis', 'action' => 'test');
+		//}else{
+			// L'user connecté est un chef de clan
+		//	 $this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'photos', 'action' => 'add');
+		//}
+    }
+
+	//var $components = array('Auth');
+
 }
