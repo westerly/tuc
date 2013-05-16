@@ -31,7 +31,6 @@ class UsersController extends AppController {
 
 	function admin_login(){	
 	
-		var_dump($this->Auth->user());
 		if ($this->request->is('post')) {
 		
 			if ($this->Auth->login()) {
