@@ -7,6 +7,15 @@ App::uses('AppController', 'Controller');
  */
 class DefisController extends AppController {
 
+
+	var $paginate = array(
+		'Defi' => array(
+				'limit' => 5,
+				'order' => array(
+						'Defi.date_soumission' => 'Desc'
+						)
+	));
+
 	public function beforeFilter() {
         
 		parent::beforeFilter();
@@ -16,6 +25,14 @@ class DefisController extends AppController {
 	public function index() {
 		$this->Defi->recursive = 0;
 		$this->set('defis', $this->paginate());
+	}
+	
+	public function view($id = null) {
+		if (!$this->Defi->exists($id)) {
+			throw new NotFoundException(__('Invalid defi'));
+		}
+		$options = array('conditions' => array('Defi.' . $this->Defi->primaryKey => $id));
+		$this->set('defi', $this->Defi->find('first', $options));
 	}
 
 /**

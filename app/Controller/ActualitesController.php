@@ -7,8 +7,17 @@ App::uses('AppController', 'Controller');
  */
 class ActualitesController extends AppController {
 
+	var $paginate = array(
+		'Actualite' => array(
+				'limit' => 5,
+				'order' => array(
+						'Actualite.date_creation' => 'Desc'
+						)
+	));
+
 	public function index(){
-	
+		$this->Actualite->recursive = 0;
+		$this->set('actualites', $this->paginate());
 	}
 
 /**
@@ -20,6 +29,14 @@ class ActualitesController extends AppController {
 	public function admin_index() {
 		$this->Actualite->recursive = 0;
 		$this->set('actualites', $this->paginate());
+	}
+	
+	public function view($id = null) {
+		if (!$this->Actualite->exists($id)) {
+			throw new NotFoundException(__('Invalid actualite'));
+		}
+		$options = array('conditions' => array('Actualite.' . $this->Actualite->primaryKey => $id));
+		$this->set('actualite', $this->Actualite->find('first', $options));
 	}
 
 /**

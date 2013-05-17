@@ -2349,3 +2349,841 @@ Stack Trace:
 #3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-05-08 13:19:36 Error: [MissingActionException] Action DefisController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => '1',
+)
+Request URL: /tuc/defis/1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-08 13:19:45 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view
+Stack Trace:
+#0 [internal function]: DefisController->view()
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-08 13:19:53 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/1
+Stack Trace:
+#0 [internal function]: DefisController->view('1')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-08 13:20:07 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 13:21:23 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Defis\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Defis\\view.ctp',
+)
+Request URL: /tuc/defis/view/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-08 13:24:24 Error: [MissingActionException] Action ActualitesController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ActualitesController',
+  'action' => 'view',
+)
+Request URL: /tuc/actualites/view/4
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ActualitesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-08 13:25:16 Error: [MissingActionException] Action PartenairesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => 'index',
+)
+Request URL: /tuc/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-08 13:26:55 Error: [MissingActionException] Action PartenairesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => 'index',
+)
+Request URL: /tuc/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-08 14:30:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'afficher' in where clause is ambiguous
+Request URL: /tuc/photos/index/2
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Photo), Array)
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(43): Model->find('all', Array)
+#6 [internal function]: PhotosController->index('2')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-08 14:32:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Photo.affichersdd' in 'where clause'
+Request URL: /tuc/photos/index/2
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Photo), Array)
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(43): Model->find('all', Array)
+#6 [internal function]: PhotosController->index('2')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-08 16:58:56 Error: [NotFoundException] Not Found
+Request URL: /tuc/admin/photos/index/page:3
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#1 C:\wamp\www\tuc\app\Controller\PhotosController.php(56): Controller->paginate()
+#2 [internal function]: PhotosController->admin_index()
+#3 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#4 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-05-08 17:23:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tuc\app\Controller\MessagesController.php, line 50]
+2013-05-08 17:23:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tuc/messages/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 17:28:53 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 17:45:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tuc`.`form_messages`, CONSTRAINT `form_messages_ibfk_1` FOREIGN KEY (`fk_entite`) REFERENCES `form_entites` (`entite_id`))
+Request URL: /tuc/admin/messages/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Message), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\MessagesController.php(134): Model->save(Array)
+#5 [internal function]: MessagesController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 12:12:13 Error: [MissingActionException] Action PartenairesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => 'add',
+)
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-13 12:12:55 Error: [MissingActionException] Action PartenairesController::14() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => '14',
+)
+Request URL: /tuc/partenaires/14
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-13 12:13:00 Error: [MissingActionException] Action PartenairesController::14() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => '14',
+)
+Request URL: /tuc/partenaires/14
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-13 12:13:10 Error: [NotFoundException] Invalid partenaire
+Request URL: /tuc/partenaires/view/255
+Stack Trace:
+#0 [internal function]: PartenairesController->view('255')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-13 12:13:20 Error: [MissingActionException] Action PartenairesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PartenairesController',
+  'action' => 'add',
+)
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-13 12:15:16 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Partenaires\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Partenaires\\add.ctp',
+)
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-13 12:58:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(32): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:01:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(32): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:01:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(32): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:03:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(32): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:03:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(32): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:04:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(32): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:52:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 13:53:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 14:00:42 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 39]
+2013-05-13 14:00:42 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 39, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 39, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 14:11:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 14:17:33 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 52]
+2013-05-13 14:17:33 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 14:17:36 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 52]
+2013-05-13 14:17:36 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 14:19:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 14:19:55 Error: Fatal Error (4): syntax error, unexpected T_ARRAY, expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 51]
+2013-05-13 14:19:55 Error: [FatalErrorException] syntax error, unexpected T_ARRAY, expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 14:20:09 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 51]
+2013-05-13 14:20:09 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 14:20:26 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 51]
+2013-05-13 14:20:26 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 51, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 17:32:22 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 19]
+2013-05-13 17:32:22 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 19, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 19, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-13 17:40:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 17:42:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 17:48:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 18:00:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 20:13:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-13 20:25:53 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => NULL,
+)
+Request URL: /tuc//add?_method=POST&data%5BPartenaire%5D%5Bpartenaire%5D=dcdcdc&data%5BPartenaire%5D%5BadresseWeb%5D=tuxa.me.utc.fr&data%5BPartenaire%5D%5Badresse%5D=sdff&data%5BPartenaire%5D%5Bcp%5D=31300&data%5BPartenaire%5D%5Bdepartement_id%5D=1&data%5BPartenaire%5D%5Bville%5D=dfbffbf&data%5BPartenaire%5D%5Bdescription%5D=dffg++fezf+h+ddffg++fezf+h+ddffg++fezf+h+ddffg++fezf+h+ddffg++fezf+h+ddffg++fezf+h+ddffg++fezf+h+d&data%5BPartenaire%5D%5BfichierLogo%5D=webcam-toy-photo3.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-14 10:16:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 10:33:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 10:36:14 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 76]
+2013-05-14 10:36:14 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 10:37:08 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 76]
+2013-05-14 10:37:08 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 10:37:11 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 76]
+2013-05-14 10:37:11 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 10:37:39 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 76]
+2013-05-14 10:37:39 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 10:37:40 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 76]
+2013-05-14 10:37:40 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_VARIABLE
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 10:42:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(33): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 13:42:26 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\wamp\www\tuc\app\Model\Partenaire.php, line 76]
+2013-05-14 13:42:26 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 76, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 14:11:37 Error: Fatal Error (4): syntax error, unexpected T_RETURN in [C:\wamp\www\tuc\app\Model\Behavior\ImageUploadBehavior.php, line 14]
+2013-05-14 14:11:37 Error: [FatalErrorException] syntax error, unexpected T_RETURN
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 14, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 14, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 14:11:46 Error: Fatal Error (4): syntax error, unexpected $end, expecting T_FUNCTION in [C:\wamp\www\tuc\app\Model\Behavior\ImageUploadBehavior.php, line 66]
+2013-05-14 14:11:46 Error: [FatalErrorException] syntax error, unexpected $end, expecting T_FUNCTION
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 66, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 66, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 14:15:47 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\tuc\lib\Cake\Utility\Debugger.php, line 823]
+2013-05-14 14:15:47 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\tuc...', 823)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\tuc...', 823, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\tuc...', 823, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 14:16:35 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\tuc\lib\Cake\Utility\Debugger.php, line 486]
+2013-05-14 14:16:35 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\tuc...', 486)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\tuc...', 486, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\tuc...', 486, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 14:18:42 Error: Fatal Error (1): Cannot use object of type Partenaire as array in [C:\wamp\www\tuc\app\Model\Behavior\ImageUploadBehavior.php, line 11]
+2013-05-14 14:18:42 Error: [FatalErrorException] Cannot use object of type Partenaire as array
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\tuc...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\tuc...', 11, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\tuc...', 11, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 14:53:14 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\tuc\app\Model\Behavior\ImageUploadBehavior.php, line 23]
+2013-05-14 14:53:14 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 23, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 23, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 15:49:16 Error: [MissingControllerException] Controller class MediaController could not be found.
+Exception Attributes: array (
+  'class' => 'MediaController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/media
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-14 15:56:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '"eregrggrg' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(53): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:02:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(54): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:02:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(54): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:05:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'zadzadzd' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(54): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:07:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'zadzadzd' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(54): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:15:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'zadzadzdzsasasas' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(54): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:32:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'zadzadzdzsasasascfece' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(54): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 16:40:47 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\Controller\PartenairesController.php, line 68]
+2013-05-14 16:40:47 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 68, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 68, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 17:08:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'dzdzdzddzdd' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(62): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-14 17:25:04 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\Controller\PartenairesController.php, line 78]
+2013-05-14 17:25:04 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 78)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 78, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 78, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 17:32:15 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [C:\wamp\www\tuc\app\Controller\PartenairesController.php, line 79]
+2013-05-14 17:32:15 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 79)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 79, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 79, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-14 17:52:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'dzdsdezfedzsqfsddergzezefeffezdzdzdeffedddfeddz' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(63): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

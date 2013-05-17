@@ -8,6 +8,7 @@
 		echo $this->Form->input('afficher');
 		echo $this->Form->input('clan_id');
 		echo $this->Form->input('defi_id');
+		echo $this->Form->input('date_upload');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

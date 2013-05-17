@@ -7,6 +7,7 @@
 			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('defi_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($photos as $photo): ?>
@@ -20,6 +21,7 @@
 		<td>
 			<?php echo $this->Html->link($photo['Defi']['nom'], array('controller' => 'defis', 'action' => 'view', $photo['Defi']['id'])); ?>
 		</td>
+		<td><?php echo h($photo['Photo']['date_upload']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $photo['Photo']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $photo['Photo']['id'])); ?>
