@@ -73,10 +73,10 @@ class Partenaire extends AppModel {
 				'message' => 'La taille de l\'image ne doit pas dépasser 2MB.',
 				'last' => true
 			),
-			'rule3' => array(
-				'rule'=> array('isRightsOnFolderDestination','test/ezfh/'),
-				'message'    => 'Il semble il y avoir un problème de droit d\'accès sur un dossier du serveur, nous ne pouvons pas upload votre logo.',
-			)
+// 			'rule3' => array(
+// 				'rule'=> array('isRightsOnFolderDestination','test/ezfh/'),
+// 				'message'    => 'Il semble il y avoir un problème de droit d\'accès sur un dossier du serveur, nous ne pouvons pas upload votre logo.',
+// 			)
 		)
     );
 	
