@@ -8,7 +8,7 @@ App::uses('AppController', 'Controller');
 class AccueilController extends AppController {
 
 	public function index() {
-		
+		$this->layout = 'front';
 	}
 
 }
