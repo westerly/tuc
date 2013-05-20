@@ -7,7 +7,6 @@
 	print_r($actualites);
 	
 	print ($actualites[1]["Actualite"]["titre"]);
-	
 	 
 
 

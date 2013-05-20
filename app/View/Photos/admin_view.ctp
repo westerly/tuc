@@ -26,6 +26,11 @@
 			<?php echo $this->Html->link($photo['Defi']['nom'], array('controller' => 'defis', 'action' => 'view', $photo['Defi']['id'])); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Date Upload'); ?></dt>
+		<dd>
+			<?php echo h($photo['Photo']['date_upload']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

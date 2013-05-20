@@ -7,6 +7,87 @@ App::uses('AppController', 'Controller');
  */
 class PartenairesController extends AppController {
 
+	public $msgConfirmation; // Représeente le message de confirmation à afficher lorsque l'utilisateur a effectué une action avec succès (exemple: enregistrement du partenaire avec succès)
+	
+	// Action permettant l'affiche du message de confirmation à l'utilisateur (ex: confirmation de l'enregistrement du partenaire)
+	public function confirmation()
+	{
+		var_dump($this->viewVars);
+		//$this->Session->setFlash(__($this->msgConfirmation));
+	}
+
+	public function index() {
+		$this->Partenaire->recursive = 0;
+		$this->set('partenaires', $this->paginate());
+	}
+	
+	public function view($id = null) {
+		if (!$this->Partenaire->exists($id)) {
+			throw new NotFoundException(__('Invalid partenaire'));
+		}
+		$options = array('conditions' => array('Partenaire.' . $this->Partenaire->primaryKey => $id));
+		$this->set('partenaire', $this->Partenaire->find('first', $options));
+	}
+	
+	/**
+		Permet l'ajout d'un partenaire dans la partie publique
+	
+	**/
+	public function add(){
+	
+		if ($this->request->is('post')) {
+			if($this->request->data["Partenaire"]["new_fichierLogo"]["name"] == "")
+			{
+				$needUpload = false;
+				unset($this->request->data["Partenaire"]["new_fichierLogo"]); // Permet d'éviter les erreurs avec la rule de type "extension" lorsque aucun fichier n'est pas envoyé par le formulaire.
+			}else{
+				$needUpload = true;
+			}
+		
+			$this->Partenaire->create();
+
+			if($needUpload){
+				// Sauvegarde des infos pour l'upload
+				$infosUpload = $this->request->data["Partenaire"]["new_fichierLogo"];
+				
+				// La constante APP est la variable permettant d'accéder au path du dossier app 
+				$dossier = APP."media\partenaires\logos\\";
+				$extension = strrchr($this->request->data["Partenaire"]["new_fichierLogo"]['name'], '.');
+				
+				// Génration d'un nombre automatique pour le nom du fichier
+				$fichier = rand().$extension;
+				
+				$this->request->data["Partenaire"]["fichierLogo"] = $dossier.$fichier;
+			}
+		
+			if ($this->Partenaire->save($this->request->data)) {
+				
+				if($needUpload)
+				{
+					//Si on a pu save le partenaire on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
+					if(move_uploaded_file($infosUpload["tmp_name"], $dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+					{
+						 // Envoi du message de confirmation à la vue
+						$this->set('message', 'Votre enregistrement a été effectué avec succès.');
+					}
+					else //Sinon (la fonction renvoie FALSE).
+					{
+						 // L'upload a fail il faut supprimer le dernier partenaire enregistré en BD
+						 $this->Partenaire->delete($this->Partenaire->getLastInsertID());
+						 $this->Session->setFlash(__("Problème lors de l'upload du fichier sur le serveur, nous n'avons pas pu vous enregistrer."));
+					}
+				}else{	
+					// Envoi du message de confirmation à la vue
+					$this->set('message', 'Votre enregistrement a été effectué avec succès.');
+				}
+			} else {
+				$this->Session->setFlash(__('The partenaire could not be saved. Please, try again.'));
+			}
+		}
+		$departements = $this->Partenaire->Departement->find('list');
+		$this->set(compact('departements'));
+	}
+
 /**
  * admin_index method
  *
@@ -39,17 +120,56 @@ class PartenairesController extends AppController {
  */
 	public function admin_add() {
 		if ($this->request->is('post')) {
+			if($this->request->data["Partenaire"]["new_fichierLogo"]["name"] == "")
+			{
+				$needUpload = false;
+				unset($this->request->data["Partenaire"]["new_fichierLogo"]); // Permet d'éviter les erreurs avec la rule de type "extension" lorsque aucun fichier n'est pas envoyé par le formulaire.
+			}else{
+				$needUpload = true;
+			}
+		
 			$this->Partenaire->create();
+
+			if($needUpload){
+				// Sauvegarde des infos pour l'upload
+				$infosUpload = $this->request->data["Partenaire"]["new_fichierLogo"];
+				
+				// La constante APP est la variable permettant d'accéder au path du dossier app 
+				$dossier = APP."media\partenaires\logos\\";
+				$extension = strrchr($this->request->data["Partenaire"]["new_fichierLogo"]['name'], '.');
+				
+				// Génration d'un nombre automatique pour le nom du fichier
+				$fichier = rand().$extension;
+				
+				$this->request->data["Partenaire"]["fichierLogo"] = $dossier.$fichier;
+			}
+		
 			if ($this->Partenaire->save($this->request->data)) {
-				$this->Session->setFlash(__('The partenaire has been saved'));
-				$this->redirect(array('action' => 'index'));
+				
+				if($needUpload)
+				{
+					//Si on a pu save le partenaire on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
+					if(move_uploaded_file($infosUpload["tmp_name"], $dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+					{
+						 // Envoi du message de confirmation à la vue
+						$this->set('message', 'Votre enregistrement a été effectué avec succès.');
+					}
+					else //Sinon (la fonction renvoie FALSE).
+					{
+						 // L'upload a fail il faut supprimer le dernier partenaire enregistré en BD
+						 $this->Partenaire->delete($this->Partenaire->getLastInsertID());
+						 $this->Session->setFlash(__("Problème lors de l'upload du fichier sur le serveur, nous n'avons pas pu vous enregistrer."));
+					}
+				}else{	
+					// Envoi du message de confirmation à la vue
+					$this->set('message', 'Votre enregistrement a été effectué avec succès.');
+				}
 			} else {
 				$this->Session->setFlash(__('The partenaire could not be saved. Please, try again.'));
 			}
 		}
 		$departements = $this->Partenaire->Departement->find('list');
-		$defis = $this->Partenaire->Defi->find('list');
-		$this->set(compact('departements', 'defis'));
+		$this->set(compact('departements'));
 	}
 
 /**

@@ -7,6 +7,14 @@ App::uses('AppController', 'Controller');
  */
 class PhotosController extends AppController {
 
+	var $paginate = array(
+		'Photo' => array(
+				'limit' => 5,
+				'order' => array(
+						'Photo.date_upload' => 'Desc'
+						)
+	));
+
 
 	// Definit les règles d'accès utilisateurs pour les actions sur les photos
 	public function isAuthorized($user) {
@@ -26,6 +34,17 @@ class PhotosController extends AppController {
 
 		return parent::isAuthorized($user);
 	}
+	
+	
+	public function index($clan_id = null) {
+	
+		if(isset($clan_id))
+		{
+			//$this->set('photos',$this->Photo->find('all', array('conditions' => array('Photo.clan_id' => $clan_id, 'Photo.afficher' => 1))));
+			$this->set('photos', $this->paginate('Photo', array('Photo.clan_id' => $clan_id, 'Photo.afficher' => 1)));
+		}
+	}
+
 
 /**
  * admin_index method

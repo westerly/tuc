@@ -33,15 +33,6 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	// public $components = array(
-        // 'Auth' => array('authorize' => 'Controller'),
-    // );
-	
-	// $this->Auth->authenticate = array(
-		// AuthComponent::ALL => array('userModel' => 'Membre'),
-		// 'Form',
-		// 'Basic'
-	// );
 	
 	public $components = array(
 		'Session',
@@ -72,10 +63,6 @@ class AppController extends Controller {
 		if(!isset($user['clan_id'])){
 			return true;
 		}
-		
-		// if (!isset($user['clan_id'])) {
-			// return true;
-		// }
 
 		// Refus par défaut
 		return false;
@@ -83,17 +70,10 @@ class AppController extends Controller {
 	
 	// Permet de rendre accessible toutes las actions index, view... de l'ensemble des controllers de l'application
 	public function beforeFilter() {
-        $this->Auth->allow('index', 'view','admin_login');
+        $this->Auth->allow('index', 'view','add', 'confirmation', 'admin_login');
 		
 		$this->log("Here: {$this->here}, coming from: " . $this->referer(), LOG_DEBUG);
 		
-		// L'user connecté est un admin
-		//if($this->Auth->user('clan_id') == NULL){
-			 //$this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'defis', 'action' => 'test');
-		//}else{
-			// L'user connecté est un chef de clan
-		//	 $this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'photos', 'action' => 'add');
-		//}
     }
 
 	//var $components = array('Auth');
