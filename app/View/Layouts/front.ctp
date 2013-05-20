@@ -29,44 +29,17 @@
 		</header>
 		<nav>
 			<ul>
-				<li>news</li>
-				<li>défis</li>
-				<li>galerie</li>
-				<li>partenaires</li>
-				<li>contact</li>
+				<?= $this->Html->link('<li>news</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index')), array('escape'=>false)) ?>
+				<?= $this->Html->link('<li>défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index')), array('escape'=>false)) ?>
+                                <a><li>galerie</li></a>
+				<?= $this->Html->link('<li>partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index')), array('escape'=>false)) ?>
+                                <a><li>contact</li></a>
 			</ul>		
 		</nav>
 
-		<section>
-			<div id="path"><a href="#">Accueil</a></div>
+		<section class="accueil">
 			
-			<article>
-				<h2>Le Projet TUC</h2>
-				<p>
                                     <?= $this->fetch('content') ?>
-				</p>
-				<img src="accueil.jpg" alt="accueil" width="" height="" />
-				
-			
-			</article>
-			
-			
-			<article>
-				<h2>Dernier Défi</h2>
-				<h3>Rammasser les feuilles</h3>
-				<p>Proposé par <span>Jean - Claude</span>
-				<p>A <span>Compiègne</span></p>
-				
-				<div id="slider">
-				
-				
-				</div>
-			
-			
-			
-			</article>
-		
-		
 		</section>
 		
 		
@@ -76,6 +49,9 @@
 		
 		</footer>
 		
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+         <?= $this->Html->script('jquery.slides.min'); ?>
+         <?= $this->Html->script('front'); ?>
 
 	</body>
 
