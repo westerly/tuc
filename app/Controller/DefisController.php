@@ -24,11 +24,12 @@ class DefisController extends AppController {
 	
 	public function index() {
 		$this->Defi->recursive = 0;
-		$this->set('defis', $this->paginate());
+		$this->set('defis', $this->paginate('Defi', array('Defi.afficher' => 1)));
+		//$this->set('defis', $this->paginate());
 	}
 	
 	public function view($id = null) {
-		if (!$this->Defi->exists($id)) {
+		if (!$this->Defi->exists($id) || $this->Defi->field('afficher', array('id' => $id)) != 1 ) {
 			throw new NotFoundException(__('Invalid defi'));
 		}
 		$options = array('conditions' => array('Defi.' . $this->Defi->primaryKey => $id));

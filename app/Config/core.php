@@ -350,3 +350,15 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+
+
+define("BASE_URL", 'http://'.$_SERVER['SERVER_NAME'].'/');
+
+define("URL_IMG", BASE_URL.'tuc/app/webroot/img/');
+
+define("IMG", APP.'webroot/img/');
+
+
+
+

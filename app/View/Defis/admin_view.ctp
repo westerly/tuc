@@ -178,7 +178,7 @@
 		foreach ($defi['Photo'] as $photo): ?>
 		<tr>
 			<td><?php echo $photo['id']; ?></td>
-			<td><?php echo $photo['nom_fichier']; ?></td>
+			<td><?php echo $photo['chemin_fichier']; ?></td>
 			<td><?php echo $photo['afficher']; ?></td>
 			<td><?php echo $photo['clan_id']; ?></td>
 			<td><?php echo $photo['defi_id']; ?></td>

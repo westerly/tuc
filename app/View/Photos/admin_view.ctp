@@ -8,7 +8,7 @@
 		</dd>
 		<dt><?php echo __('Nom Fichier'); ?></dt>
 		<dd>
-			<?php echo h($photo['Photo']['nom_fichier']); ?>
+			<?php echo h($photo['Photo']['chemin_fichier']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Afficher'); ?></dt>

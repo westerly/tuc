@@ -14,6 +14,23 @@ class Photo extends AppModel {
  * @var string
  */
 	public $displayField = 'id';
+	
+	// Permet de définir les règles de validation des données
+	// Attention la clé rule doit toujours être présente
+	public $validate = array(
+			'photo_fichier' => array(
+				'ruleExtension'  => array(
+					'rule' => array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+					'message' => 'L\'extension du ficher fourni n\'est pas valide.',
+					'last' => true
+			),
+			'ruleFileSize' => array(
+				'rule' => array('fileSize', '<=', '2MB'),
+				'message' => 'La taille de l\'image ne doit pas dépasser 2MB.',
+				'last' => true
+			)
+		)
+	);
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
