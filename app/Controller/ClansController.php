@@ -6,6 +6,17 @@ App::uses('AppController', 'Controller');
  * @property Clan $Clan
  */
 class ClansController extends AppController {
+	
+	// Definit les règles d'accès utilisateurs pour les actions sur les photos
+	public function isAuthorized($user) {
+	
+		// Tous les users inscrits peuvent visualiser un defi
+		if (isset($user["id"]) && in_array($this->action, array('admin_view'))) {
+			return true;
+		}
+	
+		return parent::isAuthorized($user);
+	}
 
 /**
  * admin_index method

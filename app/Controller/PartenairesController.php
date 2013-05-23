@@ -18,11 +18,11 @@ class PartenairesController extends AppController {
 
 	public function index() {
 		$this->Partenaire->recursive = 0;
-		$this->set('partenaires', $this->paginate());
+		$this->set('partenaires', $this->paginate('Partenaire', array('Partenaire.afficher' => 1)));
 	}
 	
 	public function view($id = null) {
-		if (!$this->Partenaire->exists($id)) {
+		if (!$this->Partenaire->exists($id) || $this->Partenaire->field('afficher', array('partenaire_id' => $id)) != 1) {
 			throw new NotFoundException(__('Invalid partenaire'));
 		}
 		$options = array('conditions' => array('Partenaire.' . $this->Partenaire->primaryKey => $id));
@@ -51,7 +51,7 @@ class PartenairesController extends AppController {
 				$infosUpload = $this->request->data["Partenaire"]["new_fichierLogo"];
 				
 				// La constante APP est la variable permettant d'accéder au path du dossier app 
-				$dossier = APP."media\partenaires\logos\\";
+				$dossier = APP."webroot\img\partenaires\logos\\";
 				$extension = strrchr($this->request->data["Partenaire"]["new_fichierLogo"]['name'], '.');
 				
 				// Génration d'un nombre automatique pour le nom du fichier
@@ -135,7 +135,7 @@ class PartenairesController extends AppController {
 				$infosUpload = $this->request->data["Partenaire"]["new_fichierLogo"];
 				
 				// La constante APP est la variable permettant d'accéder au path du dossier app 
-				$dossier = APP."media\partenaires\logos\\";
+				$dossier = APP."webroot\img\partenaires\logos\\";
 				$extension = strrchr($this->request->data["Partenaire"]["new_fichierLogo"]['name'], '.');
 				
 				// Génration d'un nombre automatique pour le nom du fichier

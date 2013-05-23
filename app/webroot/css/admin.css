@@ -1,0 +1,48 @@
+.menu
+{
+	align:center;
+	margin-top:10;
+	height:25px;
+}
+
+
+div.menu ul
+{
+	float:left;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+div.menu a
+{
+	float:left;
+	/* width:6em; */
+	text-decoration:none;
+	color:#003D4C;
+	background-color:white;
+	padding:0.2em 0.6em;
+	border-right:1px solid white;
+}
+
+div.menu a:hover 
+{
+	background-color:#DCDCDC;
+}
+
+li 
+{
+	display:inline;
+}
+
+div.index,
+div.view {
+	width:97%;
+}
+
+div.form {
+	width:97%;
+}
+}
