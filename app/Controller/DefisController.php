@@ -15,6 +15,25 @@ class DefisController extends AppController {
 						'Defi.date_soumission' => 'Desc'
 						)
 	));
+	
+	
+	// Definit les règles d'accès utilisateurs pour les actions sur les photos
+	public function isAuthorized($user) {
+	
+		// Connexion de type admin
+		if(!isset($user["clan_id"])){
+			return true;
+		}
+		
+		// Tous les users inscrits peuvent visualiser un defi
+		if (isset($user["id"]) && in_array($this->action, array('admin_view'))) {
+			return true;
+		}
+	
+		return parent::isAuthorized($user);
+	}
+	
+	
 
 	public function beforeFilter() {
         

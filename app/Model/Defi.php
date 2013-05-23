@@ -82,6 +82,7 @@ class Defi extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
+
 		'Association' => array(
 			'className' => 'Association',
 			'joinTable' => 'defis_associations',

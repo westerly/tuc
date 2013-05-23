@@ -39,7 +39,7 @@ class AppController extends Controller {
 		'Auth' => array(
 			//'loginRedirect' => array('admin'=>true, 'controller' => 'defis', 'action' => 'index'),
 			//'logoutRedirect' => array('admin'=>false, 'controller'=>'defis','action'=>'index'),
-			'authorize' => array('Controller'), // Ligne ajoutée
+			'authorize' => array('Controller'), // Ligne ajoutï¿½e
 			'loginAction' => array('admin' => true, 'controller' => 'users', 'action' => 'login'),
 			'userModel' => "User",
 			
@@ -59,20 +59,29 @@ class AppController extends Controller {
 
 	public function isAuthorized($user) {
 		$user = $this->Auth->user();
-		// Admin peut accéder à toute action (Compte non associé à un clan, champ clan_id = NULL)
+		// Admin peut accÃ©der Ã  toute action (Compte non associÃ© Ã  un clan, champ clan_id = NULL)
 		if(!isset($user['clan_id'])){
 			return true;
 		}
 
-		// Refus par défaut
+		// Refus par dÃ©faut
 		return false;
 	}
 	
 	// Permet de rendre accessible toutes las actions index, view... de l'ensemble des controllers de l'application
 	public function beforeFilter() {
         $this->Auth->allow('index', 'view','add', 'confirmation', 'admin_login');
-		
+        
 		$this->log("Here: {$this->here}, coming from: " . $this->referer(), LOG_DEBUG);
+		
+		$user = $this->Auth->user();
+		
+		// Set de la variable adminCo pour savoir si un admin est co et en en fonction afficher le menu qui va bien dans le layout admin
+		if(!isset($user['clan_id'])){
+			$this->set('adminCo', true);
+		}else{
+			$this->set('adminCo', false);
+		}
 		
     }
 

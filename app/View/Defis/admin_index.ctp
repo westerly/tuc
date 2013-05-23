@@ -47,9 +47,9 @@
 		<td><?php echo h($defi['Defi']['date_soumission']); ?>&nbsp;</td>
 		<td><?php echo h($defi['Defi']['afficher']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $defi['Defi']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $defi['Defi']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $defi['Defi']['id']), null, __('Are you sure you want to delete # %s?', $defi['Defi']['id'])); ?>
+			<?php echo $this->Html->link(__('Détails'), array('action' => 'view', $defi['Defi']['id'])); ?>
+			<?php echo $this->Html->link(__('Editer'), array('action' => 'edit', $defi['Defi']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Supprimer'), array('action' => 'delete', $defi['Defi']['id']), null, __('Voulez vous vraiment supprimer ce défi?')); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -57,42 +57,23 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Page {:page} sur {:pages}, montrant {:current} enregistrements sur un total de {:count}, commence à {:start}, finit à {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Précédent'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Suivant') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
+	
+	<br/>
+	<br/>
+	
+	<div class="actions">
+		<?php echo $this->Html->link(__('Ajouter un défi'), array('controller' => 'defis', 'action' => 'add')); ?>
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Defi'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Localisations'), array('controller' => 'localisations', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Localisation'), array('controller' => 'localisations', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Horaires'), array('controller' => 'horaires', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Horaire'), array('controller' => 'horaires', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis Clans'), array('controller' => 'defis_clans', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defis Clan'), array('controller' => 'defis_clans', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Associations'), array('controller' => 'associations', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Association'), array('controller' => 'associations', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Clans'), array('controller' => 'clans', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Clan'), array('controller' => 'clans', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Entites'), array('controller' => 'entites', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Entite'), array('controller' => 'entites', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Materiels'), array('controller' => 'materiels', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Materiel'), array('controller' => 'materiels', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Partenaires'), array('controller' => 'partenaires', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Partenaire'), array('controller' => 'partenaires', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Profils'), array('controller' => 'profils', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Profil'), array('controller' => 'profils', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Superviseurs'), array('controller' => 'superviseurs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Superviseur'), array('controller' => 'superviseurs', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
+

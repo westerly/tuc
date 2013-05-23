@@ -31,9 +31,10 @@ class PhotosController extends AppController {
 		}
 		
 		
-		//Le propriétaire de la photo peut l'éditer et la supprimer
-		if (in_array($this->action, array('admin_edit', 'admin_delete'))) {
+		//Le propriétaire de la photo peut la supprimer
+		if (in_array($this->action, array('admin_delete'))) {
 			$photoId = $this->request->params['pass'][0];
+
 			if (isset($photoId) && $this->Photo->field('clan_id', array('id' => $photoId)) == $user["clan_id"]) {
 				return true;
 			}
@@ -201,8 +202,8 @@ class PhotosController extends AppController {
 		
 		$user = $this->Auth->user();
 		$this->Photo->id = $id;
-		if (!$this->Photo->exists() || $this->Photo->field('clan_id') != $user["clan_id"]) {
-			throw new NotFoundException(__('Photo invalide.'));
+		if (!$this->Photo->exists()) {
+			throw new NotFoundException(__('La photo n\'existe pas.'));
 		}
 		$this->request->onlyAllow('post', 'delete');
 		

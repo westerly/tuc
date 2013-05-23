@@ -93,74 +93,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Defi'), array('action' => 'edit', $defi['Defi']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Defi'), array('action' => 'delete', $defi['Defi']['id']), null, __('Are you sure you want to delete # %s?', $defi['Defi']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Localisations'), array('controller' => 'localisations', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Localisation'), array('controller' => 'localisations', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Horaires'), array('controller' => 'horaires', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Horaire'), array('controller' => 'horaires', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis Clans'), array('controller' => 'defis_clans', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defis Clan'), array('controller' => 'defis_clans', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Associations'), array('controller' => 'associations', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Association'), array('controller' => 'associations', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Clans'), array('controller' => 'clans', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Clan'), array('controller' => 'clans', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Entites'), array('controller' => 'entites', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Entite'), array('controller' => 'entites', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Materiels'), array('controller' => 'materiels', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Materiel'), array('controller' => 'materiels', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Partenaires'), array('controller' => 'partenaires', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Partenaire'), array('controller' => 'partenaires', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Profils'), array('controller' => 'profils', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Profil'), array('controller' => 'profils', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Superviseurs'), array('controller' => 'superviseurs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Superviseur'), array('controller' => 'superviseurs', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Defis Clans'); ?></h3>
-	<?php if (!empty($defi['DefisClan'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Defi Id'); ?></th>
-		<th><?php echo __('Clan Id'); ?></th>
-		<th><?php echo __('NbVotesPour'); ?></th>
-		<th><?php echo __('NbVotesContre'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($defi['DefisClan'] as $defisClan): ?>
-		<tr>
-			<td><?php echo $defisClan['id']; ?></td>
-			<td><?php echo $defisClan['defi_id']; ?></td>
-			<td><?php echo $defisClan['clan_id']; ?></td>
-			<td><?php echo $defisClan['nbVotesPour']; ?></td>
-			<td><?php echo $defisClan['nbVotesContre']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'defis_clans', 'action' => 'view', $defisClan['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'defis_clans', 'action' => 'edit', $defisClan['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'defis_clans', 'action' => 'delete', $defisClan['id']), null, __('Are you sure you want to delete # %s?', $defisClan['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Defis Clan'), array('controller' => 'defis_clans', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
 <div class="related">
 	<h3><?php echo __('Related Photos'); ?></h3>
 	<?php if (!empty($defi['Photo'])): ?>
@@ -192,11 +125,6 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>
 <div class="related">
 	<h3><?php echo __('Related Associations'); ?></h3>
@@ -223,43 +151,8 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Association'), array('controller' => 'associations', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>
-<div class="related">
-	<h3><?php echo __('Related Clans'); ?></h3>
-	<?php if (!empty($defi['Clan'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Nom'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($defi['Clan'] as $clan): ?>
-		<tr>
-			<td><?php echo $clan['id']; ?></td>
-			<td><?php echo $clan['nom']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'clans', 'action' => 'view', $clan['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'clans', 'action' => 'edit', $clan['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'clans', 'action' => 'delete', $clan['id']), null, __('Are you sure you want to delete # %s?', $clan['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Clan'), array('controller' => 'clans', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
 <div class="related">
 	<h3><?php echo __('Related Entites'); ?></h3>
 	<?php if (!empty($defi['Entite'])): ?>
@@ -287,11 +180,6 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Entite'), array('controller' => 'entites', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>
 <div class="related">
 	<h3><?php echo __('Related Materiels'); ?></h3>
@@ -318,11 +206,6 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Materiel'), array('controller' => 'materiels', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>
 <div class="related">
 	<h3><?php echo __('Related Partenaires'); ?></h3>
@@ -361,11 +244,7 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Partenaire'), array('controller' => 'partenaires', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
+
 </div>
 <div class="related">
 	<h3><?php echo __('Related Profils'); ?></h3>
@@ -392,11 +271,7 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Profil'), array('controller' => 'profils', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
+
 </div>
 <div class="related">
 	<h3><?php echo __('Related Superviseurs'); ?></h3>
@@ -435,9 +310,5 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Superviseur'), array('controller' => 'superviseurs', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
+
 </div>

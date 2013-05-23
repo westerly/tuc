@@ -3187,3 +3187,1286 @@ Stack Trace:
 #8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2013-05-17 16:53:29 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-17 16:53:34 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/login
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-17 17:00:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'zdafdiefh' for key 'partenaire'
+Request URL: /tuc/admin/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(147): Model->save(Array)
+#5 [internal function]: PartenairesController->admin_add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-19 17:56:26 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 12:11:55 Error: [MissingControllerException] Controller class ActualiesController could not be found.
+Exception Attributes: array (
+  'class' => 'ActualiesController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/actualies
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 12:15:45 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /tuc/users/login
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 12:16:07 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/logout
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 12:26:17 Error: [MissingControllerException] Controller class PhotoController could not be found.
+Exception Attributes: array (
+  'class' => 'PhotoController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/photo
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 12:33:19 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/12
+Stack Trace:
+#0 [internal function]: DefisController->view('12')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:33:25 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/13
+Stack Trace:
+#0 [internal function]: DefisController->view('13')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:33:31 Error: [MissingActionException] Action DefisController::13() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => '13',
+)
+Request URL: /tuc/defis/13
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 12:37:48 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:38:00 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/19
+Stack Trace:
+#0 [internal function]: DefisController->view('19')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:39:05 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/19
+Stack Trace:
+#0 [internal function]: DefisController->view('19')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:39:23 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/19
+Stack Trace:
+#0 [internal function]: DefisController->view('19')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:39:40 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/19
+Stack Trace:
+#0 [internal function]: DefisController->view('19')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:39:57 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:40:55 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:40:57 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:40:58 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:41:00 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:41:04 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/19
+Stack Trace:
+#0 [internal function]: DefisController->view('19')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:43:23 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:43:41 Error: [NotFoundException] Invalid defi
+Request URL: /tuc/defis/view/20
+Stack Trace:
+#0 [internal function]: DefisController->view('20')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:45:58 Error: [NotFoundException] Invalid partenaire
+Request URL: /tuc/partenaires/view/13
+Stack Trace:
+#0 [internal function]: PartenairesController->view('13')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:55:50 Error: Fatal Error (1): Call to a member function field() on a non-object in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 50]
+2013-05-21 12:55:50 Error: [FatalErrorException] Call to a member function field() on a non-object
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 50, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 12:56:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Defi.afficher' in 'field list'
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Defi`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Defi`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Defi`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Photo), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1552): Model->find('first', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(50): Model->field('Defi.afficher', Array)
+#7 [internal function]: PhotosController->view('5')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-21 12:57:44 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:57:51 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/4
+Stack Trace:
+#0 [internal function]: PhotosController->view('4')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:57:57 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:58:39 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:58:42 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 12:59:02 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:01:09 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:01:47 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:02:47 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:02:48 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:03:00 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:03:19 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 [internal function]: PhotosController->view('5')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:04:23 Error: Fatal Error (1): Call to a member function field() on a non-object in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 55]
+2013-05-21 13:04:23 Error: [FatalErrorException] Call to a member function field() on a non-object
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\tuc...', 55, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\tuc...', 55, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 13:06:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Defi.afficher' in 'field list'
+Request URL: /tuc/photos/view/5
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Defi`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Defi`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Defi`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Photo), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1552): Model->find('first', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(55): Model->field('Defi.afficher', Array)
+#7 [internal function]: PhotosController->view('5')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-21 13:19:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Defi.afficher' in 'field list'
+Request URL: /tuc/photos/view/4
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Defi`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Defi`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Defi`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Photo), Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1552): Model->find('first', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(51): Model->field('Defi.afficher', Array)
+#7 [internal function]: PhotosController->view('4')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-21 13:25:27 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/3
+Stack Trace:
+#0 [internal function]: PhotosController->view('3')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:25:32 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/4
+Stack Trace:
+#0 [internal function]: PhotosController->view('4')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:25:42 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/115
+Stack Trace:
+#0 [internal function]: PhotosController->view('115')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:25:58 Error: [NotFoundException] Invalid Photos
+Request URL: /tuc/photos/view/3
+Stack Trace:
+#0 [internal function]: PhotosController->view('3')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-21 13:27:41 Error: [MissingActionException] Action UsersController::admin_photos() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_photos',
+)
+Request URL: /tuc/admin/users/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 13:38:54 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/logout
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 13:49:10 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'isOwnedBy' at line 1
+Request URL: /tuc/admin/photos/edit/1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('isOwnedBy', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('isOwnedBy', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('isOwnedBy', Array, Array)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(800): DboSource->query('isOwnedBy', Array, Object(Photo))
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(38): Model->__call('isOwnedBy', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(38): Photo->isOwnedBy('1', '4')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(65): PhotosController->isAuthorized(Array)
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Component\AuthComponent.php(412): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 C:\wamp\www\tuc\lib\Cake\Controller\Component\AuthComponent.php(336): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(PhotosController))
+#11 C:\wamp\www\tuc\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\tuc\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#16 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-05-21 13:54:11 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'isOwnedBy' at line 1
+Request URL: /tuc/admin/photos/edit/1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('isOwnedBy', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('isOwnedBy', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('isOwnedBy', Array, Array)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(800): DboSource->query('isOwnedBy', Array, Object(Photo))
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(39): Model->__call('isOwnedBy', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(39): Photo->isOwnedBy('1', '4')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(65): PhotosController->isAuthorized(Array)
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Component\AuthComponent.php(412): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 C:\wamp\www\tuc\lib\Cake\Controller\Component\AuthComponent.php(336): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(PhotosController))
+#11 C:\wamp\www\tuc\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\tuc\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#16 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-05-21 13:54:13 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'isOwnedBy' at line 1
+Request URL: /tuc/admin/photos/edit/1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('isOwnedBy', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('isOwnedBy', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('isOwnedBy', Array, Array)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(800): DboSource->query('isOwnedBy', Array, Object(Photo))
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(39): Model->__call('isOwnedBy', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(39): Photo->isOwnedBy('1', '4')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(65): PhotosController->isAuthorized(Array)
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Component\AuthComponent.php(412): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 C:\wamp\www\tuc\lib\Cake\Controller\Component\AuthComponent.php(336): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(PhotosController))
+#11 C:\wamp\www\tuc\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\tuc\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#16 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-05-21 14:01:40 Error: [MissingControllerException] Controller class EditController could not be found.
+Exception Attributes: array (
+  'class' => 'EditController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/edit/5
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 14:01:51 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 14:02:24 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 14:10:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Clan.' in 'where clause'
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Clan`.`...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Clan`.`...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Clan`.`...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Clan), Array)
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(131): Model->find('first', Array)
+#6 [internal function]: PhotosController->admin_add()
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-21 18:01:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'zaddzd' for key 'partenaire'
+Request URL: /tuc/partenaires/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `tu...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `tu...')
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Partenaire), Array, Array)
+#4 C:\wamp\www\tuc\app\Controller\PartenairesController.php(63): Model->save(Array)
+#5 [internal function]: PartenairesController->add()
+#6 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PartenairesController), Array)
+#7 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PartenairesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-21 18:26:38 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [C:\wamp\www\tuc\app\View\Photos\admin_add.ctp, line 17]
+2013-05-21 18:26:38 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 18:26:51 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting ',' or ';' in [C:\wamp\www\tuc\app\View\Photos\admin_add.ctp, line 17]
+2013-05-21 18:26:51 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting ',' or ';'
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 18:33:31 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ',' or ';' in [C:\wamp\www\tuc\app\View\Photos\admin_add.ctp, line 10]
+2013-05-21 18:33:31 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ',' or ';'
+Request URL: /tuc/admin/photos/add
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 10, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 10, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 19:10:03 Error: Fatal Error (1): Call to undefined method PhotosController::Photo() in [C:\wamp\www\tuc\app\Controller\PhotosController.php, line 205]
+2013-05-21 19:10:03 Error: [FatalErrorException] Call to undefined method PhotosController::Photo()
+Request URL: /tuc/admin/photos/delete/30
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\tuc...', 205)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\tuc...', 205, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\tuc...', 205, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 19:32:55 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\View\Photos\admin_index.ctp, line 30]
+2013-05-21 19:32:55 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 30, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 30, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 19:33:26 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\View\Photos\admin_index.ctp, line 31]
+2013-05-21 19:33:26 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 31, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 31, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 19:56:48 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /tuc/app/webroot/
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 20:02:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:02:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/admin/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:06:47 Error: [MissingActionException] Action DefisController::photos() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => 'photos',
+)
+Request URL: /tuc/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 20:09:55 Error: [MissingActionException] Action DefisController::photos() could not be found.
+Exception Attributes: array (
+  'controller' => 'DefisController',
+  'action' => 'photos',
+)
+Request URL: /tuc/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 20:13:28 Error: [MissingControllerException] Controller class TucController could not be found.
+Exception Attributes: array (
+  'class' => 'TucController',
+  'plugin' => NULL,
+)
+Request URL: /tuc//tuc/webroot/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:13:34 Error: [MissingControllerException] Controller class TucController could not be found.
+Exception Attributes: array (
+  'class' => 'TucController',
+  'plugin' => NULL,
+)
+Request URL: /tuc//tuc/webroot/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:13:45 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/webroot/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:13:50 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/webroot/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:14:08 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/webroot/img/defis/photos/1842.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:14:14 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/webroot/img/defis/photos/
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-21 20:16:32 Error: Fatal Error (4): syntax error, unexpected T_NS_SEPARATOR, expecting ',' or ';' in [C:\wamp\www\tuc\app\View\Photos\admin_index.ctp, line 35]
+2013-05-21 20:16:32 Error: [FatalErrorException] syntax error, unexpected T_NS_SEPARATOR, expecting ',' or ';'
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 35, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 35, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 20:17:46 Error: Fatal Error (4): syntax error, unexpected T_LNUMBER, expecting ',' or ';' in [C:\wamp\www\tuc\app\View\Photos\admin_index.ctp, line 35]
+2013-05-21 20:17:46 Error: [FatalErrorException] syntax error, unexpected T_LNUMBER, expecting ',' or ';'
+Request URL: /tuc/admin/photos
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 35, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 35, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-21 20:27:56 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /tuc/app/webroot/img/s/photos/31275.JPG
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-21 20:28:09 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /tuc/app/webroot/img/s/photos/31275.JPG
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-22 08:24:56 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-22 17:30:41 Error: [MissingActionException] Action UsersController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'logout',
+)
+Request URL: /tuc/users/logout
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-22 18:02:17 Error: [NotFoundException] Invalid photo
+Request URL: /tuc/admin/photos/view/105
+Stack Trace:
+#0 [internal function]: PhotosController->admin_view('105')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-22 18:02:40 Error: [NotFoundException] Invalid photo
+Request URL: /tuc/admin/photos/view/105
+Stack Trace:
+#0 [internal function]: PhotosController->admin_view('105')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-22 18:04:06 Error: [MissingActionException] Action PhotosController::admin_edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'PhotosController',
+  'action' => 'admin_edit',
+)
+Request URL: /tuc/admin/photos/edit/105
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-22 18:04:39 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-22 18:05:17 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-22 18:26:16 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /tuc/admin/photos/index/page:1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp\www\tuc\lib\Cake\View\View.php(835): HelperCollection->__isset('Auth')
+#2 C:\wamp\www\tuc\app\View\Layouts\default.ctp(53): View->__get('Auth')
+#3 C:\wamp\www\tuc\lib\Cake\View\View.php(947): include('C:\wamp\www\tuc...')
+#4 C:\wamp\www\tuc\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\tuc...', Array)
+#5 C:\wamp\www\tuc\lib\Cake\View\View.php(535): View->_render('C:\wamp\www\tuc...')
+#6 C:\wamp\www\tuc\lib\Cake\View\View.php(479): View->renderLayout('', 'default')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-22 18:26:18 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /tuc/admin/photos/index/page:1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp\www\tuc\lib\Cake\View\View.php(835): HelperCollection->__isset('Auth')
+#2 C:\wamp\www\tuc\app\View\Layouts\default.ctp(53): View->__get('Auth')
+#3 C:\wamp\www\tuc\lib\Cake\View\View.php(947): include('C:\wamp\www\tuc...')
+#4 C:\wamp\www\tuc\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\tuc...', Array)
+#5 C:\wamp\www\tuc\lib\Cake\View\View.php(535): View->_render('C:\wamp\www\tuc...')
+#6 C:\wamp\www\tuc\lib\Cake\View\View.php(479): View->renderLayout('', 'default')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-22 18:26:36 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /tuc/admin/photos/index/page:1
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp\www\tuc\lib\Cake\View\View.php(835): HelperCollection->__isset('Auth')
+#2 C:\wamp\www\tuc\app\View\Layouts\default.ctp(53): View->__get('Auth')
+#3 C:\wamp\www\tuc\lib\Cake\View\View.php(947): include('C:\wamp\www\tuc...')
+#4 C:\wamp\www\tuc\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\tuc...', Array)
+#5 C:\wamp\www\tuc\lib\Cake\View\View.php(535): View->_render('C:\wamp\www\tuc...')
+#6 C:\wamp\www\tuc\lib\Cake\View\View.php(479): View->renderLayout('', 'default')
+#7 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#8 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-22 19:00:15 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\View\Defis\admin_index.ctp, line 52]
+2013-05-22 19:00:15 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/admin/defis
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 52, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:10:04 Error: [MissingControllerException] Controller class Accueil.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Accueil.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/accueil.jpg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-22 19:27:44 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 24]
+2013-05-22 19:27:44 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:27:53 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 24]
+2013-05-22 19:27:53 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:27:54 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 24]
+2013-05-22 19:27:54 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:28:45 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 24]
+2013-05-22 19:28:45 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:30:18 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 24]
+2013-05-22 19:30:18 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:30:28 Error: Fatal Error (4): syntax error, unexpected ':' in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 24]
+2013-05-22 19:30:28 Error: [FatalErrorException] syntax error, unexpected ':'
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 24, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:39:31 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 17]
+2013-05-22 19:39:31 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:39:45 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 17]
+2013-05-22 19:39:45 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 19:39:46 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tuc\app\View\Partenaires\admin_index.ctp, line 17]
+2013-05-22 19:39:46 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /tuc/admin/partenaires
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\tuc...', 17, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-22 20:10:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/css/themes/pmahomme/img/tab_bg.png
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-22 20:10:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/css/themes/pmahomme/img/tab_hover_bg.png
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-23 11:38:01 Error: Fatal Error (64): Cannot redeclare Defi::$hasAndBelongsToMany in [C:\wamp\www\tuc\app\Model\Defi.php, line 190]
+2013-05-23 11:38:01 Error: [FatalErrorException] Cannot redeclare Defi::$hasAndBelongsToMany
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\tuc...', 190)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\tuc...', 190, Array)
+#2 C:\wamp\www\tuc\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\tuc...', 190, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-23 11:40:04 Error: [MissingTableException] Table form_defis_defis_clans for model DefisDefisClan was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'form_defis_defis_clans',
+  'class' => 'DefisDefisClan',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('defis_defis_cla...')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#2 C:\wamp\www\tuc\lib\Cake\Model\Model.php(863): Model->schema()
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(888): Model->__isset('DefisDefisClan')
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3306): Model->__get('DefisDefisClan')
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1598): Model->joinModel('DefisDefisClan', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1072): DboSource->generateAssociationQuery(Object(Defi), Object(DefisClan), 'hasAndBelongsTo...', 'DefisClan', Array, Array, false, NULL)
+#7 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#8 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#9 [internal function]: DefisController->admin_edit('24')
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-23 11:41:26 Error: [MissingTableException] Table form_defis_photos for model DefisPhoto was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'form_defis_photos',
+  'class' => 'DefisPhoto',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('defis_photos')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#2 C:\wamp\www\tuc\lib\Cake\Model\Model.php(863): Model->schema()
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(888): Model->__isset('DefisPhoto')
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3306): Model->__get('DefisPhoto')
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1598): Model->joinModel('DefisPhoto', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1072): DboSource->generateAssociationQuery(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, false, NULL)
+#7 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#8 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#9 [internal function]: DefisController->admin_edit('24')
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-23 11:42:27 Error: [MissingTableException] Table form_defis_photos for model DefisPhoto was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'form_defis_photos',
+  'class' => 'DefisPhoto',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('defis_photos')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#2 C:\wamp\www\tuc\lib\Cake\Model\Model.php(863): Model->schema()
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(888): Model->__isset('DefisPhoto')
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3306): Model->__get('DefisPhoto')
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1598): Model->joinModel('DefisPhoto', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1072): DboSource->generateAssociationQuery(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Phezfefoto', Array, Array, false, NULL)
+#7 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#8 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#9 [internal function]: DefisController->admin_edit('24')
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-23 11:42:28 Error: [MissingTableException] Table form_defis_photos for model DefisPhoto was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'form_defis_photos',
+  'class' => 'DefisPhoto',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('defis_photos')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#2 C:\wamp\www\tuc\lib\Cake\Model\Model.php(863): Model->schema()
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(888): Model->__isset('DefisPhoto')
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3306): Model->__get('DefisPhoto')
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1598): Model->joinModel('DefisPhoto', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1072): DboSource->generateAssociationQuery(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Phezfefoto', Array, Array, false, NULL)
+#7 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#8 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#9 [internal function]: DefisController->admin_edit('24')
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-23 11:42:30 Error: [MissingTableException] Table form_defis_photos for model DefisPhoto was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'form_defis_photos',
+  'class' => 'DefisPhoto',
+  'ds' => 'default',
+)
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3237): Model->setSource('defis_photos')
+#1 C:\wamp\www\tuc\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#2 C:\wamp\www\tuc\lib\Cake\Model\Model.php(863): Model->schema()
+#3 C:\wamp\www\tuc\lib\Cake\Model\Model.php(888): Model->__isset('DefisPhoto')
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(3306): Model->__get('DefisPhoto')
+#5 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1598): Model->joinModel('DefisPhoto', Array)
+#6 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1072): DboSource->generateAssociationQuery(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Phezfefoto', Array, Array, false, NULL)
+#7 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#8 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#9 [internal function]: DefisController->admin_edit('24')
+#10 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#11 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-05-23 11:46:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'DefisClan'
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `DefisCl...', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `DefisCl...', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `DefisCl...', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(DefisClan), 'hasAndBelongsTo...', 'DefisClan', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('24')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-23 11:48:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Photo'
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('24')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-23 11:49:39 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Photo'
+Request URL: /tuc/admin/defis/edit/24
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('24')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-23 11:50:27 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Photo'
+Request URL: /tuc/admin/defis/edit/19
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('19')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-23 11:52:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Photo'
+Request URL: /tuc/admin/defis/edit/19
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('19')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-23 11:56:19 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Photo'
+Request URL: /tuc/admin/defis/edit/19
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('19')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-23 11:56:20 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Photo'
+Request URL: /tuc/admin/defis/edit/19
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Photo`....', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Photo`....', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1255): DboSource->fetchAll('SELECT `Photo`....', false)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Defi), Object(Photo), 'hasAndBelongsTo...', 'Photo', Array, Array, true, Array, 0, Array)
+#5 C:\wamp\www\tuc\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Defi), Array)
+#6 C:\wamp\www\tuc\app\Controller\DefisController.php(130): Model->find('first', Array)
+#7 [internal function]: DefisController->admin_edit('19')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DefisController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

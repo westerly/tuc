@@ -40,7 +40,7 @@ class UsersController extends AppController {
 					 $this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'defis', 'action' => 'index');
 				}else{
 					// L'user connecté est un chef de clan
-					 $this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'photos', 'action' => 'add');
+					 $this->Auth->loginRedirect = array('admin'=>true, 'controller' => 'photos', 'action' => 'index');
 				}
 				$this->redirect($this->Auth->redirect());
 			} else {

@@ -31,22 +31,49 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('admin');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	
 </head>
 <body>
-	<div id="container">
+	
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<?php
+			if($adminCo){
+					echo'<div class="menu">';
+							
+							echo "<ul>";
+								echo"<li>". $this->Html->link(__('Gérer les actualités'), array('controller' => 'actualites', 'action' => 'index'))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les défis'), array('controller' => 'defis', 'action' => 'index'))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les photos'), array('controller' => 'photos', 'action' => 'index')). "</li>";
+								echo"<li>". $this->Html->link(__('Gérer les partenaires'), array('controller' => 'partenaires', 'action' => 'index'))."</li>";
+							echo "</ul>";
+							
+					echo"</div>";
+			}
+		?>
+			
 		</div>
+		
+		
 		<div id="content">
+		
+		
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+			
+			<?php			
+				
+				
+			
+			?>
+			
 		</div>
 		<div id="footer">
 			<?php echo $this->Html->link(
