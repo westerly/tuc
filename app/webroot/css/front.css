@@ -33,7 +33,7 @@ body  {
 }
 
 header {
-    height: 270px;
+    height: 220px;
 }
 
 #logo {
@@ -164,6 +164,27 @@ section.accueil h2 {
     top: -15px;
 }
 
+/* news */
+.news .title {
+    color: rgb(150, 150, 150);
+}
+
+.news article {
+    border-bottom: 1px dashed black;
+}
+
+.news article {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* option */
+.paginator {
+    text-align: center;
+}
+
+/* slider */
 #slider {
     margin-top: 10px;
     float:left;
