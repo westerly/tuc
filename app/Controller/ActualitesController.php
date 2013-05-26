@@ -17,6 +17,7 @@ class ActualitesController extends AppController {
 
 	public function index(){
 		$this->Actualite->recursive = 0;
+                $this->layout = 'front';
 		$this->set('actualites', $this->paginate());
 	}
 
