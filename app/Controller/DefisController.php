@@ -51,7 +51,9 @@ class DefisController extends AppController {
 	
 	public function index() {
 		$this->Defi->recursive = 1;
+        $this->layout = 'front';
 		$this->set('defis', $this->paginate('Defi', array('Defi.afficher' => 1)));
+             
 		//$this->set('defis', $this->paginate());
 	}
 	
