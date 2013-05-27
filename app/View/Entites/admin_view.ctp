@@ -18,19 +18,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Entite'), array('action' => 'edit', $entite['Entite']['entite_id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Entite'), array('action' => 'delete', $entite['Entite']['entite_id']), null, __('Are you sure you want to delete # %s?', $entite['Entite']['entite_id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Entites'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Entite'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Superviseurs'), array('controller' => 'superviseurs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Superviseur'), array('controller' => 'superviseurs', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
 <div class="related">
 	<h3><?php echo __('Related Superviseurs'); ?></h3>
 	<?php if (!empty($entite['Superviseur'])): ?>
@@ -136,4 +124,16 @@
 			<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<a href="javascript:history.back()">Retour</a> 
+	</ul>
 </div>

@@ -6,8 +6,10 @@ App::uses('AppModel', 'Model');
  * @property Clan $Clan
  * @property Defi $Defi
  */
-class Photo extends AppModel {
 
+class Photo extends AppModel {
+	
+	
 /**
  * Display field
  *
@@ -15,21 +17,30 @@ class Photo extends AppModel {
  */
 	public $displayField = 'id';
 	
+	public $actsAs = array('Upload');
+	
 	// Permet de définir les règles de validation des données
 	// Attention la clé rule doit toujours être présente
 	public $validate = array(
+// 			'photo_fichier' => array(
+// 				'ruleExtension'  => array(
+// 					'rule' => array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+// 					'message' => 'L\'extension du ficher fourni n\'est pas valide.',
+// 					'last' => true
+// 			),
+// 			'ruleFileSize' => array(
+// 				'rule' => array('fileSize', '<=', '2MB'),
+// 				'message' => 'La taille de l\'image ne doit pas dépasser 50MB.',
+// 				'last' => true
+// 			)
+// 		)
+			
 			'photo_fichier' => array(
-				'ruleExtension'  => array(
-					'rule' => array('extension', array('gif', 'jpeg', 'png', 'jpg')),
-					'message' => 'L\'extension du ficher fourni n\'est pas valide.',
-					'last' => true
-			),
-			'ruleFileSize' => array(
-				'rule' => array('fileSize', '<=', '2MB'),
-				'message' => 'La taille de l\'image ne doit pas dépasser 2MB.',
-				'last' => true
+					'rulePhotoVideo'  => array(
+							'rule' => "checkUploadPhotoVideo",
+							'last' => true
+					)
 			)
-		)
 	);
 
 
@@ -39,6 +50,7 @@ class Photo extends AppModel {
  * belongsTo associations
  *
  * @var array
+ * 
  */
 	public $belongsTo = array(
 		'Clan' => array(
@@ -56,4 +68,10 @@ class Photo extends AppModel {
 			'order' => ''
 		)
 	);
+	
+	
+	
+	
+	
+	
 }

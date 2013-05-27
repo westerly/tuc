@@ -18,7 +18,7 @@
 		</dd>
 		<dt><?php echo __('Contenu'); ?></dt>
 		<dd>
-			<?php echo h($actualite['Actualite']['contenu']); ?>
+			<?php echo $actualite['Actualite']['contenu']; ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Last Updated'); ?></dt>
@@ -27,5 +27,13 @@
 			&nbsp;
 		</dd>
 	</dl>
+</div>
+
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<?php echo $this->Html->link(__('Editer'), array('controller' => 'Actualites', 'action' => 'edit', $actualite['Actualite']['id'])); ?>
+		<a href="javascript:history.back()">Retour</a> 
+	</ul>
 </div>
 

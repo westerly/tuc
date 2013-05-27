@@ -1,3 +1,10 @@
+<?php
+//Permet l'affichage des message de confirmation ou d'erreur si il y'en a après d'une redirection vers cette vue
+echo $this->Session->flash('ok');
+echo $this->Session->flash('nok');
+?>
+
+
 <?php 
 
 if(isset($message)){
@@ -36,10 +43,7 @@ if(isset($message)){
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Partenaires'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Departements'), array('controller' => 'departements', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Departement'), array('controller' => 'departements', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
+		<a href="javascript:history.back()">Retour</a> 
+
 	</ul>
 </div>

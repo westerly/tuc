@@ -1,3 +1,11 @@
+<?php
+//Permet l'affichage des message de confirmation ou d'erreur si il y'en a après d'une redirection vers cette vue
+echo $this->Session->flash('ok');
+echo $this->Session->flash('nok');
+?>
+
+
+
 <div class="partenaires view">
 <h2><?php  echo __('Partenaire'); ?></h2>
 	<dl>
@@ -31,6 +39,11 @@
 			<?php echo h($partenaire['Partenaire']['fichierLogo']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Logo'); ?></dt>
+		<dd>
+			 <?php  echo "<a href='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."' class='top_up'><img class='view' src='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."'/></a>"; ?> 
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Departement'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($partenaire['Departement']['nom'], array('controller' => 'departements', 'action' => 'view', $partenaire['Departement']['num_departement'])); ?>
@@ -43,19 +56,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Partenaire'), array('action' => 'edit', $partenaire['Partenaire']['partenaire_id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Partenaire'), array('action' => 'delete', $partenaire['Partenaire']['partenaire_id']), null, __('Are you sure you want to delete # %s?', $partenaire['Partenaire']['partenaire_id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Partenaires'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Partenaire'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Departements'), array('controller' => 'departements', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Departement'), array('controller' => 'departements', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
 <div class="related">
 	<h3><?php echo __('Related Defis'); ?></h3>
 	<?php if (!empty($partenaire['Defi'])): ?>
@@ -114,8 +115,9 @@
 <?php endif; ?>
 
 	<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
 		<ul>
-			<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
+			<a href="javascript:history.back()">Retour</a> 
 		</ul>
 	</div>
 </div>

@@ -1,21 +1,18 @@
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
-		<legend><?php echo __('Admin Add User'); ?></legend>
+		<legend><?php echo __('Ajouter un utilisateur'); ?></legend>
 	<?php
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
 		echo $this->Form->input('clan_id');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Envoyer')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Clans'), array('controller' => 'clans', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Clan'), array('controller' => 'clans', 'action' => 'add')); ?> </li>
+		<a href="javascript:history.back()">Retour</a> 
 	</ul>
 </div>

@@ -64,7 +64,7 @@ class Defi extends AppModel {
 		'Photo' => array(
 			'className' => 'Photo',
 			'foreignKey' => 'defi_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
