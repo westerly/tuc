@@ -6,6 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Photo $Photo
  */
 class PhotosController extends AppController {
+	
 
 	var $paginate = array(
 		'Photo' => array(
@@ -115,14 +116,29 @@ class PhotosController extends AppController {
 		
 		if ($this->request->is('post')) {
 			
+			set_time_limit("3600");
+			ini_set("max_execution_time", "3600");
+			//ini_set("upload_max_filesize", "200M");
+						
 			$this->Photo->create();
 			
 			// Sauvegarde des infos pour l'upload
 			$infosUpload = $this->request->data["Photo"]["photo_fichier"];
 			
 			// La constante APP est la variable permettant d'accéder au path du dossier app
-			$dossier = "defis/photos/";
-			$extension = strrchr($this->request->data["Photo"]["photo_fichier"]['name'], '.');
+			
+			$extension = strtolower(strrchr($this->request->data["Photo"]["photo_fichier"]['name'], '.'));
+
+			$view = new View($this);
+			$upload = $view->loadHelper('Upload');
+			
+			if(in_array($extension, $upload->getFormatsVideoAccepted())){
+				$dossier = "defis/videos/";
+			}else{
+				$dossier = "defis/photos/";
+			}
+			
+			print $dossier;
 			
 			// Génration d'un nombre automatique pour le nom du fichier
 			$fichier = rand().$extension;
@@ -134,7 +150,7 @@ class PhotosController extends AppController {
 					//Si on a pu save la photo on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
 					if(move_uploaded_file($infosUpload["tmp_name"], IMG.$dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
 					{
-						$this->Session->setFlash('Votre photo a été enregistrée avec succès.', 'default', array(), 'ok');
+						$this->Session->setFlash('Votre photo/vidéo a été enregistrée avec succès.', 'default', array(), 'ok');
 						$this->redirect(array('action' => 'index'));
 					}
 					else //Sinon (la fonction renvoie FALSE).
@@ -145,7 +161,7 @@ class PhotosController extends AppController {
 					}
 			
 			} else {
-				$this->Session->setFlash('La photo ne peut être enregistrée.', 'default', array(), 'nok');
+				$this->Session->setFlash('La photo/vidéo ne peut être enregistrée.', 'default', array(), 'nok');
 			}
 			
 		}
@@ -203,19 +219,21 @@ class PhotosController extends AppController {
 		$user = $this->Auth->user();
 		$this->Photo->id = $id;
 		if (!$this->Photo->exists()) {
-			throw new NotFoundException(__('La photo n\'existe pas.'));
+			throw new NotFoundException(__('La photo/vidéo n\'existe pas.'));
 		}
 		$this->request->onlyAllow('post', 'delete');
 		
-		$file = new File($this->Photo->field('chemin_fichier', array('id' => $id)));
-		$file->delete();
+		$file = new File(IMG.$this->Photo->field('chemin_fichier', array('id' => $id)));
 		
-		if ($this->Photo->delete()) {
+		if ($file->delete() && $this->Photo->delete()) {
 			
-			$this->Session->setFlash('Photo supprimée avec succès.', 'default', array(), 'ok');
-			$this->redirect(array('action' => 'index'));
+			$this->Session->setFlash('Photo/Vidéo supprimée avec succès.', 'default', array(), 'ok');
+			//$this->redirect(array('action' => 'index'));
+			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
 		}
-		$this->Session->setFlash('La photo n\'a pas été supprimée.', 'default', array(), 'nok');
-		$this->redirect(array('action' => 'index'));
+		$this->Session->setFlash('La photo/vidéo n\'a pas été supprimée.', 'default', array(), 'nok');
+		//$this->redirect(array('action' => 'index'));
+		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+		
 	}
 }

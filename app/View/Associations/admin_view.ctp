@@ -13,17 +13,6 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Association'), array('action' => 'edit', $association['Association']['association_id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Association'), array('action' => 'delete', $association['Association']['association_id']), null, __('Are you sure you want to delete # %s?', $association['Association']['association_id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Associations'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Association'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
 <div class="related">
 	<h3><?php echo __('Related Defis'); ?></h3>
 	<?php if (!empty($association['Defi'])): ?>
@@ -81,4 +70,11 @@
 	</table>
 <?php endif; ?>
 
+</div>
+
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<a href="javascript:history.back()">Retour</a> 
+	</ul>
 </div>

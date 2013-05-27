@@ -23,6 +23,9 @@
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($defis as $defi): ?>
+	
+	<?php var_dump($defi["Photo"]); ?>
+	
 	<tr>
 		<td><?php echo h($defi['Defi']['id']); ?>&nbsp;</td>
 		<td><?php echo h($defi['Defi']['nom']); ?>&nbsp;</td>
@@ -52,6 +55,9 @@
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $defi['Defi']['id']), null, __('Are you sure you want to delete # %s?', $defi['Defi']['id'])); ?>
 		</td>
 	</tr>
+	
+	
+	
 <?php endforeach; ?>
 	</table>
 	<p>

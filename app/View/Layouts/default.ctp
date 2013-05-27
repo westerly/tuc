@@ -29,6 +29,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
+		
+		// Import de la librairie permettant les affichages photos en pop pup
+		echo '<script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>';
+		
+		echo '<link href="http://vjs.zencdn.net/4.0.2/video-js.css" rel="stylesheet">';
+		echo '<script src="http://vjs.zencdn.net/4.0.2/video.js"></script>';
 
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('admin');
@@ -47,13 +53,23 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					echo'<div class="menu">';
 							
 							echo "<ul>";
-								echo"<li>". $this->Html->link(__('Gérer les actualités'), array('controller' => 'actualites', 'action' => 'index'))."</li>";
-								echo"<li>". $this->Html->link(__('Gérer les défis'), array('controller' => 'defis', 'action' => 'index'))."</li>";
-								echo"<li>". $this->Html->link(__('Gérer les photos'), array('controller' => 'photos', 'action' => 'index')). "</li>";
-								echo"<li>". $this->Html->link(__('Gérer les partenaires'), array('controller' => 'partenaires', 'action' => 'index'))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les actualités'), array('controller' => 'actualites', 'action' => 'index','admin' => true))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les défis'), array('controller' => 'defis', 'action' => 'index','index','admin' => true))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les photos'), array('controller' => 'photos', 'action' => 'index', 'admin' => true)). "</li>";
+								echo"<li>". $this->Html->link(__('Gérer les partenaires'), array('controller' => 'partenaires', 'action' => 'index', 'admin' => true))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les utilisateurs'), array('controller' => 'users', 'action' => 'index', 'admin' => true))."</li>";
+								echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
 							echo "</ul>";
 							
 					echo"</div>";
+			}else{
+				echo'<div class="menu">';
+							
+							echo "<ul>";
+								echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
+							echo "</ul>";
+							
+				echo"</div>";
 			}
 		?>
 			
