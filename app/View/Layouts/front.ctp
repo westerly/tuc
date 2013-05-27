@@ -44,10 +44,16 @@
 		
 		
 		<footer>
-		
-		
-		
-		</footer>
+                    <table style="width: 100%">
+                        <tr>
+                            <td><?= $this->Html->image('front/utc.jpg', array('alt' => 'utc', 'height'=>50, 'width'=>150, 'id'=>'utc')); ?></td>
+                            <td><?= $this->Html->image('front/logo.png', array('alt' => 'utc', 'height'=>50, 'width'=>50, 'id'=>'tuc')); ?></td>
+                            <td style="font-size: 2em;">Tous unis pour Compiègne</td>
+                            <td><?=  $this->Html->link('Contact', 'mailto:integ@assos.utc.fr')?></td>             
+                            <td><?= $this->Html->image('front/facebook.jpg', array('alt' => 'facebook', 'height'=>65, 'width'=>65, 'id'=>'facebook')); ?></td>
+                        </tr>
+                    </table>
+                </footer>
 		
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
          <?= $this->Html->script('jquery.slides.min'); ?>
