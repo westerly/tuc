@@ -10,11 +10,19 @@ class DefisController extends AppController {
 
 	var $paginate = array(
 		'Defi' => array(
-				'limit' => 5,
+				'limit' => 20,
 				'order' => array(
 						'Defi.date_soumission' => 'Desc'
 						)
-	));
+		),
+		'Photo' => array(
+				'limit' => 5,
+				'order' => array(
+						'Photo.date_upload' => 'Desc'
+				)
+		)
+			
+	);
 	
 	
 	// Definit les règles d'accès utilisateurs pour les actions sur les photos
@@ -42,7 +50,7 @@ class DefisController extends AppController {
 
 	
 	public function index() {
-		$this->Defi->recursive = 0;
+		$this->Defi->recursive = 1;
 		$this->set('defis', $this->paginate('Defi', array('Defi.afficher' => 1)));
 		//$this->set('defis', $this->paginate());
 	}
@@ -78,6 +86,7 @@ class DefisController extends AppController {
 		}
 		$options = array('conditions' => array('Defi.' . $this->Defi->primaryKey => $id));
 		$this->set('defi', $this->Defi->find('first', $options));
+		$this->set('photos', $this->paginate('Photo', array ("Photo.defi_id = " => $id)));
 	}
 
 /**
@@ -89,10 +98,10 @@ class DefisController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Defi->create();
 			if ($this->Defi->save($this->request->data)) {
-				$this->Session->setFlash(__('The defi has been saved'));
+				$this->Session->setFlash('Le défi a été enregistrée avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The defi could not be saved. Please, try again.'));
+				$this->Session->setFlash('Le défi n\'a pas été enregistrée.', 'default', array(), 'nok');
 			}
 		}
 		$localisations = $this->Defi->Localisation->find('list');
@@ -120,15 +129,19 @@ class DefisController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Defi->save($this->request->data)) {
-				$this->Session->setFlash(__('The defi has been saved'));
+				$this->Session->setFlash('Le défi a été enregistrée avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The defi could not be saved. Please, try again.'));
+				$this->Session->setFlash('Le défi n\'a pas été enregistrée.', 'default', array(), 'nok');
 			}
 		} else {
 			$options = array('conditions' => array('Defi.' . $this->Defi->primaryKey => $id));
 			$this->request->data = $this->Defi->find('first', $options);
+		
+			$this->set('photos', $this->paginate('Photo', array ("Photo.defi_id = " => $id)));
+			
 		}
+		
 		$localisations = $this->Defi->Localisation->find('list');
 		$horaires = $this->Defi->Horaire->find('list');
 		$associations = $this->Defi->Association->find('list');
@@ -155,10 +168,10 @@ class DefisController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Defi->delete()) {
-			$this->Session->setFlash(__('Defi deleted'));
+			$this->Session->setFlash('Le défi a été supprimée avec succès.', 'default', array(), 'ok');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Defi was not deleted'));
+		$this->Session->setFlash('Le défi n\'a pas été supprimée.', 'default', array(), 'nok');
 		$this->redirect(array('action' => 'index'));
 	}
 }
