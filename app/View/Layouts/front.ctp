@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php echo echo $this->Html->charset(); ?>
+		<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo echo $title_for_layout; ?>
+		<?php echo $title_for_layout; ?>
 	</title>
-	<?php echo
+	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('front');
 

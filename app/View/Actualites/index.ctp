@@ -7,7 +7,7 @@
     <div class="paginator">
 <?php echo $this->paginator->numbers(); ?>
     </div>
-<?php echo 
+<?php 
 
 foreach($actualites as $actu) { ?>
     <article>
@@ -17,7 +17,7 @@ foreach($actualites as $actu) { ?>
     </article>
     
 
-<?php echo } ?>
+<?php  } ?>
      <div class="paginator">
 <?php echo $this->paginator->numbers(); ?>
     </div>
