@@ -1,7 +1,6 @@
 
 <div id="path"><?php echo $this->Html->link($this->Html->image('front/home.png', array('alt' => 'home')).' Accueil', $this->Html->url(array('controller'=>'accueil', 'action'=>'index')), array('escape'=>false)) ?>
 </div>
-<?php var_dump($defis); ?>
 <div class="defis">
     <div class="paginator">
 <?php echo $this->paginator->numbers(); ?>
