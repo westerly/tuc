@@ -1,3 +1,12 @@
+<?php
+
+//Permet l'affichage des message de confirmation ou d'erreur si il y'en a après d'une redirection vers cette vue
+echo $this->Session->flash('ok');
+echo $this->Session->flash('nok');
+
+?>
+
+
 <div class="actualites index">
 	<h2><?php echo __('Actualites'); ?></h2>
 	<table cellpadding="0" cellspacing="0">

@@ -8,8 +8,6 @@ App::uses('AppModel', 'Model');
  */
 class Partenaire extends AppModel {
 	
-	public $actsAs = array('ImageUpload'); // Permet d'associer le Behaviour de ImageUpload au modèle Partenaire
-
 	// Permet de définir les règles de validation des données
 	// Attention la clé rule doit toujours être présente
 	public $validate = array(

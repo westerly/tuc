@@ -1,5 +1,73 @@
+<?php
+
+//Permet l'affichage des message de confirmation ou d'erreur si il y'en a après d'une redirection vers cette vue
+echo $this->Session->flash('ok');
+echo $this->Session->flash('nok');
+
+?>
+
+
+<?php if(isset($photos)){ ?>
+
+<div class="related">
+	<h3><?php echo __('Photos associées'); ?></h3>
+	<?php if (!empty($defi['Photo'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('chemin_fichier'); ?></th>
+			<th><?php echo "Photo" ?></th>
+			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
+			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
+			<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($photos as $photo): ?>
+		<tr>
+			<td><?php echo $photo['Photo']['id']; ?></td>
+			<td><?php echo $photo['Photo']['chemin_fichier']; ?></td>
+			    
+			 <td> <?php  echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='index' src='".URL_IMG.$photo['Photo']['chemin_fichier']."' /></a>"; ?> </td>
+			
+			
+			<td><?php if($photo['Photo']['afficher'] == 1){ echo "Oui";}else{echo "Non";} ?>&nbsp;</td>
+			
+			<td><?php echo $this->Html->link($photo['Clan']['nom'], array('controller' => 'clans', 'action' => 'view', $photo['Clan']['id'])); ?></td>
+			<td><?php echo h($photo['Photo']['date_upload']); ?>&nbsp;</td>
+			
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'photos', 'action' => 'view', $photo['Photo']['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'photos', 'action' => 'delete', $photo['Photo']['id']), null, __('Voulez vous vraiment supprimer cette photo?')); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} sur {:pages}, montrant {:current} enregistrements sur un total de {:count}, commence à {:start}, finit à {:end}')
+	));
+	?>	</p>
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('Précédent'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('Suivant') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+
+</div>
+
+<?php } ?>
+
+<br/>
+<br/>
+
+
 <div class="defis view">
-<h2><?php  echo __('Defi'); ?></h2>
+<h2><?php  echo __('Défi'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
@@ -94,40 +162,12 @@
 	</dl>
 </div>
 
-<div class="related">
-	<h3><?php echo __('Related Photos'); ?></h3>
-	<?php if (!empty($defi['Photo'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Nom Fichier'); ?></th>
-		<th><?php echo __('Afficher'); ?></th>
-		<th><?php echo __('Clan Id'); ?></th>
-		<th><?php echo __('Defi Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($defi['Photo'] as $photo): ?>
-		<tr>
-			<td><?php echo $photo['id']; ?></td>
-			<td><?php echo $photo['chemin_fichier']; ?></td>
-			<td><?php echo $photo['afficher']; ?></td>
-			<td><?php echo $photo['clan_id']; ?></td>
-			<td><?php echo $photo['defi_id']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'photos', 'action' => 'view', $photo['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'photos', 'action' => 'edit', $photo['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'photos', 'action' => 'delete', $photo['id']), null, __('Are you sure you want to delete # %s?', $photo['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
 
-</div>
+
 <div class="related">
-	<h3><?php echo __('Related Associations'); ?></h3>
+<br/>
+<br/>
+	<h3><?php echo __('Associations liées:'); ?></h3>
 	<?php if (!empty($defi['Association'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -154,7 +194,7 @@
 </div>
 
 <div class="related">
-	<h3><?php echo __('Related Entites'); ?></h3>
+	<h3><?php echo __('Entités liées:'); ?></h3>
 	<?php if (!empty($defi['Entite'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -182,7 +222,7 @@
 
 </div>
 <div class="related">
-	<h3><?php echo __('Related Materiels'); ?></h3>
+	<h3><?php echo __('Materiels liés:'); ?></h3>
 	<?php if (!empty($defi['Materiel'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -208,7 +248,7 @@
 
 </div>
 <div class="related">
-	<h3><?php echo __('Related Partenaires'); ?></h3>
+	<h3><?php echo __('Partenaires liés:'); ?></h3>
 	<?php if (!empty($defi['Partenaire'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -247,7 +287,7 @@
 
 </div>
 <div class="related">
-	<h3><?php echo __('Related Profils'); ?></h3>
+	<h3><?php echo __('Profils liés:'); ?></h3>
 	<?php if (!empty($defi['Profil'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -274,7 +314,7 @@
 
 </div>
 <div class="related">
-	<h3><?php echo __('Related Superviseurs'); ?></h3>
+	<h3><?php echo __('Superviseurs liés:'); ?></h3>
 	<?php if (!empty($defi['Superviseur'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -310,5 +350,12 @@
 	</table>
 <?php endif; ?>
 
+</div>
 
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<?php echo $this->Html->link(__('Editer'), array('controller' => 'Defis', 'action' => 'edit', $defi['Defi']['id'])); ?>
+		<a href="javascript:history.back()">Retour</a> 
+	</ul>
 </div>

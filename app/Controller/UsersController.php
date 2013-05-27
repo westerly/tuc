@@ -14,16 +14,8 @@ class UsersController extends AppController {
 		// Toute personne connecté peut se déconnecter
 		if(isset($user) && $this->action === 'admin_logout'){
 			return true;
-		}
+		}	
 		
-		// Toute personne qui est déjà connecté n'a pas le droit d'accéder à la page de login
-		// if (isset($user) && $this->action === 'admin_login' ) {
-			// return false;
-		// }else{
-			//Toute personne non co peut accéder à la page de login
-			// return true;
-		// }
-
 		return parent::isAuthorized($user);
 	}
 
@@ -44,31 +36,9 @@ class UsersController extends AppController {
 				}
 				$this->redirect($this->Auth->redirect());
 			} else {
-				$this->Session->setFlash(__('Nom d\'user ou mot de passe invalide, réessayer'));
+				$this->Session->setFlash('Login ou mot de passe invalide, réessayer.', 'default', array(), 'nok');
 			}
 		}
-	
-		// if ($this->request->is('post')) {
-			
-			//Couple login mdp incorrect
-			// $user = $this->User->findByLoginAndPassword($this->request->data['User']['login'], Security::hash($this->request->data['User']['password'],null,true));
-			// if(empty($user))
-			// {
-				// $this->set('errorMessage', 'Login et mot de passe incorrects.');
-			// }else{
-				
-				//Si la connexion est de type admin
-				// if(!isset($user['User']['clan_id'])){
-					// var_dump($user);
-					// $this->Auth->allow('*');
-					// $this->redirect(array('controller' => 'Defis', 'action' => 'admin_index'));
-				// }else{
-				//La connexion est de type clan
-				
-				// }
-			// }
-		// }
-		
 	}
 	
 	function admin_logout(){
@@ -109,11 +79,17 @@ class UsersController extends AppController {
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$this->User->create();
+
+			// Allows the program to avoid SQL errors when we want to create Admin User (not connected to a Clan)
+			if(isset($this->request->data["User"]["clan_id"]) && $this->request->data["User"]["clan_id"]==0){
+				$this->request->data["User"]["clan_id"] = NULL;
+			}
+			
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
+				$this->Session->setFlash('L\'utilisateur a été enregistré avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+				$this->Session->setFlash('L\'utilisateur ne peut être enregistré.', 'default', array(), 'nok');
 			}
 		}
 		$clans = $this->User->Clan->find('list');
@@ -133,15 +109,21 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			// Allows the program to avoid SQL errors when we want to create Admin User (not connected to a Clan)
+			if(isset($this->request->data["User"]["clan_id"]) && $this->request->data["User"]["clan_id"]==0){
+				$this->request->data["User"]["clan_id"] = NULL;
+			}
+			
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
+				$this->Session->setFlash('L\'utilisateur a été enregistré avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+				$this->Session->setFlash('L\'utilisateur n\'a pas été enregistré.', 'default', array(), 'nok');
 			}
 		} else {
 			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 			$this->request->data = $this->User->find('first', $options);
+			$this->request->data["User"]["password"] = "";
 		}
 		$clans = $this->User->Clan->find('list');
 		array_unshift($clans, "");
@@ -162,10 +144,10 @@ class UsersController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->User->delete()) {
-			$this->Session->setFlash(__('User deleted'));
+			$this->Session->setFlash('L\'utilisateur a été supprimé avec succès.', 'default', array(), 'ok');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('User was not deleted'));
+		$this->Session->setFlash('L\'utilisateur n\'a pas été supprimé.', 'default', array(), 'nok');
 		$this->redirect(array('action' => 'index'));
 	}
 }

@@ -17,11 +17,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Materiel'), array('action' => 'edit', $materiel['Materiel']['materiel_id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Materiel'), array('action' => 'delete', $materiel['Materiel']['materiel_id']), null, __('Are you sure you want to delete # %s?', $materiel['Materiel']['materiel_id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Materiels'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Materiel'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
@@ -86,4 +81,16 @@
 			<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<a href="javascript:history.back()">Retour</a> 
+	</ul>
 </div>

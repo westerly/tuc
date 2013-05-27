@@ -14,7 +14,38 @@
 	</dl>
 </div>
 
+<div class="related">
+	<h3><?php echo __('Related Defis Clans'); ?></h3>
+	<?php if (!empty($clan['DefisClan'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Defi Id'); ?></th>
+		<th><?php echo __('Clan Id'); ?></th>
+		<th><?php echo __('NbVotesPour'); ?></th>
+		<th><?php echo __('NbVotesContre'); ?></th>
+		<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($clan['DefisClan'] as $defisClan): ?>
+		<tr>
+			<td><?php echo $defisClan['id']; ?></td>
+			<td><?php echo $defisClan['defi_id']; ?></td>
+			<td><?php echo $defisClan['clan_id']; ?></td>
+			<td><?php echo $defisClan['nbVotesPour']; ?></td>
+			<td><?php echo $defisClan['nbVotesContre']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'defis_clans', 'action' => 'view', $defisClan['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'defis_clans', 'action' => 'edit', $defisClan['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'defis_clans', 'action' => 'delete', $defisClan['id']), null, __('Are you sure you want to delete # %s?', $defisClan['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
 
+</div>
 <div class="related">
 	<h3><?php echo __('Related Photos'); ?></h3>
 	<?php if (!empty($clan['Photo'])): ?>
@@ -45,6 +76,7 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
+
 
 </div>
 <div class="related">

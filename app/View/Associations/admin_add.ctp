@@ -12,9 +12,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
-		<li><?php echo $this->Html->link(__('List Associations'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
+		<a href="javascript:history.back()">Retour</a> 
 	</ul>
 </div>
