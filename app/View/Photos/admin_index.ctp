@@ -28,10 +28,8 @@ echo $this->Session->flash('nok');
 		<?php 
 		
 			$extension = strtolower(substr($photo['Photo']['chemin_fichier'],strpos($photo['Photo']['chemin_fichier'],'.')));
-					
-			print $extension;
-					
-			if(in_array($extension, $this->Upload->getFormatsVideoAccepted())){	
+										
+			if(in_array($extension, Configure::read('ACCEPTED_VIDEO_FORMATS'))){	
 			
 				echo'
 				<video id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex" controls
@@ -41,7 +39,6 @@ echo $this->Session->flash('nok');
 				</video>';						     
 				
 			}else{
-			print "juhuh";
 				echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('class' => 'index', 'alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
 			}
 									

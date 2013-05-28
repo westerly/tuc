@@ -128,11 +128,8 @@ class PhotosController extends AppController {
 			// La constante APP est la variable permettant d'accéder au path du dossier app
 			
 			$extension = strtolower(strrchr($this->request->data["Photo"]["photo_fichier"]['name'], '.'));
-
-			$view = new View($this);
-			$upload = $view->loadHelper('Upload');
 			
-			if(in_array($extension, $upload->getFormatsVideoAccepted())){
+			if(in_array($extension, Configure::read('ACCEPTED_VIDEO_FORMATS'))){
 				$dossier = "defis/videos/";
 			}else{
 				$dossier = "defis/photos/";
