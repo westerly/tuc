@@ -9,7 +9,7 @@ class ActualitesController extends AppController {
 
 	var $paginate = array(
 		'Actualite' => array(
-				'limit' => 5,
+				'limit' => 20,
 				'order' => array(
 						'Actualite.date_creation' => 'Desc'
 						)
@@ -64,11 +64,14 @@ class ActualitesController extends AppController {
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$this->Actualite->create();
+			$this->request->data[Actualite][last_updated] = date("Y-m-d H:i:s");
+			$this->request->data[Actualite][date_creation] = date("Y-m-d H:i:s");
+				
 			if ($this->Actualite->save($this->request->data)) {
-				$this->Session->setFlash(__('The actualite has been saved'));
+				$this->Session->setFlash('L\'actualité a été enregistrée avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The actualite could not be saved. Please, try again.'));
+				$this->Session->setFlash('L\'actualité n\'a pas été enregistrée.', 'default', array(), 'nok');
 			}
 		}
 	}
@@ -85,11 +88,14 @@ class ActualitesController extends AppController {
 			throw new NotFoundException(__('Invalid actualite'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			
+			$this->request->data[Actualite][last_updated] = date("Y-m-d H:i:s");
+			
 			if ($this->Actualite->save($this->request->data)) {
-				$this->Session->setFlash(__('The actualite has been saved'));
+				$this->Session->setFlash('L\'actualité a été enregistrée avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The actualite could not be saved. Please, try again.'));
+				$this->Session->setFlash('L\'actualité n\'a pas été enregistrée.', 'default', array(), 'nok');
 			}
 		} else {
 			$options = array('conditions' => array('Actualite.' . $this->Actualite->primaryKey => $id));
@@ -111,10 +117,10 @@ class ActualitesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Actualite->delete()) {
-			$this->Session->setFlash(__('Actualite deleted'));
+			$this->Session->setFlash('L\'actualité a été supprimée avec succès.', 'default', array(), 'ok');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Actualite was not deleted'));
+		$this->Session->setFlash('L\'actualité n\'a pas été supprimée.', 'default', array(), 'nok');
 		$this->redirect(array('action' => 'index'));
 	}
 }

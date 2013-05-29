@@ -1,3 +1,13 @@
+<?php
+
+//Permet l'affichage des message de confirmation ou d'erreur si il y'en a après d'une redirection vers cette vue
+echo $this->Session->flash('ok');
+echo $this->Session->flash('nok');
+
+?>
+
+
+
 <div class="defis index">
 	<h2><?php echo __('Defis'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
@@ -36,14 +46,14 @@
 			<?php echo $this->Html->link($defi['Localisation']['lieu'], array('controller' => 'localisations', 'action' => 'view', $defi['Localisation']['localisation_id'])); ?>
 		</td>
 		<td><?php echo h($defi['Defi']['nbr_etu']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['principe_orga']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['orga_equipe_projet']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['precautions']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['resultats']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['valo_citoyenne']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['valo_media']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['etapes']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['commentaires']); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['principe_orga'],0,50)."..."; ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['orga_equipe_projet'],0,50); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['precautions'],0,50); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['resultats'],0,50); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['valo_citoyenne'],0,50); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['valo_media'],0,50); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['etapes'],0,50); ?>&nbsp;</td>
+		<td><?php echo substr($defi['Defi']['commentaires'],0,50); ?>&nbsp;</td>
 		<td><?php echo h($defi['Defi']['date_soumission']); ?>&nbsp;</td>
 		<td><?php echo h($defi['Defi']['afficher']); ?>&nbsp;</td>
 		<td class="actions">

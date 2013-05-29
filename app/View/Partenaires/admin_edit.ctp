@@ -1,14 +1,23 @@
+<?php
+//Permet l'affichage des message de confirmation ou d'erreur si il y'en a après d'une redirection vers cette vue
+echo $this->Session->flash('ok');
+echo $this->Session->flash('nok');
+?>
+
+
+
 <div class="partenaires form">
-<?php echo $this->Form->create('Partenaire'); ?>
+<?php echo $this->Form->create('Partenaire', array('type' => 'file')); ?>
 	<fieldset>
-		<legend><?php echo __('Admin Edit Partenaire'); ?></legend>
+		<legend><?php echo __('Edition du partenaire'); ?></legend>
 	<?php
 		echo $this->Form->input('partenaire_id');
 		echo $this->Form->input('partenaire');
 		echo $this->Form->input('adresseWeb');
 		echo $this->Form->input('cp');
 		echo $this->Form->input('description');
-		echo $this->Form->input('fichierLogo');
+		echo "<a href='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."' class='top_up'><img class='edit' src='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."'/></a>"; 
+		echo $this->Form->input('new_fichierLogo', array('label' => 'Logo', 'type' => 'file'));
 		echo $this->Form->input('departement_id');
 		echo $this->Form->input('afficher');
 		echo $this->Form->input('Defi');
@@ -19,12 +28,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Partenaire.partenaire_id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Partenaire.partenaire_id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Partenaires'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Departements'), array('controller' => 'departements', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Departement'), array('controller' => 'departements', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Defis'), array('controller' => 'defis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Defi'), array('controller' => 'defis', 'action' => 'add')); ?> </li>
+		<a href="javascript:history.back()">Retour</a> 
 	</ul>
 </div>
