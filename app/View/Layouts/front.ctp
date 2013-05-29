@@ -8,7 +8,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('front');
-
+		echo $this->Html->css('colorbox');
                 echo $this->fetch('css');
 		echo $this->fetch('meta');
 		echo $this->fetch('script');
@@ -29,10 +29,10 @@
 		</header>
 		<nav>
 			<ul>
-				<?php echo $this->Html->link('<li>news</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index')), array('escape'=>false)) ?>
-				<?php echo $this->Html->link('<li>défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index')), array('escape'=>false)) ?>
+				<?php echo $this->Html->link('<li>news</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index'), true), array('escape'=>false)) ?>
+				<?php echo $this->Html->link('<li>défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index'), true), array('escape'=>false)) ?>
                                 <a><li>galerie</li></a>
-				<?php echo $this->Html->link('<li>partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index')), array('escape'=>false)) ?>
+				<?php echo $this->Html->link('<li>partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index'), true), array('escape'=>false)) ?>
                                 <a><li>contact</li></a>
 			</ul>		
 		</nav>
@@ -57,6 +57,7 @@
 		
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
          <?php echo $this->Html->script('jquery.slides.min'); ?>
+         <?php echo $this->Html->script('jquery.colorbox-min'); ?>
          <?php echo $this->Html->script('front'); ?>
 
 	</body>

@@ -169,6 +169,20 @@ section.accueil h2 {
     border: 1px solid rgb(140, 140, 140);
     padding: 5px;
     margin-top: 20px;
+    cursor:pointer;
+}
+
+a .content:hover {
+    text-decoration: none;
+}
+
+.colorbox:hover {
+    text-decoration: none;
+}
+
+#colorbox {
+    border: 1px solid black;
+    background-color: white;
 }
 /* news */
 .news .title, .defis .title {

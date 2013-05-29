@@ -38,6 +38,7 @@ class ActualitesController extends AppController {
 		}
 		$options = array('conditions' => array('Actualite.' . $this->Actualite->primaryKey => $id));
 		$this->set('actualite', $this->Actualite->find('first', $options));
+                $this->layout = 'ajax';
 	}
 
 /**
