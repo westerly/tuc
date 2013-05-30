@@ -9,7 +9,7 @@ class ActualitesController extends AppController {
 
 	var $paginate = array(
 		'Actualite' => array(
-				'limit' => 20,
+				'limit' => 5,
 				'order' => array(
 						'Actualite.date_creation' => 'Desc'
 						)
