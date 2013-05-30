@@ -62,7 +62,7 @@ echo $this->Session->flash('nok');
 	<br/>
 	<br/>
 	
-	<div class="actions">
+	<div class="actions widebutton">
 		<?php echo $this->Html->link(__('Ajouter un partenaire'), array('controller' => 'partenaires', 'action' => 'add')); ?>
 	</div>
 	
