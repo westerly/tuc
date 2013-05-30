@@ -75,7 +75,7 @@ echo $this->Session->flash('nok');
 	<br/>
 	<br/>
 	
-	<div class="actions">
+	<div class="actions widebutton">
 		<?php echo $this->Html->link(__('Ajouter une photo/vidéo'), array('action' => 'add')); ?>
 	</div>
 </div>
