@@ -6,7 +6,7 @@
     </div>
 <?php 
 
-foreach($defis as $defi) { var_dump($defi);?>
+foreach($defis as $defi) { ?>
     <article>
         <div>
             <h3><?php echo $defi['Defi']['nom'] ?></h3>
