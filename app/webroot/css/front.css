@@ -170,6 +170,19 @@ section.accueil h2 {
     padding: 5px;
     margin-top: 20px;
 }
+
+a .content:hover {
+    text-decoration: none;
+}
+
+.colorbox:hover {
+    text-decoration: none;
+}
+
+#colorbox {
+    border: 1px solid black;
+    background-color: white;
+}
 /* news */
 .news .title, .defis .title {
     color: rgb(150, 150, 150);

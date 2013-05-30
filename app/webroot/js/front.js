@@ -5,4 +5,5 @@ $(function(){
       })
       
       $('.slidesjs-navigation').text('');
+      $('.colorbox').colorbox({width:1024});
   });

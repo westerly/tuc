@@ -108,3 +108,16 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
+
+define("BASE_URL", 'http://'.$_SERVER['SERVER_NAME'].'/');
+
+define("URL_IMG", BASE_URL.'tuc/app/webroot/img/');
+
+define("IMG", APP.'webroot/img/');
+
+
+Configure::write(
+'ACCEPTED_VIDEO_FORMATS',array('.mp4', '.mov')
+);
+
+

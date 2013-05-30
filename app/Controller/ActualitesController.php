@@ -9,7 +9,7 @@ class ActualitesController extends AppController {
 
 	var $paginate = array(
 		'Actualite' => array(
-				'limit' => 20,
+				'limit' => 5,
 				'order' => array(
 						'Actualite.date_creation' => 'Desc'
 						)
@@ -38,6 +38,7 @@ class ActualitesController extends AppController {
 		}
 		$options = array('conditions' => array('Actualite.' . $this->Actualite->primaryKey => $id));
 		$this->set('actualite', $this->Actualite->find('first', $options));
+                $this->layout = 'ajax';
 	}
 
 /**

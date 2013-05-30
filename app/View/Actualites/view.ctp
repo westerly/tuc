@@ -1,5 +1,4 @@
 <?php 
-
-	print_r($actualite);
+	echo $actualite['Actualite']['contenu'];
 
 ?>

@@ -1,7 +1,5 @@
 
 
-<div id="path"><?php echo $this->Html->link($this->Html->image('front/home.png', array('alt' => 'home')).' Accueil', $this->Html->url(array('controller'=>'accueil', 'action'=>'index')), array('escape'=>false)) ?>
-</div>
 <div class="defis">
     <div class="paginator">
 <?php echo $this->paginator->numbers(); ?>
@@ -20,6 +18,7 @@ foreach($defis as $defi) { ?>
         </div>
         
         <div class="content"><?php echo $defi['Defi']['nature']; ?></div>
+        
         
     </article>
     
