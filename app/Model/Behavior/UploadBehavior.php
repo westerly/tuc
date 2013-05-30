@@ -4,6 +4,8 @@ define("MAX_IMG_SIZE", 2 * 1000000);
 define("MAX_VIDEO_SIZE", 50 * 1000000);
 
 
+
+
 class UploadBehavior extends ModelBehavior {
 	
 
@@ -35,9 +37,11 @@ class UploadBehavior extends ModelBehavior {
 				
 			}else{
 				// Test if the user wants to upload a video
-				$extensions = array('.mp4', '.mov');
+				
+				$extensions = Configure::read('ACCEPTED_VIDEO_FORMATS');
+				
 				if(!in_array($extension, $extensions)){
-					$Model->validator()->getField('photo_fichier')->getRule('rulePhotoVideo')->message = 'Vous devez uploader un fichier de type png, jpg, jpeg ou mp4.';
+					$Model->validator()->getField('photo_fichier')->getRule('rulePhotoVideo')->message = 'Vous devez uploader un fichier de type png, jpg, jpeg, mp4 ou mov.';
 					return false;
 				}else{
 					// The users wants to upload a video

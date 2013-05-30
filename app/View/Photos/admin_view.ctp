@@ -17,7 +17,7 @@
 			 			 	
 			 	$extension = strtolower(strrchr($photo["Photo"]['chemin_fichier'], '.'));
 			 				 	
-			 	if(in_array($extension,$this->Upload->getFormatsVideoAccepted())){
+			 	if(in_array($extension,Configure::read('ACCEPTED_VIDEO_FORMATS'))){
 			 		 	echo'
 						<video id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex" controls
 							 preload="auto" width="620" height="264"
