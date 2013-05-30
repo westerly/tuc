@@ -1,8 +1,4 @@
-
-	 
-	<div id="path"><?php echo $this->Html->link($this->Html->image('front/home.png', array('alt' => 'home')).' Accueil', $this->Html->url(array('controller'=>'accueil', 'action'=>'index')), array('escape'=>false)) ?>
-</div>
-			
+		
 			<article class="content-accueil">
 				<h2>Le Projet TUC</h2>
                                 <?php echo $this->Html->image('front/accueil.jpg', array('alt'=>'accueil', 'width'=> 470, 'height'=>350)); ?>
