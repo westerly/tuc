@@ -14,17 +14,15 @@
 		<dt><?php echo __('Photo/Vidéo'); ?></dt>
 		<dd>
 			 <?php  
-			 			 	
-			 	$extension = strtolower(strrchr($photo["Photo"]['chemin_fichier'], '.'));
-			 				 	
-			 	if(in_array($extension,Configure::read('ACCEPTED_VIDEO_FORMATS'))){
-			 		 	echo'
-						<video id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex" controls
-							 preload="auto" width="620" height="264"
-							 data-setup="{}">
-							 <source src="'.URL_IMG.$photo['Photo']['chemin_fichier'].'" type=\'video/mp4\'>
-						</video>';
-			 	}else{
+			 	
+			 	if (!strpos($photo['Photo']['chemin_fichier'],'.')) {
+					// Video
+					echo'
+					<iframe id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex"
+						width="500" height="264"
+						src="http://www.youtube.com/embed/'.$photo['Photo']['chemin_fichier'].'">
+					</iframe>';	
+			 	} else {
 			 		//echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='view' src='".URL_IMG.$photo['Photo']['chemin_fichier']."'/></a>";
 			 		echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
 			 	}

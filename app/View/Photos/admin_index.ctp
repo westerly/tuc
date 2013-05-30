@@ -27,16 +27,13 @@ echo $this->Session->flash('nok');
 		<td>
 		<?php 
 		
-			$extension = strtolower(substr($photo['Photo']['chemin_fichier'],strpos($photo['Photo']['chemin_fichier'],'.')));
-										
-			if(in_array($extension, Configure::read('ACCEPTED_VIDEO_FORMATS'))){	
-			
+			if(!strpos($photo['Photo']['chemin_fichier'],'.')){	
+				// Video
 				echo'
-				<video id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex" controls
-					 preload="auto" width="620" height="264"
-					 data-setup="{}">
-					 <source src="'.URL_IMG.$photo['Photo']['chemin_fichier'].'" type=\'video/mp4\'>
-				</video>';						     
+				<iframe id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex"
+					width="500" height="264"
+					src="http://www.youtube.com/embed/'.$photo['Photo']['chemin_fichier'].'">
+				</iframe>';						     
 				
 			}else{
 				echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('class' => 'index', 'alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
@@ -76,7 +73,10 @@ echo $this->Session->flash('nok');
 	<br/>
 	
 	<div class="actions widebutton">
-		<?php echo $this->Html->link(__('Ajouter une photo/vidéo'), array('action' => 'add')); ?>
+		<?php echo $this->Html->link(__('Ajouter une photo'), array('action' => 'add')); ?>
+	</div>
+	<div class="actions widebutton">
+		<?php echo $this->Html->link(__('Ajouter une vidéo'), array('action' => 'addv')); ?>
 	</div>
 </div>
 

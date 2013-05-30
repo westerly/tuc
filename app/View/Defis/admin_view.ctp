@@ -6,66 +6,6 @@ echo $this->Session->flash('nok');
 
 ?>
 
-
-<?php if(isset($photos)){ ?>
-
-<div class="related">
-	<h3><?php echo __('Photos associées'); ?></h3>
-	<?php if (!empty($defi['Photo'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('chemin_fichier'); ?></th>
-			<th><?php echo "Photo" ?></th>
-			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
-			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($photos as $photo): ?>
-		<tr>
-			<td><?php echo $photo['Photo']['id']; ?></td>
-			<td><?php echo $photo['Photo']['chemin_fichier']; ?></td>
-			    
-			 <td> <?php  echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='index' src='".URL_IMG.$photo['Photo']['chemin_fichier']."' /></a>"; ?> </td>
-			
-			
-			<td><?php if($photo['Photo']['afficher'] == 1){ echo "Oui";}else{echo "Non";} ?>&nbsp;</td>
-			
-			<td><?php echo $this->Html->link($photo['Clan']['nom'], array('controller' => 'clans', 'action' => 'view', $photo['Clan']['id'])); ?></td>
-			<td><?php echo h($photo['Photo']['date_upload']); ?>&nbsp;</td>
-			
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'photos', 'action' => 'view', $photo['Photo']['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'photos', 'action' => 'delete', $photo['Photo']['id']), null, __('Voulez vous vraiment supprimer cette photo?')); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} sur {:pages}, montrant {:current} enregistrements sur un total de {:count}, commence à {:start}, finit à {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('Précédent'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('Suivant') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-
-</div>
-
-<?php } ?>
-
-<br/>
-<br/>
-
-
 <div class="defis view">
 <h2><?php  echo __('Défi'); ?></h2>
 	<dl>
@@ -163,6 +103,76 @@ echo $this->Session->flash('nok');
 </div>
 
 
+<?php if(isset($photos)){ ?>
+
+<div class="related">
+	<h3><?php echo __('Photos associées'); ?></h3>
+	<?php if (!empty($defi['Photo'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('chemin_fichier'); ?></th>
+			<th><?php echo "Photo" ?></th>
+			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
+			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
+			<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($photos as $photo): ?>
+		<tr>
+			<td><?php echo $photo['Photo']['id']; ?></td>
+			<td><?php echo $photo['Photo']['chemin_fichier']; ?></td>
+			    
+			 <td> <?php
+			 	
+			 	if (!strpos($photo['Photo']['chemin_fichier'],'.')) {
+					// Video
+					echo'
+					<iframe id="my_video_'.$photo['Photo']['id'].'" class="video-js vjs-default-skin videoIndex"
+						width="500" height="264"
+						src="http://www.youtube.com/embed/'.$photo['Photo']['chemin_fichier'].'">
+					</iframe>';	
+			 	} else {
+			 		//echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='view' src='".URL_IMG.$photo['Photo']['chemin_fichier']."'/></a>";
+			 		echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
+			 	}
+				?> </td>
+			
+			
+			<td><?php if($photo['Photo']['afficher'] == 1){ echo "Oui";}else{echo "Non";} ?>&nbsp;</td>
+			
+			<td><?php echo $this->Html->link($photo['Clan']['nom'], array('controller' => 'clans', 'action' => 'view', $photo['Clan']['id'])); ?></td>
+			<td><?php echo h($photo['Photo']['date_upload']); ?>&nbsp;</td>
+			
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'photos', 'action' => 'view', $photo['Photo']['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'photos', 'action' => 'delete', $photo['Photo']['id']), null, __('Voulez vous vraiment supprimer cette photo/vidéo?')); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} sur {:pages}, montrant {:current} enregistrements sur un total de {:count}, commence à {:start}, finit à {:end}')
+	));
+	?>	</p>
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('Précédent'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('Suivant') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+
+</div>
+
+<?php } ?>
+
+<br/>
+<br/>
 
 <div class="related">
 <br/>
