@@ -268,25 +268,25 @@ public function admin_addV() {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		
-		if (!strpos($photo['Photo']['chemin_fichier'],'.')) {
+		$chemin_fichier = $this->Photo->field('chemin_fichier', array('id' => $id));
+		
+		if (!strpos($chemin_fichier,'.')) {
 			// Video
 			if ($this->Photo->delete()) {
 				$this->Session->setFlash('Vidéo supprimée avec succès.', 'default', array(), 'ok');
 			} else {
 				$this->Session->setFlash('La vidéo n\'a pas été supprimée.', 'default', array(), 'nok');
 			}
-			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
 		} else {
+			// Photo
 			$file = new File(IMG.$this->Photo->field('chemin_fichier', array('id' => $id)));
-			
-			if ($file->delete() && $this->Photo->delete()) {
+			$file->delete();
+			if ($this->Photo->delete()) {
 				$this->Session->setFlash('Photo supprimée avec succès.', 'default', array(), 'ok');
 			} else {
 				$this->Session->setFlash('La photo n\'a pas été supprimée.', 'default', array(), 'nok');
 			}
-			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
 		}
-		
-		
+		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
 	}
 }
