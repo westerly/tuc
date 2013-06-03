@@ -129,13 +129,7 @@ class PhotosController extends AppController {
 			
 			$extension = strtolower(strrchr($this->request->data["Photo"]["photo_fichier"]['name'], '.'));
 			
-			if(in_array($extension, Configure::read('ACCEPTED_VIDEO_FORMATS'))){
-				$dossier = "defis/videos/";
-			}else{
-				$dossier = "defis/photos/";
-			}
-			
-			print $dossier;
+			$dossier = "defis/photos/";
 			
 			// Génration d'un nombre automatique pour le nom du fichier
 			$fichier = rand().$extension;
@@ -147,7 +141,7 @@ class PhotosController extends AppController {
 					//Si on a pu save la photo on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
 					if(move_uploaded_file($infosUpload["tmp_name"], IMG.$dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
 					{
-						$this->Session->setFlash('Votre photo/vidéo a été enregistrée avec succès.', 'default', array(), 'ok');
+						$this->Session->setFlash('Votre photo a été enregistrée avec succès.', 'default', array(), 'ok');
 						$this->redirect(array('action' => 'index'));
 					}
 					else //Sinon (la fonction renvoie FALSE).
@@ -158,7 +152,7 @@ class PhotosController extends AppController {
 					}
 			
 			} else {
-				$this->Session->setFlash('La photo/vidéo ne peut être enregistrée.', 'default', array(), 'nok');
+				$this->Session->setFlash('La photo ne peut être enregistrée.', 'default', array(), 'nok');
 			}
 			
 		}
@@ -176,6 +170,60 @@ class PhotosController extends AppController {
 		$defis = $this->Photo->Defi->find('list');
 		$this->set(compact('clans', 'defis'));
 	}
+
+/**
+ * admin_addV method
+ *
+ * @return void
+ */
+public function admin_addV() {
+		
+		if ($this->request->is('post')) {
+			
+			set_time_limit("3600");
+			ini_set("max_execution_time", "3600");
+			//ini_set("upload_max_filesize", "200M");
+						
+			$this->Photo->create();
+			
+			// Sauvegarde des infos pour l'upload
+			$infosUpload = $this->request->data["Photo"]["video_url"];
+			
+			$urlOk = false;
+			$match;
+			// URL de la forme "[...]www.youtube.[...]v=[token][...]"
+			if ($urlOk = preg_match("#www\.youtube\..*v=([A-Za-z0-9]+)#",$infosUpload,$match)) {
+				$this->request->data["Photo"]["chemin_fichier"] = $match[1];
+			}
+			
+			if ($urlOk) {
+				if (!empty($match[1]) && $this->Photo->save($this->request->data,false)) {
+					// On enregistre le token youtube
+					$this->Session->setFlash('Votre photo a été enregistrée avec succès.', 'default', array(), 'ok');
+					$this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash('La vidéo ne peut être enregistrée.', 'default', array(), 'nok');
+				}
+			} else {
+				$this->Session->setFlash('URL non reconnue', 'default', array(), 'nok');
+			}
+			
+		}
+		
+		$user = $this->Auth->user();
+		
+		// Connexion de type Admin
+		if(!isset($user["clan_id"])){
+			$clans = $this->Photo->Clan->find('list');
+		}else{
+			$options = array('conditions' => array('Clan.' . $this->Photo->Clan->primaryKey => $user["clan_id"]));
+			$clans = $this->Photo->Clan->find("list", $options);
+		}
+		
+		$defis = $this->Photo->Defi->find('list');
+		$this->set(compact('clans', 'defis'));
+	}
+
 
 /**
  * admin_edit method
@@ -220,17 +268,25 @@ class PhotosController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		
-		$file = new File(IMG.$this->Photo->field('chemin_fichier', array('id' => $id)));
+		$chemin_fichier = $this->Photo->field('chemin_fichier', array('id' => $id));
 		
-		if ($file->delete() && $this->Photo->delete()) {
-			
-			$this->Session->setFlash('Photo/Vidéo supprimée avec succès.', 'default', array(), 'ok');
-			//$this->redirect(array('action' => 'index'));
-			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+		if (!strpos($chemin_fichier,'.')) {
+			// Video
+			if ($this->Photo->delete()) {
+				$this->Session->setFlash('Vidéo supprimée avec succès.', 'default', array(), 'ok');
+			} else {
+				$this->Session->setFlash('La vidéo n\'a pas été supprimée.', 'default', array(), 'nok');
+			}
+		} else {
+			// Photo
+			$file = new File(IMG.$this->Photo->field('chemin_fichier', array('id' => $id)));
+			$file->delete();
+			if ($this->Photo->delete()) {
+				$this->Session->setFlash('Photo supprimée avec succès.', 'default', array(), 'ok');
+			} else {
+				$this->Session->setFlash('La photo n\'a pas été supprimée.', 'default', array(), 'nok');
+			}
 		}
-		$this->Session->setFlash('La photo/vidéo n\'a pas été supprimée.', 'default', array(), 'nok');
-		//$this->redirect(array('action' => 'index'));
 		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
-		
 	}
 }
