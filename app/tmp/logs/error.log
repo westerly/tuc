@@ -8338,3 +8338,133 @@ Stack Trace:
 #3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DefisController), Object(CakeRequest), Object(CakeResponse))
 #4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-05-30 18:01:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/img/ekDbjTQmls4
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-31 15:23:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/img/defis/photos/30600.jpeg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-31 15:27:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/img/defis/photos/1313.jpeg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-31 15:31:54 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Photos\admin_delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Photos\\admin_delete.ctp',
+)
+Request URL: /tuc/admin/photos/delete/125
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-31 15:32:25 Error: [NotFoundException] La photo/vidéo n'existe pas.
+Request URL: /tuc/admin/photos/delete/125
+Stack Trace:
+#0 [internal function]: PhotosController->admin_delete('125')
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-31 15:32:51 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Photos\admin_delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Photos\\admin_delete.ctp',
+)
+Request URL: /tuc/admin/photos/delete/126
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-31 15:40:07 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Photos\admin_delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Photos\\admin_delete.ctp',
+)
+Request URL: /tuc/admin/photos/delete/127
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-31 15:46:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'get' at line 1
+Request URL: /tuc/admin/photos/delete/128
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('get', Array)
+#2 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('get', Array, Array)
+#3 C:\wamp\www\tuc\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('get', Array, Array)
+#4 C:\wamp\www\tuc\lib\Cake\Model\Model.php(800): DboSource->query('get', Array, Object(Photo))
+#5 C:\wamp\www\tuc\app\Controller\PhotosController.php(271): Model->__call('get', Array)
+#6 C:\wamp\www\tuc\app\Controller\PhotosController.php(271): Photo->get('chemin_fichier')
+#7 [internal function]: PhotosController->admin_delete('128')
+#8 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PhotosController), Array)
+#9 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-05-31 15:47:38 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Photos\admin_delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Photos\\admin_delete.ctp',
+)
+Request URL: /tuc/admin/photos/delete/128
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-31 15:52:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/img/defis/photos/14307.jpeg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-31 15:52:06 Error: [MissingViewException] View file "C:\wamp\www\tuc\app\View\Photos\admin_delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\tuc\\app\\View\\Photos\\admin_delete.ctp',
+)
+Request URL: /tuc/admin/photos/delete/129
+Stack Trace:
+#0 C:\wamp\www\tuc\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\tuc\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\tuc\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-31 15:52:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /tuc/img/defis/photos/597.jpeg
+Stack Trace:
+#0 C:\wamp\www\tuc\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
