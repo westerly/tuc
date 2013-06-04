@@ -5,9 +5,19 @@ echo $this->Session->flash('nok');
 ?>
 
 
+<div class="liste-partenaires">
 <?php
 
-	print_r($partenaires);
+	foreach($partenaires as $part) {
+           ?>
+    <div class="partenaires">
+        <?php echo $this->Html->image($part['Partenaire']['fichierLogo'], array('width'=>'250', 'height'=>'250','pop'=>$this->Html->url(array('controller'=>'partenaires', 'action'=>'view', $part['Partenaire']['partenaire_id']), true))) ?>
+    </div>
+    
+            <?php
+        }
 
 
 ?>
+
+</div>

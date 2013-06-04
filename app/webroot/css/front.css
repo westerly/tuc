@@ -24,12 +24,14 @@ a:hover {
 
 body  { 
     width:1024px;
-    border:3px solid black;
+    border:1px solid black;
     margin: auto;
     margin-bottom: 50px;
     border-top: 0px;
     font-family: "Myriad Pro";
     font-size: 14px;
+    -webkit-box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -231,4 +233,74 @@ a .content:hover {
 .slidesjs-next {
     left: 914px;
     top: -580px;
+}
+
+/* carrousel defis */
+.vote-defis {
+    text-align: center;
+}
+
+.vote-defis span {
+    margin-right: 10px;
+}
+
+.carroussel-defis {
+	padding: 15px 0 15px 40px;
+	position: relative;
+}
+.carroussel-defis img {
+	border: 1px solid #ccc;
+	background-color: white;
+	padding: 9px;
+	margin: 7px;
+	display: block;
+	float: left;
+}
+a.prev, a.next {
+	background: url(../img/front/miscellaneous_sprite.png) no-repeat transparent;
+	width: 45px;
+	height: 50px;
+	display: block;
+	position: absolute;
+	top: 85px;
+}
+a.prev {			left: -22px;
+                                background-position: 0 0; }
+a.prev:hover {              background-position: 0 -50px; }
+a.next {			right: -22px;
+					background-position: -50px 0; }
+a.next:hover {		background-position: -50px -50px; }
+
+a.prev span, a.next span {
+	display: none;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+/*partenaires*/
+
+.liste-partenaires {
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.partenaires {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}
+
+.partenaires img {
+    padding: 20px;
+}
+
+/*login*/
+
+.login-admin {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

@@ -20,6 +20,7 @@ class PartenairesController extends AppController {
 
 	public function index() {
 		$this->Partenaire->recursive = 0;
+                $this->layout = 'front';
 		$this->set('partenaires', $this->paginate('Partenaire', array('Partenaire.afficher' => 1)));
 	}
 	
@@ -29,7 +30,9 @@ class PartenairesController extends AppController {
 		}
 		$options = array('conditions' => array('Partenaire.' . $this->Partenaire->primaryKey => $id));
 		$this->set('partenaire', $this->Partenaire->find('first', $options));
-	}
+                $this->layout = 'ajax';
+                
+        }
 	
 	/**
 		Permet l'ajout d'un partenaire dans la partie publique
