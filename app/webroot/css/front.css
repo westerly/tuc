@@ -80,6 +80,25 @@ nav li {
 }
 
 
+.titre-mission span:nth-child(5n) {
+    color:#82c2f9;
+}
+
+.titre-mission span:nth-child(5n+1) {
+    color:#90be3a;
+}
+
+.titre-mission span:nth-child(5n+2) {
+    color:#da005e;
+}
+
+.titre-mission span:nth-child(5n+3) {
+    color:#a11f20;
+}
+
+.titre-mission span:nth-child(5n+4) {
+    color:#de9535;
+}
 
 nav a:nth-child(1) li {
     border-left: 0px;
