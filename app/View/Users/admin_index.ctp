@@ -13,7 +13,6 @@ echo $this->Session->flash('nok');
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('login'); ?></th>
-			<th><?php echo $this->Paginator->sort('password'); ?></th>
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -21,7 +20,6 @@ echo $this->Session->flash('nok');
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['login']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($user['Clan']['nom'], array('controller' => 'clans', 'action' => 'view', $user['Clan']['id'])); ?>
 		</td>
