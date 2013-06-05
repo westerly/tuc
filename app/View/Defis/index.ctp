@@ -34,13 +34,19 @@ foreach($defis as $defi) { ?>
             <h4><?php echo $nom ?></h4>
             <div class="carroussel-defis" id="car_<?php echo $i ?>">
                 <div>
-                <?php
-                    foreach($clan as $photo) {                
-                ?>
-                    <?php echo $this->Html->image($clan[0], array('alt' => 'defis', 'width' => '200', 'height'=>'150')) ?>
-                
-                <?php     }
-                 
+		<?php
+		foreach($clan as $photo) {
+			if(!strpos($photo,'.')) {
+				echo '
+				<iframe class="video-js vjs-default-skin videoIndex"
+					width="220" height="170" alt="defis"
+					src="http://www.youtube.com/embed/'.$photo.'">
+				</iframe>';
+			
+			} else {
+				echo $this->Html->image($photo, array('alt' => 'defis', 'width' => '200', 'height'=>'150'));
+			}
+		}
                 ?>
                 
                 </div>
