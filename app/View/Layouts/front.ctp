@@ -9,7 +9,7 @@
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('front');
 		echo $this->Html->css('colorbox');
-                echo $this->fetch('css');
+            
 		echo $this->fetch('meta');
 		echo $this->fetch('script');
 	?>
@@ -29,11 +29,11 @@
 		</header>
 		<nav>
 			<ul>
-				<?php echo $this->Html->link('<li>news</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index'), true), array('escape'=>false)) ?>
-				<?php echo $this->Html->link('<li>défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index'), true), array('escape'=>false)) ?>
-                                <a><li>galerie</li></a>
-				<?php echo $this->Html->link('<li>partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index'), true), array('escape'=>false)) ?>
-                                <a><li>contact</li></a>
+				<?php echo $this->Html->link('<li>News</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index'), true), array('escape'=>false)) ?>
+				<?php echo $this->Html->link('<li>Défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index'), true), array('escape'=>false)) ?>
+                                <a><li>Galerie</li></a>
+				<?php echo $this->Html->link('<li>Partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index'), true), array('escape'=>false)) ?>
+                                <a><li>Contact</li></a>
 			</ul>		
 		</nav>
 
@@ -52,8 +52,8 @@
                         <tr>
                             <td><?php echo $this->Html->image('front/utc.jpg', array('alt' => 'utc', 'height'=>50, 'width'=>150, 'id'=>'utc')); ?></td>
                             <td><?php echo $this->Html->image('front/logo.png', array('alt' => 'utc', 'height'=>50, 'width'=>50, 'id'=>'tuc')); ?></td>
-                            <td style="font-size: 2em;">Tous unis pour Compiègne</td>
-                            <td><?php echo  $this->Html->link('Contact', 'mailto:integ@assos.utc.fr')?></td>             
+                            <td style="font-size: 2em;" class="titre-mission"><span>T</span><span>o</span><span>u</span><span>s</span> <span>U</span><span>n</span><span>i</span><span>s</span> <span>p</span><span>o</span><span>u</span><span>r</span> <span>C</span><span>o</span><span>m</span><span>p</span><span>i</span><span>è</span><span>g</span><span>n</span><span>e</span><span>!</span></td>
+                            <td><?php echo  $this->Html->link('Contact', 'mailto:tuc@assos.utc.fr')?></td>             
                             <td><?php echo $this->Html->image('front/facebook.jpg', array('alt' => 'facebook', 'height'=>65, 'width'=>65, 'id'=>'facebook')); ?></td>
                         </tr>
                     </table>
@@ -62,6 +62,8 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
          <?php echo $this->Html->script('jquery.slides.min'); ?>
          <?php echo $this->Html->script('jquery.colorbox-min'); ?>
+         <?php echo $this->Html->script('jquery.carouFredSel-6.2.1-packed'); ?>
+
          <?php echo $this->Html->script('front'); ?>
 
 	</body>

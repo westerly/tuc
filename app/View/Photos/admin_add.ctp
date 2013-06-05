@@ -11,11 +11,11 @@ echo $this->Form->create('Photo', array('type' => 'file'));
 
 	echo"<fieldset>";
 		echo "<legend>";
-		 echo __('Ajouter une photo/vidéo');
+		 echo __('Ajouter une photo');
 		echo "</legend>";
 
 		//echo $this->Form->input('chemin_fichier');
-		echo $this->Form->input('photo_fichier', array('label' => 'Uploader une photo/vidéo', 'type' => 'file'));
+		echo $this->Form->input('photo_fichier', array('label' => 'Uploader une photo (PNG, JPG, JPEG)', 'type' => 'file'));
 		echo $this->Form->input('afficher');
 		echo $this->Form->input('clan_id');
 		echo $this->Form->input('defi_id');
@@ -33,7 +33,7 @@ echo'<div class="actions">';
 		echo"</h3>";
 		
 		echo"<ul>";
-			echo '<a href="javascript:history.back()">Retour</a>';
+			echo '<a href="../photos">Retour</a>';
 		echo "</ul>";
 echo"</div>";
 

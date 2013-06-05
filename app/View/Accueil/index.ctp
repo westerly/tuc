@@ -1,22 +1,45 @@
 		
 			<article class="content-accueil">
-				<h2>Le Projet TUC</h2>
-                                <?php echo $this->Html->image('front/accueil.jpg', array('alt'=>'accueil', 'width'=> 470, 'height'=>350)); ?>
+				<h2>Quoi ?</h2>
+                                <?php echo $this->Html->image('front/leprojet.png', array('alt'=>'accueil', 'width'=> 640, 'height'=>327)); ?>
                                 
                                 <p>
-                                    Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être sûr qu'il n'y a rien d'embarrassant caché dans le texte. Tous les générateurs de Lorem Ipsum sur Internet tendent à reproduire le même extrait sans fin, ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum. Iil utilise un dictionnaire de plus de 200 mots latins, en combinaison de plusieurs structures de phrases, pour générer un Lorem Ipsum irréprochable. Le Lorem Ipsum ainsi obtenu ne contient aucune répétition, ni ne contient des mots farfelus, ou des touches d'humour.
-				</p>
+                                    L’initiative consiste à mobiliser tous les nouveaux étudiants
+                                    arrivant à Compiègne (de l’UTC et de l’ESCOM…), soit près de
+                                    800 nouveaux étudiants, sur différents chantiers au bénéfice de
+                                    la Cité pendant une journée lors de la rentrée universitaire et
+                                    ainsi transformer la ville en une grande fourmilière débordante
+                                    de générosité   
+                                </p>
+                                
+                                <h2 style="text-align: left;">Qui ? </h2>
+                                <p>
+                                    Cette initiative, lancée par les étudiants de l’Université de
+                                    Technologie de Compiègne dans le cadre du quarantième
+                                    anniversaire de l’établissement, est élaborée en partenariat
+                                    avec la ville de Compiègne et l‘Agglomération de la Région de
+                                    Compiègne. Elle a suscité immédiatement l’adhésion des
+                                    étudiants de l’ESCOM et le soutien enthousiaste et l’implication
+                                    opérationnelle de partenaires économiques, illustrant ainsi avec
+                                    cette initiative, leur responsabilité Sociétale et Environnementale.
+                                </p>
+                                
+                                <h2>Quand ? </h2>
+                                <p>
+                                    Cette initiative dont la première édition aura donc lieu le
+                                    <span style="font-weight:bold;">jeudi 5 septembre 2013</span> a vocation à être réitérée tous les ans, à
+                                    se décliner dans d’autres établissements de Compiègne et
+                                    pourquoi pas… à susciter des initiatives similaires dans d’autres
+                                    villes.
+                                    
+                                </p>
 				
 				
 			
 			</article>
 			
 			
-			<article class="liste-defis">
-				<h2>Dernier Défi</h2>
-				<h3>Rammasser les feuilles</h3>
-				<p>Proposé par <span style="font-weight: bold">Jean - Claude</span>
-				<p class="ville">A <span style="font-weight: bold">Compiègne</span></p>
+			<article class="liste-defis" style="margin-top: 70px">
 				
 				<div id="slider">
 				
