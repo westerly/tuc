@@ -6,6 +6,8 @@
     </div>
 <?php 
 
+
+
 foreach($defis as $defi) { ?>
     <article>
         <div>

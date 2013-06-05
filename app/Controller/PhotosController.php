@@ -32,8 +32,8 @@ class PhotosController extends AppController {
 		}
 		
 		
-		//Le propriétaire de la photo peut la supprimer
-		if (in_array($this->action, array('admin_delete'))) {
+		//Le propriétaire de la photo peut la supprimer ou l'afficher
+		if (in_array($this->action, array('admin_delete', 'admin_afficher'))) {
 			$photoId = $this->request->params['pass'][0];
 
 			if (isset($photoId) && $this->Photo->field('clan_id', array('id' => $photoId)) == $user["clan_id"]) {
@@ -137,10 +137,12 @@ class PhotosController extends AppController {
 			
 			print $dossier;
 			
-			// Génration d'un nombre automatique pour le nom du fichier
+			// Génération d'un nombre automatique pour le nom du fichier
 			$fichier = rand().$extension;
 			
 			$this->request->data["Photo"]["chemin_fichier"] = $dossier.$fichier;
+			
+			$this->request->data["Photo"]["date_upload"] = date("Y-m-d H:i:s");
 			
 			if ($this->Photo->save($this->request->data)) {
 			
@@ -232,5 +234,43 @@ class PhotosController extends AppController {
 		//$this->redirect(array('action' => 'index'));
 		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
 		
+	}
+	
+	public function admin_afficher($id = null, $afficher) {
+	
+		$user = $this->Auth->user();
+		$this->Photo->id = $id;
+		if (!$this->Photo->exists()) {
+			throw new NotFoundException(__('Le média n\'existe pas.'));
+		}
+		
+		$this->Photo->read(null, $id);
+		
+		
+		
+		$query = "UPDATE form_photos SET afficher = ";
+		if($afficher == true){
+			$this->Photo->set(array(
+				'afficher' => '1'
+		));
+		}else{
+			$this->Photo->set(array(
+				'afficher' => '0'
+		));
+		}
+		$query .= " WHERE id = ".$id;
+						
+		if ($this->Photo->save()) {
+				
+			if($afficher){
+				$this->Session->setFlash('Le média est maintenant affiché dans la partie publique du site.', 'default', array(), 'ok');
+			}else{
+				$this->Session->setFlash('Le média n\'est plus affiché dans la partie publique du site', 'default', array(), 'ok');
+			}
+			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+		}
+		$this->Session->setFlash('Un problème est survenu, l\'action n\'a pas été effectuée.', 'default', array(), 'nok');
+		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+	
 	}
 }

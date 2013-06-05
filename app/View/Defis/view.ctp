@@ -1,6 +1,6 @@
 <?php
 
- print_r($defi);
+ debug($defi);
 
 
 ?>

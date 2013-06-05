@@ -49,7 +49,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	
 		<div id="header">
 			<?php
-			if($adminCo){
+			if($adminCo)
+			{
 					echo'<div class="menu">';
 							
 							echo "<ul>";
@@ -63,13 +64,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 							
 					echo"</div>";
 			}else{
-				echo'<div class="menu">';
-							
-							echo "<ul>";
-								echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
-							echo "</ul>";
-							
-				echo"</div>";
+			
+				if($clanCo)
+				{
+					echo'<div class="menu">';
+								
+								echo "<ul>";
+									echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
+								echo "</ul>";
+								
+					echo"</div>";
+				}
 			}
 		?>
 			

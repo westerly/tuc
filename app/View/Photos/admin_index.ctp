@@ -54,6 +54,15 @@ echo $this->Session->flash('nok');
 		<td class="actions">
 			<?php echo $this->Html->link(__('Détails'), array('action' => 'view', $photo['Photo']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Supprimer'), array('action' => 'delete', $photo['Photo']['id']), null, __('Voulez vous vraiment supprimer cette photo/vidéo?')); ?>
+			<?php 
+				if($photo['Photo']['afficher']==1){
+					echo $this->Form->postLink(__('Ne plus afficher'), array('action' => 'afficher', $photo['Photo']['id'], false), null, __('Supprimer l\'affichage du média dans la partie publique du site?')); 
+				}else{
+					echo $this->Form->postLink(__('Afficher'), array('action' => 'afficher', $photo['Photo']['id'], true), null, __('Afficher ce média dans la partie publique du site?')); 
+				}
+			
+			?>
+			
 		</td>
 	</tr>
 <?php endforeach; ?>
