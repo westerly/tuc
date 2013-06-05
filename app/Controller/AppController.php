@@ -80,11 +80,19 @@ class AppController extends Controller {
 		$user = $this->Auth->user();
 		
 		// Set de la variable adminCo pour savoir si un admin est co et en en fonction afficher le menu qui va bien dans le layout admin
-		if(!isset($user['clan_id'])){
+		if(isset($user['id']) && !isset($user['clan_id'])){
 			$this->set('adminCo', true);
+			$this->set('clanCo', false);
 		}else{
-			$this->set('adminCo', false);
+			if(isset($user['id'])){
+				$this->set('adminCo', false);
+				$this->set('clanCo', true);
+			}else{
+				$this->set('adminCo', false);
+				$this->set('clanCo', false);
+			}
 		}
+		
 		
     }
 
