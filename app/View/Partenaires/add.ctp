@@ -13,6 +13,7 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
 	
 		echo $this->Form->input('partenaire', array('label' => 'Nom'));
 		echo $this->Form->input('adresseWeb', array('label' => 'Site Web'));
+		echo $this->Form->input('email', array('label' => 'Email'));
 		echo $this->Form->input('adresse', array('label' => 'Adresse'));
 		echo $this->Form->input('cp', array('label' => 'Code postal'));
 		echo $this->Form->input('departement_id', array('label' => 'Département'));

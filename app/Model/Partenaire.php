@@ -70,11 +70,20 @@ class Partenaire extends AppModel {
 				'rule' => array('fileSize', '<=', '2MB'),
 				'message' => 'La taille de l\'image ne doit pas dépasser 2MB.',
 				'last' => true
-			),
-// 			'rule3' => array(
-// 				'rule'=> array('isRightsOnFolderDestination','test/ezfh/'),
-// 				'message'    => 'Il semble il y avoir un problème de droit d\'accès sur un dossier du serveur, nous ne pouvons pas upload votre logo.',
-// 			)
+			)
+		),
+		'email' => array(
+				'rule1' => array(
+						'rule' => array('maxLength', 100),
+						'last'    => false, // Permet d'afficher à la fois le message d'erreur associé à rule1 et à rule2 si rule1 et rule2 échouent
+						'required' => false, // A renseigner sinon par défault le champ devient obligatoire dès qu'on applique une règle dessus...
+						'allowEmpty' => true, // A renseigner sinon par défault le champ devient obligatoire dès qu'on applique une règle dessus...
+						'message'    => 'L\'adresse email ne doit pas dépasser 100 caractères.'
+				),
+				'email' => array(
+		        'rule'    => array('email', false),
+		        'message' => 'L\adresse email n\'est pas valide.'
+		    )
 		)
     );
 	
