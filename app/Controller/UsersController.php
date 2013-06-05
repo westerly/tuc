@@ -38,6 +38,7 @@ class UsersController extends AppController {
 				$this->Session->setFlash('Login ou mot de passe invalide, réessayer.', 'default', array(), 'nok');
 			}
 		}
+                $this->layout = 'front';
 	}
 	
 	function admin_logout(){

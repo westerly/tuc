@@ -5,10 +5,11 @@ echo $this->Session->flash('nok');
 ?>
 
 
+<div class="login-admin">
 <?php
 	
 	echo $this->Form->create('User',array('url'=>array('action'=>'login')));
-	
+        
 	echo $this->Form->input('login');
 	echo $this->Form->input('password');
 	
@@ -19,5 +20,5 @@ echo $this->Session->flash('nok');
 		echo $errorMessage;
 	}
 ?>	
-	
+</div>	
 

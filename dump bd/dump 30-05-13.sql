@@ -1,16 +1,15 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 21 Mai 2013 à 13:51
+-- Généré le: Jeu 30 Mai 2013 à 15:32
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 set foreign_key_checks = 0;
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -34,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `form_actualites` (
   `contenu` longtext NOT NULL,
   `last_updated` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Contenu de la table `form_actualites`
@@ -46,15 +45,14 @@ INSERT INTO `form_actualites` (`id`, `date_creation`, `titre`, `contenu`, `last_
 (6, '2013-04-24 00:00:00', 'erfref fefeff', 'efefef fefefef fefef', NULL),
 (7, '2013-10-24 00:00:00', 'erfref fefeff', 'efefef fefefef fefef', NULL),
 (8, '2013-10-24 00:00:00', 'erfref fefeff', 'efefef fefefef fefef', NULL),
-(9, '2013-10-24 00:00:00', 'erfref fefeff', 'efefef fefefef fefef', NULL),
-(10, '2013-10-24 00:00:00', 'erfref fefeff', 'efefef fefefef fefef', NULL),
 (11, '2013-10-24 00:00:00', 'erfref fefeff', 'efefef fefefef fefef', NULL),
-(12, '2013-04-22 16:27:00', 'Nouveau titre de news', 'zifheifhf zojzeffj\r\ndzoddd dz dzdzdkd dzdzdzkd ', NULL),
-(13, '2030-04-22 16:33:00', 'zeeIHJIÃ–ZDFHIDFHIUHF', 'zfiehjfekijeiofjeiof', NULL),
-(14, '2030-04-22 16:33:00', 'zeeIHJIÃ–ZDFHIDFHIUHF', 'zfiehjfekijeiofjeiof', NULL),
+(13, '2030-04-22 16:33:00', 'zeeIHJIÃ–ZDFHIDFHIUHF', 'zfiehjfekijeiofjeiof fdhefuhefhfe"feff \r\n\r\nzaduhfhihfeihf\r\n\r\n\r\nazjizefjefifejfeoifj fjzeoifjeifjefjeofjeofeofjeof  fzefjejfoezfjefoejf\r\n\r\niezfeifejfjfjezfejfjezofp fzejfejfzjfjoefjefpeozjfefzjefjopoe', '2013-05-24 08:15:20'),
+(14, '2030-04-22 16:33:00', 'zeeIHJIÃ–ZDFHIDFHIUHF', 'zfiehjfekijeiofjeiof', '2013-05-24 08:17:04'),
 (15, '2013-05-02 00:00:00', 'éééééééééé&eacute;', 'ééééééééé&eacute;', NULL),
 (16, '2013-05-25 00:00:00', 'ééééééé', 'ééééééé', NULL),
-(17, '2013-05-03 11:15:00', '', '', '2013-05-03 11:15:00');
+(17, '2013-05-03 11:15:00', '', '', '2013-05-03 11:15:00'),
+(18, '2013-05-24 08:22:36', 'Test date', 'fdejfeiùofjeifj fejeifjezfjeofefeof f jze*pfefjeofjefzje\r\nergrjg*jgorjgr  gregkrpogkrgde  Zfjzeofjeofjeojfefj\r\n\r\nffefzfjoejfoefjeofjeojfoefjoefjoefjeofjeofjefjoefjeofjejf\r\nfpekfpekfz^fek fzpefkepfkepfkepfkepfkefkepfkekpfefkzf pfkz Fefzkefkepfekf\r\nfeozfjepofj*zjf fejozjfeopfjeopfjeofjeofjefj', '2013-05-24 08:30:27'),
+(20, '2013-05-27 18:19:54', 'ezfefef', 'efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', '2013-05-27 18:19:54');
 
 -- --------------------------------------------------------
 
@@ -126,18 +124,16 @@ CREATE TABLE IF NOT EXISTS `form_defis` (
   PRIMARY KEY (`id`),
   KEY `localisation_id` (`localisation_id`),
   KEY `horaire` (`horaire`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Contenu de la table `form_defis`
 --
 
 INSERT INTO `form_defis` (`id`, `nom`, `demandeur`, `horaire`, `ip_demandeur`, `nature`, `localisation_id`, `nbr_etu`, `principe_orga`, `orga_equipe_projet`, `precautions`, `resultats`, `valo_citoyenne`, `valo_media`, `etapes`, `commentaires`, `date_soumission`, `afficher`) VALUES
-(19, 'Le défi Test', 'Hugo Rodde', 2, '195.83.155.55', 'Simple', 12, 123, '', '', '', '', '', '', '', '', '2013-04-09 19:09:00', 1),
-(20, 'tests', 'efefef', 2, '', '', 12, 0, '', '', '', '', '', '', '', '', '2013-05-02 00:00:00', 0),
-(22, 'Defis drapeau', 'Asso drapeau', 7, '', '', 13, 111, '', '', '', '', '', '', '', '', '2013-05-04 16:00:00', 0),
+(22, 'Defis drapeau', 'Asso drapeau', 7, '', '', 13, 111, '', '', '', '', '', '', '', '', '2013-05-04 16:00:00', 1),
 (23, 'Defis voiture', 'Ferrari', 5, '', '', 12, 10, '', '', '', '', '', '', '', '', '2013-05-04 16:00:00', 0),
-(24, 'Test', 'Test', 4, '', '', 12, 3, '', '', '', '', '', '', '', '', '2013-05-04 16:01:00', 0);
+(25, 'Défi piscine', 'Errric', 6, '', 'Night club', 13, 2500, 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', 'Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.\r\n\r\nCumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.\r\n\r\nHaec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.', '2013-05-24 08:35:00', 1);
 
 -- --------------------------------------------------------
 
@@ -157,10 +153,7 @@ CREATE TABLE IF NOT EXISTS `form_defis_associations` (
 --
 
 INSERT INTO `form_defis_associations` (`defi_id`, `association_id`) VALUES
-(19, 17),
-(19, 18),
-(19, 19),
-(19, 20);
+(25, 18);
 
 -- --------------------------------------------------------
 
@@ -177,14 +170,14 @@ CREATE TABLE IF NOT EXISTS `form_defis_clans` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `defi_clan_id` (`defi_id`,`clan_id`),
   KEY `clan_id` (`clan_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `form_defis_clans`
 --
 
 INSERT INTO `form_defis_clans` (`id`, `defi_id`, `clan_id`, `nbVotesPour`, `nbVotesContre`) VALUES
-(3, 19, 1, NULL, NULL);
+(4, 25, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -204,8 +197,7 @@ CREATE TABLE IF NOT EXISTS `form_defis_entites` (
 --
 
 INSERT INTO `form_defis_entites` (`defi_id`, `entite_id`) VALUES
-(19, 31),
-(19, 32);
+(25, 31);
 
 -- --------------------------------------------------------
 
@@ -225,10 +217,10 @@ CREATE TABLE IF NOT EXISTS `form_defis_materiels` (
 --
 
 INSERT INTO `form_defis_materiels` (`defi_id`, `materiel_id`) VALUES
-(19, 22),
-(19, 23),
-(19, 24),
-(19, 25);
+(22, 24),
+(25, 24),
+(22, 25),
+(25, 25);
 
 -- --------------------------------------------------------
 
@@ -248,8 +240,7 @@ CREATE TABLE IF NOT EXISTS `form_defis_partenaires` (
 --
 
 INSERT INTO `form_defis_partenaires` (`defi_id`, `partenaire_id`) VALUES
-(19, 13),
-(20, 14);
+(22, 53);
 
 -- --------------------------------------------------------
 
@@ -269,11 +260,7 @@ CREATE TABLE IF NOT EXISTS `form_defis_profils` (
 --
 
 INSERT INTO `form_defis_profils` (`defi_id`, `profil_id`) VALUES
-(19, 25),
-(19, 26),
-(19, 27),
-(19, 28),
-(19, 29);
+(22, 25);
 
 -- --------------------------------------------------------
 
@@ -293,8 +280,7 @@ CREATE TABLE IF NOT EXISTS `form_defis_superviseurs` (
 --
 
 INSERT INTO `form_defis_superviseurs` (`defi_id`, `superviseur_id`) VALUES
-(19, 39),
-(19, 40);
+(25, 40);
 
 -- --------------------------------------------------------
 
@@ -498,7 +484,6 @@ CREATE TABLE IF NOT EXISTS `form_materiels` (
 --
 
 INSERT INTO `form_materiels` (`materiel_id`, `materiel`) VALUES
-(22, 'aa'),
 (24, 'ere'),
 (25, 'rr'),
 (23, 'zz');
@@ -548,35 +533,25 @@ CREATE TABLE IF NOT EXISTS `form_partenaires` (
   PRIMARY KEY (`partenaire_id`),
   UNIQUE KEY `partenaire` (`partenaire`),
   KEY `fk_partenaire_departement` (`departement_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=70 ;
 
 --
 -- Contenu de la table `form_partenaires`
 --
 
 INSERT INTO `form_partenaires` (`partenaire_id`, `partenaire`, `adresseWeb`, `cp`, `description`, `fichierLogo`, `departement_id`, `afficher`, `email`, `adresse`, `ville`) VALUES
-(13, 'ww', '', 31300, '', '', '16', 0, '', '', ''),
-(14, 'xx', '', 0, '', '', '1', 0, '', '', ''),
-(15, 'cc', NULL, 0, '', NULL, NULL, 0, '', '', ''),
-(16, 'vv', NULL, 0, '', NULL, NULL, 0, '', '', ''),
-(35, 'dzdzdzd', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\25924.JPG', '1', 1, '', 'zdzddzd', 'ezfeef'),
-(36, 'dzdzdzddzdd', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(38, 'dzdzdzddzdddzadazd', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(39, 'dzdzdzddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(40, 'dzdzdzzefeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(41, 'dzdzdzzedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(42, 'dzdzdzzeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(43, 'dzdzdzzddeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(44, 'dzdsddzdzzddeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(45, 'dzdsddzdzzdzdzdeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(46, 'dzdsddzdergzegfezdzdzdeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(47, 'dzdsddzsqfsddergzegfezdzdzdeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(48, 'dzdsddzsqfsddergzezefeffezdzdzdeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(49, 'dzdsdezfedzsqfsddergzezefeffezdzdzdeffedddfeddz', '', 23000, 'fefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffeffefefeffef', NULL, '1', 0, '', 'zdzddzd', 'ezfeef'),
-(51, 'zaddzd', '', 31300, 'regerergrgrregerergrgrregerergrgrregerergrgrregerergrgrregerergrgrregerergrgrregerergrgrregerergrgr', NULL, '1', 0, '', 'dsfsdff', 'dgregergrg'),
-(52, 'zdzdzd', '', 31300, 'dzdzdzdzdzdazzefgrejigr^_girg^_rehgç_rehgreiçgrç_ghrgrg', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\8378.JPG', '1', 0, '', 'zdzdzd', 'dvdvdv'),
-(53, 'zdafdiefh', '', 31300, 'zegfn,refi^jezhrhgropfghsurhgvbrugyenozyrgezhreugiphreugheruigrthghzuighrg', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\26312.JPG', '1', 0, '', 'zfdffzfzafef', 'dzdzadazza'),
-(55, 'zdafdiefhzaazdzadzd', '', 31300, 'zegfn,refi^jezhrhgropfghsurhgvbrugyenozyrgezhreugiphreugheruigrthghzuighrg', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\3718.JPG', '1', 0, '', 'zfdffzfzafef', 'dzdzadazza');
+(53, 'zdafdiefh', '', 31300, 'zegfn,refi^jezhrhgropfghsurhgvbrugyenozyrgezhreugiphreugheruigrthghzuighrg', 'partenaires/logos/17683.jpg', '1', 1, '', 'zfdffzfzafef', 'dzdzadazza'),
+(55, 'zdafdiefhzaazdzadzd', '', 31300, 'zegfn,refi^jezhrhgropfghsurhgvbrugyenozyrgezhreugiphreugheruigrthghzuighrg', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\3718.JPG', '1', 0, '', 'zfdffzfzafef', 'dzdzadazza'),
+(57, 'zaddzdezfefef', '', 31300, 'zadazdzdrgjeifhriguhehg efhear ghrgiprhgrughrgrphgurgh', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\17471.JPG', '1', 0, '', 'zdzdzdzd', 'zadzadz'),
+(58, 'zdzdzdzdzgrghrgrh', '', 31300, 'zefefefroegfreuyfg er hgaghrghguhguirhgeghareugh grghapierhgrgugrgreagerag', 'C:\\wamp\\www\\tuc\\app\\media\\partenaires\\logos\\11370.JPG', '1', 0, '', 'ergrgazgjeparuhgghrg', 'efrughguthgrg'),
+(59, 'zeefef', '', 31300, 'zefefefefefefefefzf fe fzfahgrghrtgrgrgrgergrg gergrgrgeg', 'partenaires/logos/25424.jpg', '1', 0, '', 'zfeeffeff', 'eefefef'),
+(60, 'zzdzdaffzdzd', '', 31300, 'azdzdefeufheuyfheugfezrhgfguehfazf zfueheufhifjezifjeoijzefjeof', 'C:\\wamp\\www\\tuc\\app\\webroot\\img\\partenaires\\logos\\15937.JPG', '1', 0, '', 'zdzdzdzd', 'zadazdzd'),
+(62, 'Test', '', 31300, 'fezfefef fezakùjgrighrg ghero^phgghrghrguhrgrighrig griegh^grhzgrighâhgrgr\r\nregrijhre^zoihgriugh ghrghza', 'partenaires/logos/30265.JPG', '1', 0, '', '4 ezfheuifueifh', 'toulouse'),
+(63, 'Test front', '', 31300, 'dzad dzdaz dzdz dhazddddddddddddddddddddddddddddddddddddda ppppppppppppppppppppp', 'partenaires/logos/25726.jpg', '1', 0, '', '4 ezfheuifueifh', 'dvdvdv'),
+(66, 'Test front2', '', 31300, 'dzad dzdaz dzdz dhazddddddddddddddddddddddddddddddddddddda ppppppppppppppppppppp', 'partenaires/logos/15605.jpg', '1', 0, '', '4 ezfheuifueifh', 'dvdvdv'),
+(67, 'Test front3', '', 31300, 'dzad dzdaz dzdz dhazddddddddddddddddddddddddddddddddddddda ppppppppppppppppppppp', NULL, '1', 0, '', '4 ezfheuifueifh', 'dvdvdv'),
+(68, 'Test front4', '', 31300, 'dzad dzdaz dzdz dhazddddddddddddddddddddddddddddddddddddda ppppppppppppppppppppp', 'partenaires/logos/19082.JPG', '1', 0, '', '4 ezfheuifueifh', 'dvdvdv'),
+(69, 'Test front5', '', 31300, 'dzad dzdaz dzdz dhazddddddddddddddddddddddddddddddddddddda ppppppppppppppppppppp', 'partenaires/logos/30971.JPG', '1', 0, '', '4 ezfheuifueifh', 'dvdvdv');
 
 -- --------------------------------------------------------
 
@@ -586,7 +561,7 @@ INSERT INTO `form_partenaires` (`partenaire_id`, `partenaire`, `adresseWeb`, `cp
 
 CREATE TABLE IF NOT EXISTS `form_photos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_fichier` varchar(50) NOT NULL,
+  `chemin_fichier` varchar(250) CHARACTER SET utf8 NOT NULL,
   `afficher` tinyint(1) DEFAULT '0',
   `clan_id` int(4) NOT NULL,
   `defi_id` int(11) NOT NULL,
@@ -594,19 +569,21 @@ CREATE TABLE IF NOT EXISTS `form_photos` (
   PRIMARY KEY (`id`),
   KEY `clan_id` (`clan_id`),
   KEY `defi_id` (`defi_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=83 ;
 
 --
 -- Contenu de la table `form_photos`
 --
 
-INSERT INTO `form_photos` (`id`, `nom_fichier`, `afficher`, `clan_id`, `defi_id`, `date_upload`) VALUES
-(1, 'test.png', 0, 2, 20, '0000-00-00 00:00:00'),
-(3, 'test.png', 1, 1, 23, '0000-00-00 00:00:00'),
-(4, 'photo.png', 1, 1, 23, '0000-00-00 00:00:00'),
-(5, 'test3.png', 1, 1, 19, '0000-00-00 00:00:00'),
-(6, 'test4.png', 0, 1, 24, '0000-00-00 00:00:00'),
-(7, 'zdoizedhf.jpg', 1, 1, 20, '2013-05-08 00:00:00');
+INSERT INTO `form_photos` (`id`, `chemin_fichier`, `afficher`, `clan_id`, `defi_id`, `date_upload`) VALUES
+(61, 'defis/photos/17297.jpg', 0, 1, 23, '2013-05-24 14:33:14'),
+(62, 'defis/photos/8950.jpg', 0, 2, 22, '2013-05-24 14:35:13'),
+(63, 'defis/photos/1783.jpg', 0, 1, 23, '2013-05-24 14:35:27'),
+(71, 'defis/photos/21769.JPG', 0, 1, 22, '2013-05-27 15:35:58'),
+(72, 'defis/photos/629.jpg', 0, 1, 22, '2013-05-27 15:45:03'),
+(80, 'defis/videos/17457.mp4', 0, 1, 22, '2013-05-27 21:42:34'),
+(81, 'defis/videos/4671.mov', 0, 1, 22, '2013-05-28 11:36:23'),
+(82, 'defis/videos/18585.mov', 0, 1, 22, '2013-05-28 11:53:57');
 
 --
 -- Déclencheurs `form_photos`
@@ -637,7 +614,6 @@ CREATE TABLE IF NOT EXISTS `form_profils` (
 
 INSERT INTO `form_profils` (`profil_id`, `profil`) VALUES
 (25, 'aa'),
-(27, 'ee'),
 (28, 'rr'),
 (29, 'tt'),
 (26, 'zz');
@@ -723,15 +699,17 @@ CREATE TABLE IF NOT EXISTS `form_users` (
   `clan_id` int(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `clan_id` (`clan_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `form_users`
 --
 
 INSERT INTO `form_users` (`id`, `login`, `password`, `clan_id`) VALUES
-(2, 'test', '5f0745c5c50dbe007d5912d44396d220decdece5', NULL),
-(4, 'admin', '5f0745c5c50dbe007d5912d44396d220decdece5', 2);
+(2, 'test', '40efcd5c115a2ccdc8504bb950f2ab75e98b6055', NULL),
+(4, 'admin', '5f0745c5c50dbe007d5912d44396d220decdece5', 2),
+(7, 'guillaume', '40efcd5c115a2ccdc8504bb950f2ab75e98b6055', NULL),
+(8, 'testo', 'eeab45f759c77b0b9271d40cd0f8114abb93ec8a', 1);
 
 --
 -- Contraintes pour les tables exportées
@@ -755,8 +733,8 @@ ALTER TABLE `form_defis_associations`
 -- Contraintes pour la table `form_defis_clans`
 --
 ALTER TABLE `form_defis_clans`
-  ADD CONSTRAINT `form_defis_clans_ibfk_2` FOREIGN KEY (`clan_id`) REFERENCES `form_clans` (`id`),
-  ADD CONSTRAINT `form_defis_clans_ibfk_1` FOREIGN KEY (`defi_id`) REFERENCES `form_defis` (`id`);
+  ADD CONSTRAINT `form_defis_clans_ibfk_1` FOREIGN KEY (`defi_id`) REFERENCES `form_defis` (`id`),
+  ADD CONSTRAINT `form_defis_clans_ibfk_2` FOREIGN KEY (`clan_id`) REFERENCES `form_clans` (`id`);
 
 --
 -- Contraintes pour la table `form_defis_entites`
@@ -815,8 +793,8 @@ ALTER TABLE `form_partenaires`
 -- Contraintes pour la table `form_photos`
 --
 ALTER TABLE `form_photos`
-  ADD CONSTRAINT `form_photos_ibfk_2` FOREIGN KEY (`defi_id`) REFERENCES `form_defis` (`id`),
-  ADD CONSTRAINT `form_photos_ibfk_1` FOREIGN KEY (`clan_id`) REFERENCES `form_clans` (`id`);
+  ADD CONSTRAINT `form_photos_ibfk_1` FOREIGN KEY (`clan_id`) REFERENCES `form_clans` (`id`),
+  ADD CONSTRAINT `form_photos_ibfk_2` FOREIGN KEY (`defi_id`) REFERENCES `form_defis` (`id`);
 
 --
 -- Contraintes pour la table `form_users`

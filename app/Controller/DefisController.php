@@ -50,7 +50,7 @@ class DefisController extends AppController {
 
 	
 	public function index() {
-		$this->Defi->recursive = 1;
+		$this->Defi->recursive = 2;
 		$this->layout = 'front';
 		$this->set('defis', $this->paginate('Defi', array('Defi.afficher' => 1)));
              
@@ -61,6 +61,7 @@ class DefisController extends AppController {
 		if (!$this->Defi->exists($id) || $this->Defi->field('afficher', array('id' => $id)) != 1 ) {
 			throw new NotFoundException(__('Invalid defi'));
 		}
+		$this->Defi->recursive = 2;
 		$options = array('conditions' => array('Defi.' . $this->Defi->primaryKey => $id));
 		$this->set('defi', $this->Defi->find('first', $options));
 	}
