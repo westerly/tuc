@@ -52,9 +52,7 @@ class DefisController extends AppController {
 	public function index() {
 		$this->Defi->recursive = 0;
 		$this->layout = 'front';
-		
-		//debug($this->Defi->Photo);
-		
+				
 		$defis = $this->paginate('Defi', array('Defi.afficher' => 1));
 		
 		for($i=0;$i<count($defis);$i++){
@@ -64,43 +62,6 @@ class DefisController extends AppController {
 		}
 		
 		$this->set('defis', $defis);
-		
-		//$test = $this->Defi->Photo->find('all', array('conditions' => array('Photo.afficher' => '1')));
-		
-		//debug($defis);
-		
-		
-		
-// 		$i=1;
-// 		//foreach($defis as $defi){
-// 		for($j=0;$j<count($defis);$j++)
-// 		{
-// 			print"</br></br>";
-			
-// 			print "Defi numéro ".$i++;
-			
-// 			print"</br></br>";
-// 			//debug($defi);
-			
-// 			for($i=0;$i<count($defis[$j]['Photo']);$i++)
-// 			{
-// 				// La photo ne doit pas pas être afficher
-// 				if($defis[$j]['Photo'][$i]["afficher"] == false){
-// 					//debug($defis[$j]['Photo'][$i]);
-// 					//array_splice($defis[$j]['Photo'],$i,1);
-// 					unset($defis[$j]['Photo'][$i]);
-// 				}
-				
-// 			}
-			
-// 			debug($defis[$j]);
-			
-// 		}
-		
-		
-		//$this->set('defis', $this->paginate('Defi', array('Defi.afficher' => 1)));
-             
-		//$this->set('defis', $this->paginate());
 	}
 	
 	public function view($id = null) {
