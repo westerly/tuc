@@ -23,7 +23,7 @@ foreach($defis as $defi) { ?>
         $clans = array();
         $ids = array();
         foreach($defi['Photo'] as $photo) {
-            $clans[$photo['Clan']['nom']][] = $photo['chemin_fichier'];
+            $clans[$photo['Clan']['nom']][] = $photo['Photo']['chemin_fichier'];
             $ids[$photo['Clan']['nom']]['id'] = $photo['Clan']['id'];
         }
         
