@@ -43,9 +43,9 @@
 				
 				<div id="slider">
 				
-                                    <?php echo $this->Html->image('front/band1.jpg', array('width'=>1004, 'height'=>290)); ?>
-                                    <?php echo $this->Html->image('front/band2.jpg', array('width'=>1004, 'height'=>290)); ?>
-                                    <?php echo $this->Html->image('front/band3.jpg', array('width'=>1004, 'height'=>290)); ?>
+                                    <?php echo $this->Html->image('front/band1.jpg', array('width'=>1004, 'height'=>630)); ?>
+                                    <?php echo $this->Html->image('front/band2.jpg', array('width'=>1004, 'height'=>630)); ?>
+                                    <?php echo $this->Html->image('front/band3.jpg', array('width'=>1004, 'height'=>630)); ?>
 				</div>
                                 <div style="clear: both"></div>
 			
