@@ -12,26 +12,26 @@ echo $this->Form->create('Contact');
 		echo"<legend> Contactez nous </legend>";
 		
 	
-		echo'<table><tr class="input text required">';
-				echo'<td>Nom*</td><td><input type="text" name="data[Contact][nom]" cols="30" maxlength="50" rows="6" id="ContactNom" required="required" ';
+		echo'<table class="contact"><tr class="input text required">';
+				echo'<td>Nom<span>*</span></td><td><input type="text" name="data[Contact][nom]" cols="30" maxlength="50" rows="6" id="ContactNom" required="required" ';
 				if(isset($datas["nom"])){echo "value='".$datas["nom"]."'";}
 				echo'"/></td>';
 		echo'</tr>';
 		
 		echo'<tr class="input text required">';
-				echo'<td>Prénom*</td><td><input type="text" name="data[Contact][prenom]" cols="30" maxlength="50" rows="6" id="ContactPrenom" required="required"';
+				echo'<td>Prénom<span>*</span></td><td><input type="text" name="data[Contact][prenom]" cols="30" maxlength="50" rows="6" id="ContactPrenom" required="required"';
 				if(isset($datas["prenom"])){echo "value='".$datas["prenom"]."'";}
 				echo'/></td>';
 		echo'</tr>';
 		
 		echo'<tr class="input text required">';	
-			echo'<td>Email*</td><td><input type="email" name="data[Contact][email]" cols="30" maxlength="50" rows="6" id="ContactEmail" required="required"';
+			echo'<td>Email<span>*</span></td><td><input type="email" name="data[Contact][email]" cols="30" maxlength="50" rows="6" id="ContactEmail" required="required"';
 			if(isset($datas["email"])){echo "value='".$datas["email"]."'";}
 			echo'/></td>';
 		echo'</tr>';
 		
 		echo'<tr class="input text required">';
-			echo'<td>Entité*</td><td>';
+			echo'<td>Entité<span>*</span></td><td>';
 			echo'<select name="data[Contact][entite]" id="ContactEntite">';
 				echo'<option value="Mairie">Mairie</option>';
 				echo'<option value="UTC">UTC</option>';
@@ -41,7 +41,7 @@ echo $this->Form->create('Contact');
 		echo'</tr>';
 		
 		echo'<tr class="textarea required">';
-			echo'<td>Message*</td><td><textarea name="data[Contact][message]" cols="30" minlength="50" rows="6" id="ContactMessage" required="required">';
+			echo'<td>Message<span>*</span></td><td><textarea name="data[Contact][message]" cols="30" minlength="50" rows="6" id="ContactMessage" required="required">';
 				if(isset($datas["message"])){echo $datas["message"];}
 			echo'</textarea></td>';
 		echo'</tr></table>';

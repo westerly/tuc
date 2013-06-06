@@ -178,6 +178,7 @@ section.accueil h2 {
     width: 350px;
     float: right;
     margin-bottom: 25px !important;
+    text-align: justify
 }
 
 .accueil h3, .accueil p {
