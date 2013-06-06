@@ -116,8 +116,9 @@ define("URL_IMG", BASE_URL.'tuc/app/webroot/img/');
 define("IMG", APP.'webroot/img/');
 
 
-Configure::write(
-'ACCEPTED_VIDEO_FORMATS',array('.mp4', '.mov')
-);
+
+// Configure::write(
+// 'ADRESSE_DESTINATAIRE_CONTACT',array('.mp4', '.mov')
+// );
 
 
