@@ -36,6 +36,7 @@ echo $this->Session->flash('nok');
 				</iframe>';						     
 				
 			}else{
+				//echo "URL IMG: ".URL_IMG;
 				echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('class' => 'index', 'alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
 			}
 									

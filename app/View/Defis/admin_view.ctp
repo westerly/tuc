@@ -136,7 +136,7 @@ echo $this->Session->flash('nok');
 					</iframe>';	
 			 	} else {
 			 		//echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='view' src='".URL_IMG.$photo['Photo']['chemin_fichier']."'/></a>";
-			 		echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
+			 		echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('alt' => false, 'class' => 'index')), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
 			 	}
 				?> </td>
 			

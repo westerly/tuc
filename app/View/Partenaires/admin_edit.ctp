@@ -14,6 +14,7 @@ echo $this->Session->flash('nok');
 		echo $this->Form->input('partenaire_id');
 		echo $this->Form->input('partenaire');
 		echo $this->Form->input('adresseWeb');
+		echo $this->Form->input('email');
 		echo $this->Form->input('cp');
 		echo $this->Form->input('description');
 		echo "<a href='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."' class='top_up'><img class='edit' src='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."'/></a>"; 
