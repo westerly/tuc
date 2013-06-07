@@ -7,10 +7,8 @@
 /build
 /dist
 /tags
-/.htaccess
 /app/Config/core.php
 /app/Config/database.php
-/app/webroot/.htaccess
 
 # OS generated files #
 ######################
