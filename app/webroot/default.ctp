@@ -31,11 +31,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('icon');
 		
 		// Import de la librairie permettant les affichages photos en pop pup
-		//echo '<script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>';
+		echo $this->Html->script('top_up-min.js');
+
 		
-		echo '<script type="text/javascript" src="'.$this->webroot.'app/webroot/top_up/javascripts/top_up-min.js"></script>';
-		
-		
+		//echo '<script src="'.FULL_BASE_URL.'/tuc/app/webroot/1.7.2/javascripts/top_up-min.js"></script>';
 
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('admin');
