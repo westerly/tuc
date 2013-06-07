@@ -21,8 +21,6 @@ class ContactsController extends AppController {
 
 			$errorMessage="";
 			
-			$this->set('datas', $datas);
-			
 			if(isset($datas["nom"])){$datas["nom"] = trim($datas["nom"], ' ');}
 			if(isset($datas["prenom"])){$datas["prenom"] = trim($datas["prenom"], ' ');}
 			if(isset($datas["email"])){$datas["email"] = trim($datas["email"], ' ');}
@@ -82,24 +80,26 @@ class ContactsController extends AppController {
 			}
 						
 			if($errorMessage!=''){
+				$this->set('datas', $datas);
 				$this->Session->setFlash($errorMessage, 'default', array(), 'nok');
 			}else{
 				// Pas d'erreurs, envoyer l'email
-// 				$Email = new CakeEmail();
-// 				$Email->from(array('gtorche@gmail.com' => 'Tuc website'));
-// 				$Email->to('gtorche@gmail.com');
-// 				$Email->subject('Message de '.$datas["nom"]." ".$datas["nom"]);
+ 				$Email = new CakeEmail();
+				$Email->from(array('tuc@utc.fr' => 'Tuc website'));
+				$Email->to('gtorche@gmail.com');
+				$Email->subject('Message de '.$datas["nom"]." ".$datas["nom"]);
 				
-// 				try{
-// 					$message = "Adresse mail de contact: ".$datas["email"]."\n Entité: ".$datas["entite"]."\n\n\n";
-// 					$Email->send($datas["message"]);
+				try{
+					$message = "Adresse mail de contact: ".$datas["email"]."\n Entité: ".$datas["entite"]."\n\n\n".$datas["message"];
+					$Email->send($message);
+					
  					$this->Session->setFlash("Votre message a bien été envoyé, nous vous répondrons le plus rapidement possible.", 'default', array(), 'ok');
-// 					// success message
-// 				}catch(Exception $e){
-// 					// failure message details echo $e->getMessage();
-// 					//$errorMessage = $e->getMessage();
-// 					$this->Session->setFlash("Un problème est survenu, le message n'a pas pu être envoyé.", 'default', array(), 'nok');
-// 				}
+					// success message
+				}catch(Exception $e){
+					// failure message details echo $e->getMessage();
+					//$errorMessage = $e->getMessage();
+					$this->Session->setFlash("Un problème est survenu, le message n'a pas pu être envoyé.", 'default', array(), 'nok');
+				}
 				
 			}
 			
