@@ -24,6 +24,11 @@ echo $this->Session->flash('nok');
 			<?php echo h($partenaire['Partenaire']['adresseWeb']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Email'); ?></dt>
+		<dd>
+			<?php echo h($partenaire['Partenaire']['email']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Cp'); ?></dt>
 		<dd>
 			<?php echo h($partenaire['Partenaire']['cp']); ?>

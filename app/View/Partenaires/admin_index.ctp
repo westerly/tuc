@@ -14,6 +14,7 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('partenaire_id', 'Id'); ?></th>
 			<th><?php echo $this->Paginator->sort('partenaire', 'Nom'); ?></th>
 			<th><?php echo $this->Paginator->sort('adresseWeb', 'Adresse web'); ?></th>
+			<th><?php echo $this->Paginator->sort('email', 'Email'); ?></th>
 			<th><?php echo $this->Paginator->sort('cp', 'Code postal'); ?></th>
 			<th><?php echo $this->Paginator->sort('description', 'Description'); ?></th>
 			<th><?php echo $this->Paginator->sort('departement_id', 'Département'); ?></th>
@@ -27,6 +28,7 @@ echo $this->Session->flash('nok');
 		<td><?php echo h($partenaire['Partenaire']['partenaire_id']); ?>&nbsp;</td>
 		<td><?php echo h(substr($partenaire['Partenaire']['partenaire'],0,50)); ?>&nbsp;</td>
 		<td><?php echo h($partenaire['Partenaire']['adresseWeb']); ?>&nbsp;</td>
+		<td><?php echo h($partenaire['Partenaire']['email']); ?>&nbsp;</td>
 		<td><?php echo h($partenaire['Partenaire']['cp']); ?>&nbsp;</td>
 		<td><?php echo h(substr($partenaire['Partenaire']['description'],0,50))."..."; ?>&nbsp;</td>
 		<td>
