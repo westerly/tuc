@@ -31,7 +31,7 @@
 			<ul>
 				<?php echo $this->Html->link('<li>News</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index'), true), array('escape'=>false)) ?>
 				<?php echo $this->Html->link('<li>Défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index'), true), array('escape'=>false)) ?>
-                                <a><li>Galerie</li></a>
+				<?php echo $this->Html->link('<li>Galerie</li>', $this->Html->url(array('controller'=>'photos', 'action'=>'index'), true), array('escape'=>false)) ?>
 				<?php echo $this->Html->link('<li>Partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index'), true), array('escape'=>false)) ?>
 				<?php echo $this->Html->link('<li>Contact</li>', $this->Html->url(array('controller'=>'contacts', 'action'=>'index'), true), array('escape'=>false)) ?>
 			</ul>		

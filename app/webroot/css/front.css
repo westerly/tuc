@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    border: 0px;
+}
+
 
 a:hover {
     text-decoration: underline;
@@ -257,7 +261,7 @@ a .content:hover {
 
 .slidesjs-next {
     left: 914px;
-    top: -580px;
+    top: -1260px;
 }
 
 /* carrousel defis */
@@ -306,20 +310,28 @@ a.prev span, a.next span {
 
 /*partenaires*/
 
-.liste-partenaires {
+.liste-photos {
+    text-align:center;
+}
+
+.liste-partenaires{
     text-align: center;
     cursor: pointer;
 }
 
 
-.partenaires {
+.partenaires, .photos {
     width: 300px;
     height: 300px;
     display: inline-block;
 }
 
-.partenaires img {
+.partenaires img, .photos img {
     padding: 20px;
+}
+
+.photos img {
+    padding-bottom: 2px;
 }
 
 /*login*/

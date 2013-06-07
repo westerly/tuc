@@ -10,7 +10,7 @@ class PhotosController extends AppController {
 
 	var $paginate = array(
 		'Photo' => array(
-				'limit' => 5,
+				'limit' => 9,
 				'order' => array(
 						'Photo.date_upload' => 'Desc'
 						)
@@ -46,7 +46,7 @@ class PhotosController extends AppController {
 	
 	
 	public function index($clan_id = null) {
-	
+                $this->layout = 'front';
 		if(isset($clan_id))
 		{
 			$this->set('photos', $this->paginate('Photo', array('Photo.clan_id' => $clan_id, 'Photo.afficher' => 1, "Defi.afficher" => 1)));

@@ -44,7 +44,7 @@ foreach($defis as $defi) { ?>
                                     </iframe>';
 
                             } else {
-                                    echo $this->Html->image($photo, array('alt' => 'defis', 'width' => '200', 'height'=>'150'));
+                                    echo $this->Html->image($photo, array('alt' => 'defis','class'=>'colorbox', 'width' => '200', 'height'=>'150'));
                             }
                     }
                     ?>
@@ -52,9 +52,9 @@ foreach($defis as $defi) { ?>
                     </div>
 
                 <div class="clearfix"></div>
-                <a class="prev" id="foo1_prev_<?php echo $i ?>" href="#"><span>prev</span></a>
+             <!--   <a class="prev" id="foo1_prev_<?php echo $i ?>" href="#"><span>prev</span></a>
                 <a class="next" id="foo1_next_<?php echo $i ?>" href="#"><span>next</span></a>
-                </div>
+                </div> -->
                 <div class="vote-defis">
                     <span><?php echo $this->Html->link('Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
                     <span><?php echo $this->Html->link('Pas Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
