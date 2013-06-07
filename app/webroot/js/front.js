@@ -1,7 +1,7 @@
 $(function(){
       $("#slider").slidesjs({
         width: 1003,
-        height: 290
+        height: 630
       })
       
       $('.slidesjs-navigation').text('');

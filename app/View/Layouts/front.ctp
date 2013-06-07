@@ -25,7 +25,7 @@
     ), true
 ));
 ?></div>
-	<?php echo $this->Html->image('front/logo.png', array('alt' => 'logo', 'height'=>266, 'width'=>348, 'id'=>'logo')); ?>
+	<?php echo $this->Html->link($this->Html->image('front/logo.png', array('alt' => 'logo', 'height'=>266, 'width'=>348, 'id'=>'logo')), $this->Html->url(array('controller'=>'accueil', 'action'=>'index'), true), array('escape'=>false)); ?>
 		</header>
 		<nav>
 			<ul>
@@ -33,7 +33,7 @@
 				<?php echo $this->Html->link('<li>Défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index'), true), array('escape'=>false)) ?>
                                 <a><li>Galerie</li></a>
 				<?php echo $this->Html->link('<li>Partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index'), true), array('escape'=>false)) ?>
-                                <a><li>Contact</li></a>
+				<?php echo $this->Html->link('<li>Contact</li>', $this->Html->url(array('controller'=>'contacts', 'action'=>'index'), true), array('escape'=>false)) ?>
 			</ul>		
 		</nav>
 
@@ -54,7 +54,7 @@
                             <td><?php echo $this->Html->image('front/logo.png', array('alt' => 'utc', 'height'=>50, 'width'=>50, 'id'=>'tuc')); ?></td>
                             <td style="font-size: 2em;" class="titre-mission"><span>T</span><span>o</span><span>u</span><span>s</span> <span>U</span><span>n</span><span>i</span><span>s</span> <span>p</span><span>o</span><span>u</span><span>r</span> <span>C</span><span>o</span><span>m</span><span>p</span><span>i</span><span>è</span><span>g</span><span>n</span><span>e</span><span>!</span></td>
                             <td><?php echo  $this->Html->link('Contact', 'mailto:tuc@assos.utc.fr')?></td>             
-                            <td><?php echo $this->Html->image('front/facebook.jpg', array('alt' => 'facebook', 'height'=>65, 'width'=>65, 'id'=>'facebook')); ?></td>
+                            <td><?php echo $this->Html->link($this->Html->image('front/facebook.jpg', array('alt' => 'facebook', 'height'=>65, 'width'=>65, 'id'=>'facebook')), 'https://www.facebook.com/tuc.utc', array('escape'=>false)); ?></td>
                         </tr>
                     </table>
                 </footer>

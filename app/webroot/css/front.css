@@ -178,6 +178,7 @@ section.accueil h2 {
     width: 350px;
     float: right;
     margin-bottom: 25px !important;
+    text-align: justify
 }
 
 .accueil h3, .accueil p {
@@ -233,7 +234,7 @@ a .content:hover {
 #slider {
     margin-top: 10px;
     float:left;
-    height: 290px;
+    height: 630px;
     width: 100%;
     display: none;
 }
@@ -244,10 +245,10 @@ a .content:hover {
 
 .slidesjs-navigation {
     display: block;
-    height: 290px;
+    height: 630px;
     width: 90px;
     position: relative;
-    top: -290px;
+    top: -630px;
     background-color: rgb(255, 255, 255);
     z-index: 1000;
     left: 1px;
@@ -327,4 +328,24 @@ a.prev span, a.next span {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+/*message d erreur */
+
+.message {
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#nokMessage {
+    background-color: #ff666d;
+    border-color: red;
+}
+
+#okMessage {
+    background-color: #7cd456;
+    border-color: green;
 }
