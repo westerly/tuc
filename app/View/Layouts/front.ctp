@@ -59,7 +59,7 @@
                     </table>
                 </footer>
 		
-         <?php //echo '<script src="http://code.jquery.com/jquery-latest.min.js"></script>'; ?>
+         <?php echo $this->Html->script('jquery-latest.min'); ?>
          <?php echo $this->Html->script('jquery.slides.min'); ?>
          <?php echo $this->Html->script('jquery.colorbox-min'); ?>
          <?php echo $this->Html->script('jquery.carouFredSel-6.2.1-packed'); ?>
