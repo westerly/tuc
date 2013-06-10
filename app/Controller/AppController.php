@@ -79,6 +79,12 @@ class AppController extends Controller {
 		
 		$user = $this->Auth->user();
 		
+		App::uses('Clan', 'Model');
+		$Clan = new Clan();
+		
+		$clans = $Clan->find("list");
+		$this->set('clans_menu',$clans);
+		
 		// Set de la variable adminCo pour savoir si un admin est co et en en fonction afficher le menu qui va bien dans le layout admin
 		if(isset($user['id']) && !isset($user['clan_id'])){
 			$this->set('adminCo', true);
