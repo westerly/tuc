@@ -9,10 +9,12 @@ echo $this->Session->flash('nok');
 <?php
 	
 	echo $this->Form->create('User',array('url'=>array('action'=>'login')));
-        
-	echo $this->Form->input('login');
-	echo $this->Form->input('password');
-	
+?>
+    <table style="margin: auto;">
+    <tr class="input text"><td><label for="UserLogin">Login</label></td><td><input name="data[User][login]" maxlength="255" type="text" id="UserLogin"></td></tr>
+    <tr class="input password"><td><label for="UserPassword">Password</label></td><td><input name="data[User][password]" type="password" id="UserPassword"></td></tr>
+    </table>
+        <?php
 	echo $this->Form->end('Connexion');
 	
 	if(isset($errorMessage))

@@ -26,7 +26,14 @@
 ));
 ?></div>
 	<?php echo $this->Html->link($this->Html->image('front/logo.png', array('alt' => 'logo', 'height'=>266, 'width'=>348, 'id'=>'logo')), $this->Html->url(array('controller'=>'accueil', 'action'=>'index'), true), array('escape'=>false)); ?>
-		</header>
+                    <div id="infos">BDE UTC Tous Unis pour la Cité<br/>
+                                    Bât E300<br/>
+                                    Rue Roger Couttolenc - BP 60301<br/>
+                                    60203 Compiègne Cedex<br/>
+                                    <br/>
+                                    N° SIRET : 39777672500012<br/>
+                    </div>
+                </header>
 		<nav>
 			<ul>
 				<?php echo $this->Html->link('<li>News</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index'), true), array('escape'=>false)) ?>
@@ -52,7 +59,7 @@
                         <tr>
                             <td><?php echo $this->Html->image('front/utc.jpg', array('alt' => 'utc', 'height'=>50, 'width'=>150, 'id'=>'utc')); ?></td>
                             <td><?php echo $this->Html->image('front/logo.png', array('alt' => 'utc', 'height'=>50, 'width'=>50, 'id'=>'tuc')); ?></td>
-                            <td style="font-size: 2em;" class="titre-mission"><span>T</span><span>o</span><span>u</span><span>s</span> <span>U</span><span>n</span><span>i</span><span>s</span> <span>p</span><span>o</span><span>u</span><span>r</span> <span>C</span><span>o</span><span>m</span><span>p</span><span>i</span><span>è</span><span>g</span><span>n</span><span>e</span><span>!</span></td>
+                            <td style="font-size: 2em;" class="titre-mission"><span>T</span><span>o</span><span>u</span><span>s</span> <span>U</span><span>n</span><span>i</span><span>s</span> <span>p</span><span>o</span><span>u</span><span>r</span> <span>l</span><span>a</span><span> </span><span>C</span><span>i</span><span>t</span><span>é</span><span>!</span></td>
                             <td><?php echo  $this->Html->link('Contact', 'mailto:tuc@assos.utc.fr')?></td>             
                             <td><?php echo $this->Html->link($this->Html->image('front/facebook.jpg', array('alt' => 'facebook', 'height'=>65, 'width'=>65, 'id'=>'facebook')), 'https://www.facebook.com/tuc.utc', array('escape'=>false)); ?></td>
                         </tr>

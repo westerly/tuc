@@ -42,6 +42,12 @@ header {
     height: 220px;
 }
 
+#infos {
+    position: relative;
+    top: -245px;
+    left: 260px;
+}
+
 #logo {
     position:relative;
     left:-100px;

@@ -13,7 +13,7 @@
         if(!strpos($photo,'.')) {
                                     echo '
                                     <iframe class="video-js vjs-default-skin videoIndex"
-                                            width="250" height="250" alt="defis"
+                                            width="300" height="300" alt="defis"
                                             src="http://www.youtube.com/embed/'.$photo.'">
                                     </iframe>';
 

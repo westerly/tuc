@@ -60,10 +60,11 @@ foreach($defis as $defi) { ?>
                     <span><?php echo $this->Html->link('Pas Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
 
                 </div>
+            </div>
             <?php }
 
             ?>
-            </div>
+            
         </div>
     </article>
     
