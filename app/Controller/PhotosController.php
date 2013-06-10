@@ -181,10 +181,6 @@ class PhotosController extends AppController {
 public function admin_addV() {
 		
 		if ($this->request->is('post')) {
-			
-			set_time_limit("3600");
-			ini_set("max_execution_time", "3600");
-			//ini_set("upload_max_filesize", "200M");
 						
 			$this->Photo->create();
 			

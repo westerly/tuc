@@ -482,6 +482,7 @@ class CakeResponse {
  * @return void
  */
 	protected function _setContentLength() {
+		return;
 		$shouldSetLength = !isset($this->_headers['Content-Length']) && !in_array($this->_status, range(301, 307));
 		if (isset($this->_headers['Content-Length']) && $this->_headers['Content-Length'] === false) {
 			unset($this->_headers['Content-Length']);
