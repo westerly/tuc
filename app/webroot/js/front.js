@@ -12,5 +12,28 @@ $(function(){
         $.colorbox.resize();
         
      });
+     
+     $('nav li').mouseenter(function(event){
+         var item = $(this).find('ul');
+         if(item) {
+             item.show();
+         }
+         
+     });
+     
+     $('nav li').mouseleave(function(event){
+         var item = $(this).find('ul');
+         if(item) {
+             item.hide();
+         }
+         
+     });
+     $('nav li ul').mouseleave(function(event){
+         var item = $(this);//.parent('ul');
+         if(item) {
+             item.hide();
+         }
+         
+     });
       
   });

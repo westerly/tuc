@@ -25,7 +25,7 @@
     ), true
 ));
 ?></div>
-	<?php echo $this->Html->link($this->Html->image('front/logo.png', array('alt' => 'logo', 'height'=>266, 'width'=>348, 'id'=>'logo')), $this->Html->url(array('controller'=>'accueil', 'action'=>'index'), true), array('escape'=>false)); ?>
+	<?php echo $this->Html->link($this->Html->image('front/logo.png', array('alt' => 'logo', 'height'=>266, 'width'=>348, 'id'=>'logo')), $this->Html->url(array('controller'=>'accueil', 'action'=>'index','admin'=>false), true), array('escape'=>false)); ?>
                     <div id="infos">BDE UTC Tous Unis pour la Cité<br/>
                                     Bât E300<br/>
                                     Rue Roger Couttolenc - BP 60301<br/>
@@ -34,16 +34,35 @@
                                     N° SIRET : 39777672500012<br/>
                     </div>
                 </header>
+                
+           
 		<nav>
 			<ul>
-				<?php echo $this->Html->link('<li>News</li>', $this->Html->url(array('controller'=>'actualites', 'action'=>'index'), true), array('escape'=>false)) ?>
-				<?php echo $this->Html->link('<li>Défis</li>', $this->Html->url(array('controller'=>'defis', 'action'=>'index'), true), array('escape'=>false)) ?>
-				<?php echo $this->Html->link('<li>Galerie</li>', $this->Html->url(array('controller'=>'photos', 'action'=>'index'), true), array('escape'=>false)) ?>
-				<?php echo $this->Html->link('<li>Partenaires</li>', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index'), true), array('escape'=>false)) ?>
-				<?php echo $this->Html->link('<li>Contact</li>', $this->Html->url(array('controller'=>'contacts', 'action'=>'index'), true), array('escape'=>false)) ?>
+				<li><?php echo $this->Html->link('News', $this->Html->url(array('controller'=>'actualites', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?></li>
+                                <li><?php echo $this->Html->link('Défis', $this->Html->url(array('controller'=>'defis', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?></li>
+				<li><?php echo $this->Html->link('Galerie', $this->Html->url(array('controller'=>'photos', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?>
+                                    <ul>
+                                        <?php 
+                                        foreach($clans_menu as $key => $clan) {
+                                        ?>
+                                        <li><?php echo $this->Html->link($clan, $this->Html->url(array('controller'=>'photos', 'action'=>'index','admin'=>false, $key), true), array('escape'=>false)) ?></li>
+                                        
+                                        <?php
+                                            }
+                                        ?>
+                                    </ul>
+                                
+                                
+                                </li>
+				<li><?php echo $this->Html->link('Partenaires', $this->Html->url(array('controller'=>'partenaires', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?>
+                                    <ul>
+                                        <li><?php echo $this->Html->link('S\'inscrire', $this->Html->url(array('controller'=>'partenaires', 'action'=>'add','admin'=>false), true), array('escape'=>false)) ?></li>
+                                        
+                                    </ul>
+                                </li>
+				<li><?php echo $this->Html->link('Contact', $this->Html->url(array('controller'=>'contacts', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?></li>
 			</ul>		
 		</nav>
-
 		<section class="accueil">
 			
                     <div id="path">

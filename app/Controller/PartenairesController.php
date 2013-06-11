@@ -97,6 +97,7 @@ class PartenairesController extends AppController {
 		}
 		$departements = $this->Partenaire->Departement->find('list');
 		$this->set(compact('departements'));
+                $this->layout = 'front';
 	}
 
 /**
