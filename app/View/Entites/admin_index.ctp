@@ -5,7 +5,7 @@
 			<th><?php echo $this->Paginator->sort('entite_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('entite'); ?></th>
 			<th><?php echo $this->Paginator->sort('type'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($entites as $entite): ?>
 	<tr>

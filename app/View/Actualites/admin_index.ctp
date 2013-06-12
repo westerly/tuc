@@ -16,7 +16,7 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('titre'); ?></th>
 			<th><?php echo $this->Paginator->sort('contenu'); ?></th>
 			<th><?php echo $this->Paginator->sort('last_updated'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($actualites as $actualite): ?>
 	<tr>
@@ -54,4 +54,9 @@ echo $this->Session->flash('nok');
 		<?php echo $this->Html->link(__('Ajouter une actualité'), array('controller' => 'actualites', 'action' => 'add')); ?>
 	</div>
 </div>
+
+
+
+	
+
 

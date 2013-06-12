@@ -22,6 +22,11 @@ class UsersController extends AppController {
 
 
 	function admin_login(){	
+		
+		$user = $this->Auth->user();
+		if(isset($user)){
+			$this->redirect(array('admin'=>true, 'controller' => 'defis', 'action' => 'index'));
+		}
 	
 		if ($this->request->is('post')) {
 		

@@ -1,3 +1,4 @@
+
 <div class="actualites form">
 <?php echo $this->Form->create('Actualite'); ?>
 	<fieldset>
@@ -5,7 +6,7 @@
 	<?php
 		//echo $this->Form->input('date_creation');
 		echo $this->Form->input('titre');
-		echo $this->Form->input('contenu');
+		echo $this->Form->input('contenu' , array("class" => "ckeditor"));
 		//echo $this->Form->input('last_updated');
 	?>
 	</fieldset>
@@ -17,3 +18,5 @@
 		<a href="javascript:history.back()">Retour</a> 
 	</ul>
 </div>
+
+

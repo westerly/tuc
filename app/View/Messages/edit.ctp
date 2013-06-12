@@ -11,7 +11,7 @@
 		echo $this->Form->input('contenu');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Valider')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

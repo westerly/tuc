@@ -47,7 +47,7 @@ echo $this->Form->create('Contact');
 		echo'</tr></table>';
 		
 	echo'</fieldset>';
-echo $this->Form->end(__('Submit'));
+echo $this->Form->end(__('Valider'));
 
 echo '</div>';
 

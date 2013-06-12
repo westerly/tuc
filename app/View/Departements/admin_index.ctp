@@ -5,7 +5,7 @@
 			<th><?php echo $this->Paginator->sort('num_departement'); ?></th>
 			<th><?php echo $this->Paginator->sort('num_region'); ?></th>
 			<th><?php echo $this->Paginator->sort('nom'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($departements as $departement): ?>
 	<tr>

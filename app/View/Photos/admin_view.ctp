@@ -22,9 +22,12 @@
 						width="500" height="264"
 						src="http://www.youtube.com/embed/'.$photo['Photo']['chemin_fichier'].'">
 					</iframe>';	
-			 	} else {
-			 		//echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='view' src='".URL_IMG.$photo['Photo']['chemin_fichier']."'/></a>";
-			 		echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('alt' => false, 'class' => 'view')), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
+			 	} else {			 		
+			 		echo $this->Html->link(
+									    $this->Html->image($photo['Photo']['chemin_fichier'],  array("class" => "view")),
+									    '/' . IMAGES_URL .$photo['Photo']['chemin_fichier'],
+									    array('escape' => false, 'class'=>'colorbox')
+					);
 			 	}
 
 			 ?> 

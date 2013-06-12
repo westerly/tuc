@@ -19,7 +19,7 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($photos as $photo): ?>
 	<tr>
@@ -103,7 +103,7 @@ echo $this->Session->flash('nok');
 		echo $this->Form->input('Superviseur');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Valider')); ?>
 </div>
 
 <div class="actions">

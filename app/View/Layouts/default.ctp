@@ -40,19 +40,42 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		//echo $this->Html->script('jquery-1.4.3.min'); 
 		//echo $this->Html->css('style');
 		
-		echo $this->Html->script('jquery-latest.min');
-		echo $this->Html->script('jquery.colorbox-min');
-
-		echo $this->Html->css('cake.generic');
-		echo $this->Html->css('admin');
+		
+		
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
+		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('colorbox');
+		echo $this->Html->css('admin');
+		echo $this->fetch('script');
 		
+		echo $this->Html->script('ckeditor/ckeditor');
+		echo $this->Html->script('jquery-1.10.1.min');
+		echo $this->Html->script('jquery-latest.min');
+		echo $this->Html->script('jquery.colorbox-min');
+		echo $this->Html->script('jquery.slides.min');
+		echo $this->Html->script('front');
 		
 	?>
+	
+	<script>
+	
+		//var $j = jQuery.noConflict();
+	
+		sfHover = function() {
+        var sfEls = document.getElementById("menu").getElementsByTagName("LI");
+        for (var i=0; i<sfEls.length; i++) {
+                sfEls[i].onmouseover=function() {
+                        this.className+=" sfhover";
+                }
+                sfEls[i].onmouseout=function() {
+                        this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+                }
+	        }
+		}
+		if (window.attachEvent) window.attachEvent("onload", sfHover);
+	</script>
 	
 </head>
 <body>
@@ -61,29 +84,65 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php
 			if($adminCo)
 			{
-					echo'<div class="menu">';
 							
-							echo "<ul>";
-								echo"<li>". $this->Html->link(__('Gérer les actualités'), array('controller' => 'actualites', 'action' => 'index','admin' => true))."</li>";
-								echo"<li>". $this->Html->link(__('Gérer les défis'), array('controller' => 'defis', 'action' => 'index','index','admin' => true))."</li>";
-								echo"<li>". $this->Html->link(__('Gérer les photos'), array('controller' => 'photos', 'action' => 'index', 'admin' => true)). "</li>";
-								echo"<li>". $this->Html->link(__('Gérer les partenaires'), array('controller' => 'partenaires', 'action' => 'index', 'admin' => true))."</li>";
-								echo"<li>". $this->Html->link(__('Gérer les utilisateurs'), array('controller' => 'users', 'action' => 'index', 'admin' => true))."</li>";
+							echo "<ul id='menu'>";
+								echo"<li>". $this->Html->link(__('Accueil'), array('controller' => 'accueil', 'action' => 'index','admin' => false))."</li>";
+								echo"<li>". $this->Html->link(__('Gérer les actualités'), array('controller' => 'actualites', 'action' => 'index','admin' => true));
+									echo "<ul>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter une actualité'), array('controller' => 'actualites', 'action' => 'add', 'admin' => true));
+										echo "</li>";
+									echo "</ul>";
+								echo"</li>";
+								echo"<li>". $this->Html->link(__('Gérer les défis'), array('controller' => 'defis', 'action' => 'index','index','admin' => true));
+									echo "<ul>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter un défi'), array('controller' => 'defis', 'action' => 'add', 'admin' => true));
+										echo "</li>";
+									echo "</ul>";
+								echo"</li>";
+								echo"<li>". $this->Html->link(__('Gérer les médias'), array('controller' => 'photos', 'action' => 'index', 'admin' => true));
+								echo "<ul>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter une photo'), array('controller' => 'photos', 'action' => 'add', 'admin' => true));
+										echo "</li>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter une vidéo'), array('controller' => 'photos', 'action' => 'addv', 'admin' => true));
+										echo "</li>";
+									echo "</ul>";
+								echo"</li>";
+								
+								echo"<li>". $this->Html->link(__('Gérer les partenaires'), array('controller' => 'partenaires', 'action' => 'index', 'admin' => true));
+								echo "<ul>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter un partenaire'), array('controller' => 'partenaires', 'action' => 'add', 'admin' => true));
+										echo "</li>";
+									echo "</ul>";
+								echo"</li>";
+								
+								echo"<li>". $this->Html->link(__('Gérer les utilisateurs'), array('controller' => 'users', 'action' => 'index', 'admin' => true));
+									echo "<ul>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter un utilisateur'), array('controller' => 'users', 'action' => 'add', 'admin' => true));
+										echo "</li>";
+										echo"<li>";
+											echo $this->Html->link(__('Ajouter un clan'), array('controller' => 'clans', 'action' => 'add', 'admin' => true));
+										echo "</li>";
+									echo "</ul>";
+								echo "</li>";
 								echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
 							echo "</ul>";
 							
-					echo"</div>";
 			}else{
 			
 				if($clanCo)
 				{
-					echo'<div class="menu">';
-								
+				
 								echo "<ul>";
+									echo"<li>". $this->Html->link(__('Accueil'), array('controller' => 'accueil', 'action' => 'index','admin' => false))."</li>";
 									echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
 								echo "</ul>";
 								
-					echo"</div>";
 				}
 			}
 		?>
@@ -116,5 +175,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+	
+	<?php
+
+	?>
 </body>
 </html>

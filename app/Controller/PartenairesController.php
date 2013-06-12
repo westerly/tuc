@@ -316,20 +316,34 @@ class PartenairesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		
+		$path = IMG.$this->Partenaire->field('fichierLogo', array('partenaire_id' => $id));
 		
-		$file = new File(IMG.$this->Partenaire->field('fichierLogo', array('partenaire_id' => $id), false, 0777));
+		debug($path);
 		
+		$file = new File($path, false, 0777);
 		
-		if ($file->delete() && $this->Partenaire->delete()) {
-
-			$this->Session->setFlash('Le partenaire a été supprimé avec succès.', 'default', array(), 'ok');
-			//$this->redirect(array('action' => 'index'));
-			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+		if(file_exists($path)){
+			
+			if($file->delete() && $this->Partenaire->delete()){
+				
+				$this->Session->setFlash('Le partenaire a été supprimé avec succès.', 'default', array(), 'ok');
+				$this->redirect(array('action' => 'index', 'admin' => true));
+			}else{
+					$this->Session->setFlash("Le partenaire n'a pas été supprimé.", 'default', array(), 'nok');
+					$this->redirect(array('action' => 'index', 'admin' => true));
+				
+			}
 		}else{
-			$this->Session->setFlash("Le partenaire n'a pas été supprimé.", 'default', array(), 'nok');
-			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
-			//$this->redirect(array('action' => 'index'));
+			if($this->Partenaire->delete()){
+			
+				$this->Session->setFlash('Le partenaire a été supprimé avec succès.', 'default', array(), 'ok');
+				$this->redirect(array('action' => 'index', 'admin' => true));
+			}else{
+				$this->Session->setFlash("Le partenaire n'a pas été supprimé.", 'default', array(), 'nok');
+				$this->redirect(array('action' => 'index', 'admin' => true));
+			
+			}
+			
 		}
-
 	}
 }
