@@ -44,7 +44,11 @@ foreach($defis as $defi) { ?>
                                     </iframe>';
 
                             } else {
-                                    echo $this->Html->image($photo, array('alt' => 'defis','class'=>'colorbox', 'width' => '200', 'height'=>'150'));
+                                    echo $this->Html->link(
+									    $this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
+									    '/' . IMAGES_URL .$photo,
+									    array('escape' => false, 'class'=>'colorbox')
+									);
                             }
                     }
                     ?>
