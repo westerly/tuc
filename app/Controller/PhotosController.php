@@ -224,33 +224,6 @@ public function admin_addV() {
 
 
 /**
- * admin_edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-// 	public function admin_edit($id = null) {
-// 		if (!$this->Photo->exists($id)) {
-// 			throw new NotFoundException(__('Invalid photo'));
-// 		}
-// 		if ($this->request->is('post') || $this->request->is('put')) {
-// 			if ($this->Photo->save($this->request->data)) {
-// 				$this->Session->setFlash(__('The photo has been saved'));
-// 				$this->redirect(array('action' => 'index'));
-// 			} else {
-// 				$this->Session->setFlash(__('The photo could not be saved. Please, try again.'));
-// 			}
-// 		} else {
-// 			$options = array('conditions' => array('Photo.' . $this->Photo->primaryKey => $id));
-// 			$this->request->data = $this->Photo->find('first', $options);
-// 		}
-// 		$clans = $this->Photo->Clan->find('list');
-// 		$defis = $this->Photo->Defi->find('list');
-// 		$this->set(compact('clans', 'defis'));
-// 	}
-
-/**
  * admin_delete method
  *
  * @throws NotFoundException
@@ -285,7 +258,7 @@ public function admin_addV() {
 				$this->Session->setFlash('La photo n\'a pas été supprimée.', 'default', array(), 'nok');
 			}
 		}
-		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+		$this->redirect(array('action' => 'index', 'admin' => true));
 	}
 	
 	public function admin_afficher($id = null, $afficher) {
@@ -319,10 +292,10 @@ public function admin_addV() {
 			}else{
 				$this->Session->setFlash('Le média n\'est plus affiché dans la partie publique du site', 'default', array(), 'ok');
 			}
-			$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+			$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
 		}
 		$this->Session->setFlash('Un problème est survenu, l\'action n\'a pas été effectuée.', 'default', array(), 'nok');
-		$this->redirect($this->referer()); // Permet de rediriger vers la page appelante
+		$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
 	
 	}
 }
