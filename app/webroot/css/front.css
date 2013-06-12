@@ -306,33 +306,43 @@ a .content:hover {
 }
 
 .carroussel-defis {
-	padding: 15px 0 15px 40px;
+	padding: 15px 15px 15px 15px;
 	position: relative;
+        overflow: hidden;
+        width: 930px;
+        margin: auto;
 }
+
+.carroussel-defis div {
+    width:10000%;
+    position:relative;
+}
+
 .carroussel-defis img {
 	border: 1px solid #ccc;
 	background-color: white;
 	padding: 9px;
-	margin: 7px;
+	margin: 8px;
 	display: block;
 	float: left;
 }
-a.prev, a.next {
+span.prev, span.next {
 	background: url(../img/front/miscellaneous_sprite.png) no-repeat transparent;
 	width: 45px;
 	height: 50px;
 	display: block;
 	position: absolute;
 	top: 85px;
+        cursor: pointer;
 }
-a.prev {			left: -22px;
+span.prev {			left:0px;
                                 background-position: 0 0; }
-a.prev:hover {              background-position: 0 -50px; }
-a.next {			right: -22px;
+span.prev:hover {              background-position: 0 -50px; }
+span.next {			right: -7px;
 					background-position: -50px 0; }
-a.next:hover {		background-position: -50px -50px; }
+span.next:hover {		background-position: -50px -50px; }
 
-a.prev span, a.next span {
+span.prev span, a.next span {
 	display: none;
 }
 .clearfix {
