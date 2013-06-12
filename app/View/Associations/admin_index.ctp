@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('association_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('association'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($associations as $association): ?>
 	<tr>

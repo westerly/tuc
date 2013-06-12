@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Actualite $Actualite
  */
 class ActualitesController extends AppController {
-
+	
 	var $paginate = array(
 		'Actualite' => array(
 				'limit' => 5,
@@ -61,12 +61,14 @@ class ActualitesController extends AppController {
  *
  * @return void
  */
-	public function admin_add() {
+	public function admin_add() {		
+		
 		if ($this->request->is('post')) {
+
 			$this->Actualite->create();
 			$this->request->data[Actualite][last_updated] = date("Y-m-d H:i:s");
 			$this->request->data[Actualite][date_creation] = date("Y-m-d H:i:s");
-				
+			
 			if ($this->Actualite->save($this->request->data)) {
 				$this->Session->setFlash('L\'actualité a été enregistrée avec succès.', 'default', array(), 'ok');
 				$this->redirect(array('action' => 'index'));

@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('profil_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('profil'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($profils as $profil): ?>
 	<tr>

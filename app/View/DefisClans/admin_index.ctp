@@ -7,7 +7,7 @@
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nbVotesPour'); ?></th>
 			<th><?php echo $this->Paginator->sort('nbVotesContre'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($defisClans as $defisClan): ?>
 	<tr>

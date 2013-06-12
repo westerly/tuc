@@ -32,7 +32,7 @@
 		<th><?php echo __('Num Departement'); ?></th>
 		<th><?php echo __('Num Region'); ?></th>
 		<th><?php echo __('Nom'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;

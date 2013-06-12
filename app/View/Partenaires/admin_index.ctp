@@ -19,9 +19,8 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('description', 'Description'); ?></th>
 			<th><?php echo $this->Paginator->sort('departement_id', 'Département'); ?></th>
 			<th><?php echo $this->Paginator->sort('afficher', 'Afficher'); ?></th>
-			<th><?php echo $this->Paginator->sort('fichierLogo', 'Path logo'); ?></th>
 			<th><?php echo "Logo"; ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($partenaires as $partenaire): ?>
 	<tr>
@@ -35,8 +34,15 @@ echo $this->Session->flash('nok');
 			<?php echo $this->Html->link($partenaire['Departement']['nom'], array('controller' => 'departements', 'action' => 'view', $partenaire['Departement']['num_departement'])); ?>
 		</td>
 		<td><?php if($partenaire['Partenaire']['afficher']==1){echo "Oui";}else{echo "Non";}?>&nbsp;</td>
-		<td><?php  echo $partenaire['Partenaire']['fichierLogo']; ?></td>
-		<td><?php echo "<a href='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."' class='top_up'><img class = 'index' src='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."'/></a>"; ?> </td>
+		<td><?php 
+
+		echo $this->Html->link(
+									    $this->Html->image($partenaire['Partenaire']['fichierLogo'],  array("class" => "index")),
+									    '/' . IMAGES_URL .$partenaire['Partenaire']['fichierLogo'],
+									    array('escape' => false, 'class'=>'colorbox')
+		);
+		
+		?> </td>
 		
 		
 		<td class="actions">

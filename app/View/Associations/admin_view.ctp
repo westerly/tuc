@@ -36,7 +36,7 @@
 		<th><?php echo __('Commentaires'); ?></th>
 		<th><?php echo __('Date Soumission'); ?></th>
 		<th><?php echo __('Afficher'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;

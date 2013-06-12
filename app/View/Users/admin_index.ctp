@@ -14,7 +14,7 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('login'); ?></th>
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($users as $user): ?>
 	<tr>
@@ -47,4 +47,5 @@ echo $this->Session->flash('nok');
 </div>
 <div class="actions widebutton">
 	<?php echo $this->Html->link(__('Ajouter un utilisateur'), array('action' => 'add')); ?>
+	<?php echo $this->Html->link(__('Ajouter un clan'), array('controller' => 'clans', 'action' => 'add')); ?>
 </div>

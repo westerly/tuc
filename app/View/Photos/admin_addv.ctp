@@ -23,7 +23,7 @@
 	?>
 	</fieldset>
 	<?php
-		echo $this->Form->end(__('Submit'));
+		echo $this->Form->end(__('Valider'));
 	?>
 </div>
 

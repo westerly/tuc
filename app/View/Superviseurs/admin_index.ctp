@@ -10,7 +10,7 @@
 			<th><?php echo $this->Paginator->sort('tel'); ?></th>
 			<th><?php echo $this->Paginator->sort('entite_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('entite_type'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($superviseurs as $superviseur): ?>
 	<tr>

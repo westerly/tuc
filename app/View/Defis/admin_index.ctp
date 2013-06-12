@@ -30,7 +30,7 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('commentaires'); ?></th>
 			<th><?php echo $this->Paginator->sort('date_soumission'); ?></th>
 			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($defis as $defi): ?>
 	<tr>
@@ -55,11 +55,28 @@ echo $this->Session->flash('nok');
 		<td><?php echo substr($defi['Defi']['etapes'],0,50); ?>&nbsp;</td>
 		<td><?php echo substr($defi['Defi']['commentaires'],0,50); ?>&nbsp;</td>
 		<td><?php echo h($defi['Defi']['date_soumission']); ?>&nbsp;</td>
-		<td><?php echo h($defi['Defi']['afficher']); ?>&nbsp;</td>
+		<td><?php
+		
+		 if(h($defi['Defi']['afficher']) == '1'){
+		 	echo "Oui";
+		 }else{
+		 	echo "Non";
+		 } 
+		 
+		 ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Détails'), array('action' => 'view', $defi['Defi']['id'])); ?>
 			<?php echo $this->Html->link(__('Editer'), array('action' => 'edit', $defi['Defi']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Supprimer'), array('action' => 'delete', $defi['Defi']['id']), null, __('Voulez vous vraiment supprimer ce défi?')); ?>
+			<?php 
+			
+				if($defi['Defi']['afficher']== '1' ){
+					echo $this->Form->postLink(__('Ne plus afficher'), array('action' => 'afficher', $defi['Defi']['id'], false), null, __('Supprimer l\'affichage du défi dans la partie publique du site?')); 
+				}else{
+					echo $this->Form->postLink(__('Afficher'), array('action' => 'afficher', $defi['Defi']['id'], true), null, __('Afficher ce défi dans la partie publique du site?')); 
+				}
+				
+			?>
 		</td>
 	</tr>
 <?php endforeach; ?>
