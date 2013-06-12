@@ -35,5 +35,31 @@ $(function(){
          }
          
      });
+     
+     $('.prev, .next').click(function() {
+        
+        var id_car = $(this).attr('defis_id');
+        var imgs = $('#car_'+id_car+' div');
+        var dep = 0;
+        var vitesse = 500;
+        if($(this).attr('item') > 1) {
+            if($(this).hasClass('prev')) {
+                dep = -236;
+                if($(this).parent().find('.next').attr('item') == 1)
+                    dep = -243;
+                $(this).parent().find('.next').attr('item', parseInt($(this).parent().find('.next').attr('item'))+1);
+                $(this).parent().find('.prev').attr('item', parseInt($(this).parent().find('.prev').attr('item'))-1);
+            }
+            else if($(this).hasClass('next')) {
+                dep = 236;
+                if($(this).parent().find('.prev').attr('item') == 2)
+                    dep = 243;
+                $(this).parent().find('.next').attr('item', parseInt($(this).parent().find('.next').attr('item'))-1);
+                $(this).parent().find('.prev').attr('item', parseInt($(this).parent().find('.prev').attr('item'))+1);
+           }
+        imgs.animate({left: '+='+dep}, vitesse);
+        }
+        
+     });
       
   });

@@ -54,11 +54,13 @@ foreach($defis as $defi) { ?>
                     ?>
 
                     </div>
-
+                <?php if(count($clan) > 4) { ?>
+                <span class="prev" item="<?php echo count($clan) - 3; ?>" defis_id="<?php echo $i ?>"><span></span></span>
+                <span class="next" item="1"defis_id="<?php echo $i ?>"><span></span></span>
+                <?php } ?>
+                </div> 
+                
                 <div class="clearfix"></div>
-             <!--   <a class="prev" id="foo1_prev_<?php echo $i ?>" href="#"><span>prev</span></a>
-                <a class="next" id="foo1_next_<?php echo $i ?>" href="#"><span>next</span></a>
-                </div> -->
                 <div class="vote-defis">
                     <span><?php echo $this->Html->link('Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
                     <span><?php echo $this->Html->link('Pas Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
