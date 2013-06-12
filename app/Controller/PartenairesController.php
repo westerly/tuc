@@ -69,8 +69,21 @@ class PartenairesController extends AppController {
 				
 				if($needUpload)
 				{
+					$folderCreate = true;
+					if(!file_exists(IMG."partenaires")){
+						if(!mkdir(IMG."partenaires", 0777)){
+							$folderCreate = false;
+						}
+					}
+						
+					if(!file_exists(IMG."partenaires/logos")){
+						if(!mkdir(IMG."partenaires/logos", 0777)){
+							$folderCreate = false;
+						}
+					}
+					
 					//Si on a pu save le partenaire on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
-					if(move_uploaded_file($infosUpload["tmp_name"], IMG.$dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+					if($folderCreate && move_uploaded_file($infosUpload["tmp_name"], IMG.$dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
 					{
 						 // Envoi du message de confirmation à la vue
 						//$this->set('message', 'Votre enregistrement a été effectué avec succès.');
@@ -160,8 +173,22 @@ class PartenairesController extends AppController {
 				
 				if($needUpload)
 				{
+					
+					$folderCreate = true;
+					if(!file_exists(IMG."partenaires")){
+						if(!mkdir(IMG."partenaires", 0777)){
+							$folderCreate = false;
+						}
+					}
+						
+					if(!file_exists(IMG."partenaires/logos")){
+						if(!mkdir(IMG."partenaires/logos", 0777)){
+							$folderCreate = false;
+						}
+					}
+					
 					//Si on a pu save le partenaire on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
-					if(move_uploaded_file($infosUpload["tmp_name"], IMG.$dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+					if($folderCreate && move_uploaded_file($infosUpload["tmp_name"], IMG.$dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
 					{
 						 // Envoi du message de confirmation à la vue
 						//$this->set('message', 'Votre enregistrement a été effectué avec succès.');

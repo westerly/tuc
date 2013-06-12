@@ -36,8 +36,12 @@ echo $this->Session->flash('nok');
 				</iframe>';						     
 				
 			}else{
-				//echo "URL IMG: ".URL_IMG;
-				echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('class' => 'index', 'alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
+				//echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('class' => 'index', 'alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
+				echo $this->Html->link(
+									    $this->Html->image($photo['Photo']['chemin_fichier'],  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
+									    '/' . IMAGES_URL .$photo['Photo']['chemin_fichier'],
+									    array('escape' => false, 'class'=>'colorbox')
+				);
 			}
 									
 		?>&nbsp;</td>
