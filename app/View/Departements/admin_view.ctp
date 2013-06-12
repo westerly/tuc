@@ -44,7 +44,7 @@
 		<th><?php echo __('FichierLogo'); ?></th>
 		<th><?php echo __('Departement Id'); ?></th>
 		<th><?php echo __('Afficher'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;

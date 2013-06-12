@@ -12,18 +12,16 @@ echo $this->Session->flash('nok');
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('chemin_fichier'); ?></th>
 			<th><?php echo "Photo/Vidéo" ?></th>
 			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('defi_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($photos as $photo): ?>
 	<tr>
 		<td><?php echo h($photo['Photo']['id']); ?>&nbsp;</td>
-		<td><?php echo h($photo['Photo']['chemin_fichier']); ?>&nbsp;</td>
 		<td>
 		<?php 
 		
@@ -36,9 +34,8 @@ echo $this->Session->flash('nok');
 				</iframe>';						     
 				
 			}else{
-				//echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('class' => 'index', 'alt' => false)), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
 				echo $this->Html->link(
-									    $this->Html->image($photo['Photo']['chemin_fichier'],  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
+									    $this->Html->image($photo['Photo']['chemin_fichier'],  array("class" => "index")),
 									    '/' . IMAGES_URL .$photo['Photo']['chemin_fichier'],
 									    array('escape' => false, 'class'=>'colorbox')
 				);
@@ -88,8 +85,7 @@ echo $this->Session->flash('nok');
 	
 	<div class="actions widebutton">
 		<?php echo $this->Html->link(__('Ajouter une photo'), array('action' => 'add')); ?>
-	</div>
-	<div class="actions widebutton">
+	
 		<?php echo $this->Html->link(__('Ajouter une vidéo'), array('action' => 'addv')); ?>
 	</div>
 </div>

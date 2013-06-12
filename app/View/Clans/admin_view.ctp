@@ -24,7 +24,7 @@
 		<th><?php echo __('Clan Id'); ?></th>
 		<th><?php echo __('NbVotesPour'); ?></th>
 		<th><?php echo __('NbVotesContre'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -56,7 +56,7 @@
 		<th><?php echo __('Afficher'); ?></th>
 		<th><?php echo __('Clan Id'); ?></th>
 		<th><?php echo __('Defi Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -102,7 +102,7 @@
 		<th><?php echo __('Commentaires'); ?></th>
 		<th><?php echo __('Date Soumission'); ?></th>
 		<th><?php echo __('Afficher'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;

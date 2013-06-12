@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('materiel_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('materiel'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($materiels as $materiel): ?>
 	<tr>

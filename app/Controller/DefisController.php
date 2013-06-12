@@ -184,4 +184,41 @@ class DefisController extends AppController {
 		$this->Session->setFlash('Le défi n\'a pas été supprimée.', 'default', array(), 'nok');
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	public function admin_afficher($id = null, $afficher) {
+	
+		$user = $this->Auth->user();
+		$this->Defi->id = $id;
+		if (!$this->Defi->exists()) {
+			throw new NotFoundException(__('Le défi n\'existe pas.'));
+		}
+	
+		$this->Defi->read(null, $id);
+	
+	
+		$query = "UPDATE form_photos SET afficher = ";
+		if($afficher == true){
+			$this->Defi->set(array(
+					'afficher' => '1'
+			));
+		}else{
+			$this->Defi->set(array(
+					'afficher' => '0'
+			));
+		}
+		$query .= " WHERE id = ".$id;
+	
+		if ($this->Defi->save()) {
+	
+			if($afficher){
+				$this->Session->setFlash('Le défi est maintenant affiché dans la partie publique du site.', 'default', array(), 'ok');
+			}else{
+				$this->Session->setFlash('Le défi n\'est plus affiché dans la partie publique du site', 'default', array(), 'ok');
+			}
+			$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
+		}
+		$this->Session->setFlash('Un problème est survenu, l\'action n\'a pas été effectuée.', 'default', array(), 'nok');
+		$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
+	
+	}
 }

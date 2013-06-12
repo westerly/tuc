@@ -46,7 +46,16 @@ echo $this->Session->flash('nok');
 		</dd>
 		<dt><?php echo __('Logo'); ?></dt>
 		<dd>
-			 <?php  echo "<a href='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."' class='top_up'><img class='view' src='".URL_IMG.$partenaire['Partenaire']['fichierLogo']."'/></a>"; ?> 
+			 <?php  
+			 
+			 	echo $this->Html->link(
+									    $this->Html->image($partenaire['Partenaire']['fichierLogo'],  array("class" => "view")),
+									    '/' . IMAGES_URL .$partenaire['Partenaire']['fichierLogo'],
+									    array('escape' => false, 'class'=>'colorbox')
+				);
+		
+			 
+			 ?> 
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Departement'); ?></dt>
@@ -85,7 +94,7 @@ echo $this->Session->flash('nok');
 		<th><?php echo __('Commentaires'); ?></th>
 		<th><?php echo __('Date Soumission'); ?></th>
 		<th><?php echo __('Afficher'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;

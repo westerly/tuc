@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('horaire_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('horaire'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($horaires as $horaire): ?>
 	<tr>

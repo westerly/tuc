@@ -8,7 +8,7 @@
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
 			<th><?php echo $this->Paginator->sort('entite_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('contenu'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php foreach ($messages as $message): ?>
 	<tr>

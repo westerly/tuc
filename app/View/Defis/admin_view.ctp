@@ -116,7 +116,7 @@ echo $this->Session->flash('nok');
 			<th><?php echo $this->Paginator->sort('afficher'); ?></th>
 			<th><?php echo $this->Paginator->sort('clan_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('date_upload'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -135,8 +135,11 @@ echo $this->Session->flash('nok');
 						src="http://www.youtube.com/embed/'.$photo['Photo']['chemin_fichier'].'">
 					</iframe>';	
 			 	} else {
-			 		//echo "<a href='".URL_IMG.$photo['Photo']['chemin_fichier']."' class='top_up'><img class='view' src='".URL_IMG.$photo['Photo']['chemin_fichier']."'/></a>";
-			 		echo $this->Html->link($this->Html->image($photo['Photo']['chemin_fichier'], array('alt' => false, 'class' => 'index')), URL_IMG.$photo['Photo']['chemin_fichier'], array('class' => 'top_up', 'escape' => false));
+			 		echo $this->Html->link(
+									    $this->Html->image($photo['Photo']['chemin_fichier'],  array("class" => "index")),
+									    '/' . IMAGES_URL .$photo['Photo']['chemin_fichier'],
+									    array('escape' => false, 'class'=>'colorbox')
+					);
 			 	}
 				?> </td>
 			
@@ -183,7 +186,7 @@ echo $this->Session->flash('nok');
 	<tr>
 		<th><?php echo __('Association Id'); ?></th>
 		<th><?php echo __('Association'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -211,7 +214,7 @@ echo $this->Session->flash('nok');
 		<th><?php echo __('Entite Id'); ?></th>
 		<th><?php echo __('Entite'); ?></th>
 		<th><?php echo __('Type'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -238,7 +241,7 @@ echo $this->Session->flash('nok');
 	<tr>
 		<th><?php echo __('Materiel Id'); ?></th>
 		<th><?php echo __('Materiel'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -270,7 +273,7 @@ echo $this->Session->flash('nok');
 		<th><?php echo __('FichierLogo'); ?></th>
 		<th><?php echo __('Departement Id'); ?></th>
 		<th><?php echo __('Afficher'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -303,7 +306,7 @@ echo $this->Session->flash('nok');
 	<tr>
 		<th><?php echo __('Profil Id'); ?></th>
 		<th><?php echo __('Profil'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
@@ -336,7 +339,7 @@ echo $this->Session->flash('nok');
 		<th><?php echo __('Tel'); ?></th>
 		<th><?php echo __('Entite Id'); ?></th>
 		<th><?php echo __('Entite Type'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th ></th>
 	</tr>
 	<?php
 		$i = 0;
