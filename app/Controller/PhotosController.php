@@ -114,6 +114,7 @@ class PhotosController extends AppController {
  */
 	public function admin_add() {
 		
+		
 		if ($this->request->is('post')) {
 			
 			set_time_limit("3600");
