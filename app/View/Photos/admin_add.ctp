@@ -17,7 +17,12 @@ echo $this->Form->create('Photo', array('type' => 'file'));
 		//echo $this->Form->input('chemin_fichier');
 		echo $this->Form->input('photo_fichier', array('label' => 'Uploader une photo (PNG, JPG, JPEG)', 'type' => 'file'));
 		echo $this->Form->input('afficher');
-		echo $this->Form->input('clan_id');
+		
+		if(isset($clanCo) && $clanCo){
+		}else{
+			echo $this->Form->input('clan_id');
+		}
+		
 		echo $this->Form->input('defi_id');
 		//echo $this->Form->input('date_upload');
 

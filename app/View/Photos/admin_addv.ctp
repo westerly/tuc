@@ -17,7 +17,10 @@
 		//echo $this->Form->input('chemin_fichier');
 		echo $this->Form->input('video_url', array('label' => 'Insérer le lien Youtube :', 'type' => 'text'));
 		echo $this->Form->input('afficher');
-		echo $this->Form->input('clan_id');
+		if(isset($clanCo) && $clanCo){
+		}else{
+			echo $this->Form->input('clan_id');
+		}
 		echo $this->Form->input('defi_id');
 		//echo $this->Form->input('date_upload');
 	?>

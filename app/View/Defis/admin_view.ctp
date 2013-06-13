@@ -29,7 +29,7 @@ echo $this->Session->flash('nok');
 			<?php echo $this->Html->link($defi['Horaire']['horaire'], array('controller' => 'horaires', 'action' => 'view', $defi['Horaire']['horaire_id'])); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Ip Demandeur'); ?></dt>
+		<dt><?php echo __('Adresse IP du demandeur'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['ip_demandeur']); ?>
 			&nbsp;
@@ -44,37 +44,37 @@ echo $this->Session->flash('nok');
 			<?php echo $this->Html->link($defi['Localisation']['lieu'], array('controller' => 'localisations', 'action' => 'view', $defi['Localisation']['localisation_id'])); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Nbr Etu'); ?></dt>
+		<dt><?php echo __('Nombre d\'étudiants'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['nbr_etu']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Principe Orga'); ?></dt>
+		<dt><?php echo __('Principe et organisation'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['principe_orga']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Orga Equipe Projet'); ?></dt>
+		<dt><?php echo __('Organisation équipe projet'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['orga_equipe_projet']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Precautions'); ?></dt>
+		<dt><?php echo __('Précautions'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['precautions']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Resultats'); ?></dt>
+		<dt><?php echo __('Résultats'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['resultats']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Valo Citoyenne'); ?></dt>
+		<dt><?php echo __('Valorisation citoyenne'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['valo_citoyenne']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Valo Media'); ?></dt>
+		<dt><?php echo __('Valorisation médiatique'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['valo_media']); ?>
 			&nbsp;
@@ -89,21 +89,29 @@ echo $this->Session->flash('nok');
 			<?php echo h($defi['Defi']['commentaires']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Date Soumission'); ?></dt>
+		<dt><?php echo __('Date de soumission'); ?></dt>
 		<dd>
 			<?php echo h($defi['Defi']['date_soumission']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Afficher'); ?></dt>
+		<dt><?php echo __('Afficher le défi'); ?></dt>
 		<dd>
-			<?php echo h($defi['Defi']['afficher']); ?>
+			<?php 
+			
+			  if(h($defi['Defi']['afficher'] == '1')){
+			  	echo "Oui";
+			  }else{
+			  	echo "Non";
+			  }
+			
+			?>
 			&nbsp;
 		</dd>
 	</dl>
 </div>
 
 
-<?php if(isset($photos)){ ?>
+<?php if(isset($photos) && count($photos) != 0){ ?>
 
 <div class="related">
 	<h3><?php echo __('Photos associées'); ?></h3>
@@ -177,6 +185,7 @@ echo $this->Session->flash('nok');
 <br/>
 <br/>
 
+<?php if (!empty($defi['Association']) && count($defi['Association']) != 0 ){ ?>
 <div class="related">
 <br/>
 <br/>
@@ -206,6 +215,10 @@ echo $this->Session->flash('nok');
 
 </div>
 
+<?php } ?>
+
+
+<?php if (!empty($defi['Entite']) && count($defi['Entite']) != 0 ){ ?>
 <div class="related">
 	<h3><?php echo __('Entités liées:'); ?></h3>
 	<?php if (!empty($defi['Entite'])): ?>
@@ -233,7 +246,12 @@ echo $this->Session->flash('nok');
 	</table>
 <?php endif; ?>
 
+
 </div>
+
+<?php } ?>
+
+<?php if (!empty($defi['Materiel']) && count($defi['Materiel']) != 0 ){ ?>
 <div class="related">
 	<h3><?php echo __('Materiels liés:'); ?></h3>
 	<?php if (!empty($defi['Materiel'])): ?>
@@ -260,6 +278,9 @@ echo $this->Session->flash('nok');
 <?php endif; ?>
 
 </div>
+
+<?php } ?>
+<?php if (!empty($defi['Partenaire']) && count($defi['Partenaire']) != 0 ){ ?>
 <div class="related">
 	<h3><?php echo __('Partenaires liés:'); ?></h3>
 	<?php if (!empty($defi['Partenaire'])): ?>
@@ -297,8 +318,10 @@ echo $this->Session->flash('nok');
 	</table>
 <?php endif; ?>
 
-
 </div>
+
+<?php } ?>
+<?php if (!empty($defi['Profil']) && count($defi['Profil']) != 0 ){ ?>
 <div class="related">
 	<h3><?php echo __('Profils liés:'); ?></h3>
 	<?php if (!empty($defi['Profil'])): ?>
@@ -324,8 +347,10 @@ echo $this->Session->flash('nok');
 	</table>
 <?php endif; ?>
 
-
 </div>
+
+<?php } ?>
+<?php if (!empty($defi['Superviseur']) && count($defi['Superviseur']) != 0 ){ ?>
 <div class="related">
 	<h3><?php echo __('Superviseurs liés:'); ?></h3>
 	<?php if (!empty($defi['Superviseur'])): ?>
@@ -364,6 +389,8 @@ echo $this->Session->flash('nok');
 <?php endif; ?>
 
 </div>
+
+<?php } ?>
 
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

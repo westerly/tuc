@@ -137,11 +137,21 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			
 				if($clanCo)
 				{
-				
-								echo "<ul>";
+							echo "<ul id='menu'>";
 									echo"<li>". $this->Html->link(__('Accueil'), array('controller' => 'accueil', 'action' => 'index','admin' => false))."</li>";
+									echo"<li>". $this->Html->link(__('Gérer les médias'), array('controller' => 'photos', 'action' => 'index', 'admin' => true));
+									echo "<ul>";
+											echo"<li>";
+												echo $this->Html->link(__('Ajouter une photo'), array('controller' => 'photos', 'action' => 'add', 'admin' => true));
+											echo "</li>";
+											echo"<li>";
+												echo $this->Html->link(__('Ajouter une vidéo'), array('controller' => 'photos', 'action' => 'addv', 'admin' => true));
+											echo "</li>";
+										echo "</ul>";
+									echo"</li>";
 									echo"<li>". $this->Html->link(__('Déconnexion'), array('controller' => 'Users', 'action' => 'logout', 'admin' => true))."</li>";
 								echo "</ul>";
+							echo "</ul>";
 								
 				}
 			}
@@ -166,15 +176,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
+			<?php //echo $this->Html->link(
+			//		$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+			//		'http://www.cakephp.org/',
+			//		array('target' => '_blank', 'escape' => false)
+			//	);
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 	
 	<?php
 
