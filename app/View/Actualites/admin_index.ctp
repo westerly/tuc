@@ -8,7 +8,7 @@ echo $this->Session->flash('nok');
 
 
 <div class="actualites index">
-	<h2><?php echo __('Actualites'); ?></h2>
+	<h2><?php echo __('Actualités'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>

@@ -155,7 +155,7 @@ html>body #menu li ul ul
 
 #menu a:hover /* Lorsque la souris passe sur un des liens */   
 {
-        color: #003D4C; /* On passe le texte en noir... */
+        color: #003D4C; /* On passe le texte en vert... */
         background: white; /* ... et au contraire, le fond en blanc */
 }
 

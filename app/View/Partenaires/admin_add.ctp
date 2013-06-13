@@ -19,7 +19,7 @@ if(isset($message)){
 	echo $this->Form->create('Partenaire', array('type' => 'file'));
 	
 		echo'<fieldset>';
-			echo"<legend> S'inscrire en tant que partenaire </legend>";
+			echo"<legend> Ajouter un partenaire </legend>";
 		
 			echo $this->Form->input('partenaire', array('label' => 'Nom'));
 			echo $this->Form->input('adresseWeb', array('label' => 'Site Web'));

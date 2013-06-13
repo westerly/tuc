@@ -27,7 +27,7 @@ class PhotosController extends AppController {
 		}
 	
 		// Tous les users inscrits peuvent ajouter des photos et accéder à l'index des photos
-		if (isset($user["id"]) && in_array($this->action, array('admin_add', 'admin_index', 'admin_view'))) {
+		if (isset($user["id"]) && in_array($this->action, array('admin_add', 'admin_addv', 'admin_index', 'admin_view'))) {
 			return true;
 		}
 		
@@ -138,6 +138,13 @@ class PhotosController extends AppController {
 			
 			$this->request->data["Photo"]["date_upload"] = date("Y-m-d H:i:s");
 			
+			
+			$user = $this->Auth->user();
+			if(isset($user["clan_id"])){
+				$this->request->data["Photo"]["clan_id"] = $user["clan_id"];
+			}
+			
+			
 			if ($this->Photo->save($this->request->data)) {
 			
 					//Si on a pu save la photo on effectue l'upload du fichier (tout à été testé pour que ça passe normalement)
@@ -165,8 +172,7 @@ class PhotosController extends AppController {
 		if(!isset($user["clan_id"])){
 			$clans = $this->Photo->Clan->find('list');
 		}else{
-			$options = array('conditions' => array('Clan.' . $this->Photo->Clan->primaryKey => $user["clan_id"]));
-			$clans = $this->Photo->Clan->find("list", $options);
+			$this->set('clanCo', true);
 		}
 		
 		$defis = $this->Photo->Defi->find('list');
@@ -194,7 +200,15 @@ public function admin_addV() {
 				$this->request->data["Photo"]["chemin_fichier"] = $match[1];
 			}
 			
+			$this->request->data["Photo"]["date_upload"] = date("Y-m-d H:i:s");
+			
 			if ($urlOk) {
+				
+				$user = $this->Auth->user();
+				if(isset($user["clan_id"])){
+					$this->request->data["Photo"]["clan_id"] = $user["clan_id"];
+				}
+				
 				if (!empty($match[1]) && $this->Photo->save($this->request->data,false)) {
 					// On enregistre le token youtube
 					$this->Session->setFlash('Votre photo a été enregistrée avec succès.', 'default', array(), 'ok');
@@ -214,8 +228,7 @@ public function admin_addV() {
 		if(!isset($user["clan_id"])){
 			$clans = $this->Photo->Clan->find('list');
 		}else{
-			$options = array('conditions' => array('Clan.' . $this->Photo->Clan->primaryKey => $user["clan_id"]));
-			$clans = $this->Photo->Clan->find("list", $options);
+			$this->set('clanCo', true);
 		}
 		
 		$defis = $this->Photo->Defi->find('list');
