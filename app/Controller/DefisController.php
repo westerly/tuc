@@ -50,6 +50,7 @@ class DefisController extends AppController {
 
 	
 	public function index() {
+		
 		$this->Defi->recursive = 0;
 		$this->layout = 'front';
 				
