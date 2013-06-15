@@ -49,6 +49,14 @@ echo $this->Session->flash('nok');
 			<?php echo $this->Html->link(__('Détails'), array('action' => 'view', $partenaire['Partenaire']['partenaire_id'])); ?>
 			<?php echo $this->Html->link(__('Editer'), array('action' => 'edit', $partenaire['Partenaire']['partenaire_id'])); ?>
 			<?php echo $this->Form->postLink(__('Supprimer'), array('action' => 'delete', $partenaire['Partenaire']['partenaire_id']), null, __('Voulez vous vraiment supprimer ce partenaire?')); ?>
+			<?php 
+				if($partenaire['Partenaire']['afficher']==1){
+					echo $this->Form->postLink(__('Ne plus affciher'), array('action' => 'afficher', $partenaire['Partenaire']['partenaire_id'], false), null, __('Voulez vous vraiment ne plus afficher ce partenaire?')); 
+				}else{
+					echo $this->Form->postLink(__('Afficher'), array('action' => 'afficher', $partenaire['Partenaire']['partenaire_id'], true), null, __('Voulez vous vraiment afficher ce partenaire?')); 
+				}
+			
+			?>
 		</td>
 	</tr>
 <?php endforeach; ?>

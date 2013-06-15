@@ -85,9 +85,9 @@ class ContactsController extends AppController {
 			}else{
 				// Pas d'erreurs, envoyer l'email
  				$Email = new CakeEmail();
-				$Email->from(array('tuc@utc.fr' => 'Tuc website'));
-				$Email->to('gtorche@gmail.com');
-				$Email->subject('Message de '.$datas["nom"]." ".$datas["nom"]);
+				$Email->from(array('tucWebsite@utc.fr' => 'Tuc website'));
+				$Email->to('tuc@assos.utc.fr');
+				$Email->subject('Message de '.$datas["prenom"]." ".$datas["nom"]);
 				
 				try{
 					$message = "Adresse mail de contact: ".$datas["email"]."\n Entité: ".$datas["entite"]."\n\n\n".$datas["message"];
@@ -102,8 +102,6 @@ class ContactsController extends AppController {
 				}
 				
 			}
-			
-			
 			
 			//$this->Session->setFlash('Le défi a été enregistrée avec succès.', 'default', array(), 'ok');
 			//$this->redirect(array('action' => 'index'));

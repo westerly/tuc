@@ -63,6 +63,10 @@ class PartenairesController extends AppController {
 				$fichier = rand().$extension;
 				
 				$this->request->data["Partenaire"]["fichierLogo"] = $dossier.$fichier;
+			}else{
+				$dossier = "partenaires/logos/";
+				// On affecte la photo standard pour le logo du partenaire
+				$this->request->data["Partenaire"]["fichierLogo"] = $dossier."nopics.JPG";
 			}
 		
 			if ($this->Partenaire->save($this->request->data)) {
@@ -167,6 +171,10 @@ class PartenairesController extends AppController {
 				$fichier = rand().$extension;
 				
 				$this->request->data["Partenaire"]["fichierLogo"] = $dossier.$fichier;
+			}else{
+				$dossier = "partenaires/logos/";
+				// On affecte la photo standard pour le logo du partenaire
+				$this->request->data["Partenaire"]["fichierLogo"] = $dossier."nopics.JPG";
 			}
 		
 			if ($this->Partenaire->save($this->request->data)) {
@@ -318,11 +326,10 @@ class PartenairesController extends AppController {
 		
 		$path = IMG.$this->Partenaire->field('fichierLogo', array('partenaire_id' => $id));
 		
-		debug($path);
 		
 		$file = new File($path, false, 0777);
 		
-		if(file_exists($path)){
+		if(!preg_match("/nopics/",$path) && file_exists($path)){
 			
 			if($file->delete() && $this->Partenaire->delete()){
 				
@@ -345,5 +352,42 @@ class PartenairesController extends AppController {
 			}
 			
 		}
+	}
+	
+	public function admin_afficher($id = null, $afficher) {
+	
+		$user = $this->Auth->user();
+		$this->Partenaire->id = $id;
+		if (!$this->Partenaire->exists()) {
+			throw new NotFoundException(__('Le partenaire n\'existe pas.'));
+		}
+	
+		$this->Partenaire->read(null, $id);
+	
+	
+		$query = "UPDATE form_partenaires SET afficher = ";
+		if($afficher == true){
+			$this->Partenaire->set(array(
+					'afficher' => '1'
+			));
+		}else{
+			$this->Partenaire->set(array(
+					'afficher' => '0'
+			));
+		}
+		$query .= " WHERE id = ".$id;
+	
+		if ($this->Partenaire->save()) {
+	
+			if($afficher){
+				$this->Session->setFlash('Le partenaire est maintenant affiché dans la partie publique du site.', 'default', array(), 'ok');
+			}else{
+				$this->Session->setFlash('Le partenaire n\'est plus affiché dans la partie publique du site', 'default', array(), 'ok');
+			}
+			$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
+		}
+		$this->Session->setFlash('Un problème est survenu, l\'action n\'a pas été effectuée.', 'default', array(), 'nok');
+		$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
+	
 	}
 }

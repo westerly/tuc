@@ -101,6 +101,16 @@ class AppController extends Controller {
 		
 		
     }
+    
+	function beforeRender() {
+	    if($this->name == 'CakeError') {
+	    	if(preg_match('/^admin/', $this->action)){
+	    		$this->layout ="default";
+	    	}else{
+	    		$this->layout ="front";
+	    	}
+	    }
+	}
 
 	//var $components = array('Auth');
 
