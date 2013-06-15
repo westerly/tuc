@@ -264,6 +264,7 @@ class MissingControllerException extends CakeException {
 
 //@codingStandardsIgnoreStart
 	public function __construct($message, $code = 404) {
+		$this->layout = "front";
 		parent::__construct($message, $code);
 	}
 //@codingStandardsIgnoreEnd
