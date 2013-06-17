@@ -44,16 +44,16 @@ $(function(){
         var vitesse = 500;
         if($(this).attr('item') > 1) {
             if($(this).hasClass('prev')) {
-                dep = -236;
+                dep = 236;
                 if($(this).parent().find('.next').attr('item') == 1)
-                    dep = -243;
+                    dep = 243;
                 $(this).parent().find('.next').attr('item', parseInt($(this).parent().find('.next').attr('item'))+1);
                 $(this).parent().find('.prev').attr('item', parseInt($(this).parent().find('.prev').attr('item'))-1);
             }
             else if($(this).hasClass('next')) {
-                dep = 236;
+                dep = -236;
                 if($(this).parent().find('.prev').attr('item') == 2)
-                    dep = 243;
+                    dep = -243;
                 $(this).parent().find('.next').attr('item', parseInt($(this).parent().find('.next').attr('item'))-1);
                 $(this).parent().find('.prev').attr('item', parseInt($(this).parent().find('.prev').attr('item'))+1);
            }

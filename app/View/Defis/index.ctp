@@ -17,7 +17,9 @@ foreach($defis as $defi) { ?>
             </div>
         </div>
         
-        <div class="content"><?php echo $defi['Defi']['principe_orga']; ?>
+        <div class="content">
+            <?php echo $defi['Defi']['principe_orga']; ?>
+            <a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'view', $defi['Defi']['id']), true) ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;">Détails...</a>
             <div class="liste-defis">
             <?php
             $clans = array();
@@ -55,8 +57,8 @@ foreach($defis as $defi) { ?>
 
                     </div>
                 <?php if(count($clan) > 4) { ?>
-                <span class="prev" item="<?php echo count($clan) - 3; ?>" defis_id="<?php echo $i ?>"><span></span></span>
-                <span class="next" item="1"defis_id="<?php echo $i ?>"><span></span></span>
+                <span class="next" item="<?php echo count($clan) - 3; ?>" defis_id="<?php echo $i ?>"><span></span></span>
+                <span class="prev" item="1" defis_id="<?php echo $i ?>"><span></span></span>
                 <?php } ?>
                 </div> 
                 

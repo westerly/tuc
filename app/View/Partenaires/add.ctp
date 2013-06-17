@@ -12,7 +12,7 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
 <table>
     <legend> S'inscrire en tant que partenaire </legend>
     <tr class="input text required">
-        <td><label for="PartenairePartenaire">Nom</label></td>
+        <td><label for="PartenairePartenaire">Nom <span style="color: red">*</span></label></td>
         <td><input name="data[Partenaire][partenaire]" maxlength="50" type="text" id="PartenairePartenaire" required="required"></td>
     </tr>
     <tr class="input text">
@@ -20,15 +20,15 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
         <td><input name="data[Partenaire][adresseWeb]" maxlength="100" type="text" id="PartenaireAdresseWeb"></td>
     </tr>
     <tr class="input email">
-        <td><label for="PartenaireEmail">Email</label></td>
+        <td><label for="PartenaireEmail">Email <span style="color: red">*</span></label></td>
         <td><input name="data[Partenaire][email]" maxlength="100" type="email" id="PartenaireEmail"></td>
     </tr>
     <tr class="input text required">
-        <td><label for="PartenaireAdresse">Adresse</label></td>
+        <td><label for="PartenaireAdresse">Adresse <span style="color: red">*</span></label></td>
         <td><input name="data[Partenaire][adresse]" maxlength="255" type="text" id="PartenaireAdresse" required="required"></td>
     </tr>
     <tr class="input number required">
-        <td><label for="PartenaireCp">Code postal</label></td>
+        <td><label for="PartenaireCp">Code postal <span style="color: red">*</span></label></td>
         <td><input name="data[Partenaire][cp]" type="number" id="PartenaireCp" required="required"></td>
     </tr>
     <tr class="input select">
@@ -133,15 +133,15 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
         </select></td>
     </tr>
     <tr class="input text required">
-        <td><label for="PartenaireVille">Ville</label></td>
+        <td><label for="PartenaireVille">Ville <span style="color: red">*</span></label></td>
         <td><input name="data[Partenaire][ville]" maxlength="100" type="text" id="PartenaireVille" required="required"></td>
     </tr>
     <tr class="input textarea required">
-        <td><label for="PartenaireDescription">Description</label></td>
+        <td><label for="PartenaireDescription">Description <span style="color: red">*</span></label></td>
         <td><textarea name="data[Partenaire][description]" cols="30" rows="6" id="PartenaireDescription" required="required"></textarea></td>
     </tr>
     <tr class="input file">
-        <td><label for="PartenaireNewFichierLogo">Logo</label></td>
+        <td><label for="PartenaireNewFichierLogo">Logo <span style="color: red">*</span></label></td>
         <td><input type="file" name="data[Partenaire][new_fichierLogo]" id="PartenaireNewFichierLogo"></td>
     </tr>
 </table>

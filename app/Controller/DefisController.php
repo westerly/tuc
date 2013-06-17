@@ -72,6 +72,7 @@ class DefisController extends AppController {
 		$this->Defi->recursive = 2;
 		$options = array('conditions' => array('Defi.' . $this->Defi->primaryKey => $id));
 		$this->set('defi', $this->Defi->find('first', $options));
+                $this->layout = 'ajax';
 	}
 
 /**

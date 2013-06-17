@@ -5,8 +5,8 @@
 	<title>
 		<?php echo $title_for_layout; ?>
 	</title>
+        <link rel="shortcut icon" type="image/png" href="img/cake.icon.png" />
 	<?php
-		echo $this->Html->meta('icon');
 		echo $this->Html->css('front');
 		echo $this->Html->css('colorbox');
             

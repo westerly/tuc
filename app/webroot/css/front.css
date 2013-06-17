@@ -376,6 +376,14 @@ span.prev span, a.next span {
     padding-bottom: 2px;
 }
 
+
+.ajax-liste li {
+    padding-top: 10px;
+}
+
+.ajax-liste li span {
+    text-decoration: underline;
+}
 /*login*/
 
 .login-admin {
