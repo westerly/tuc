@@ -22,7 +22,6 @@ foreach($defis as $defi) { ?>
         
         <div class="content">
             <?php echo $defi['Defi']['principe_orga']; ?>
-            Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides. Cumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit. Haec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum.
             <a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'view', $defi['Defi']['id']), true) ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;">Détails...</a>
             <div class="liste-defis">
             <?php
@@ -62,6 +61,7 @@ foreach($defis as $defi) { ?>
 			}
 			?>
 
+<?php            
             foreach($clans as $nom => $clan) {
                 $i++;
             ?>   
@@ -70,7 +70,6 @@ foreach($defis as $defi) { ?>
                     <div>
                     <?php
                     foreach($clan as $photo) {
-                            $photo = 'front/band1.jpg';
                             if(!strpos($photo,'.')) {
                                     echo '
                                     <iframe class="video-js vjs-default-skin videoIndex"
