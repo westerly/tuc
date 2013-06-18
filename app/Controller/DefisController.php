@@ -59,7 +59,7 @@ class DefisController extends AppController {
 			$defis[$i]["Photo"] = array();
 			$defis[$i]["Photo"] = $this->Defi->Photo->find('all', array('conditions' => array('Photo.afficher' => '1', "Photo.defi_id" => $defis[$i]["Defi"]["id"])));
 			$defis[$i]["Vote"] = array();
-			$defis[$i]["Vote"] = $this->Defi->Vvotecount->find('all', array('conditions' => array("vvotecount.defi_id" => $defis[$i]["Defi"]["id"])));
+			$defis[$i]["Vote"] = $this->Defi->Vvotecount->find('all', array('conditions' => array("Vvotecount.defi_id" => $defis[$i]["Defi"]["id"])));
 		}
 		
 		$this->set('defis', $defis);

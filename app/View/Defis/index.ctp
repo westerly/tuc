@@ -73,9 +73,13 @@ foreach($defis as $defi) { ?>
                     <span>
 		    <?php
 			echo $this->Html->link('+',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',0)'));
+			echo ' (';
 			if(!empty($defi['Vote'])) {
-				echo ' ('.$defi['Vote'][0]['Vvotecount']['pour'].')';
+				echo $defi['Vote'][0]['Vvotecount']['pour'];
+			} else {
+				echo '0';
 			}
+			echo ' )';
 		    ?>
 		</span>
 		<span> / </span>
