@@ -55,16 +55,16 @@ class DefisController extends AppController {
 		$this->layout = 'front';
 				
 		$defis = $this->paginate('Defi', array('Defi.afficher' => 1));
-		
 		for($i=0;$i<count($defis);$i++){
-			
 			$defis[$i]["Photo"] = array();
 			$defis[$i]["Photo"] = $this->Defi->Photo->find('all', array('conditions' => array('Photo.afficher' => '1', "Photo.defi_id" => $defis[$i]["Defi"]["id"])));
+			$defis[$i]["Vote"] = array();
+			$defis[$i]["Vote"] = $this->Defi->Vvotecount->find('all', array('conditions' => array("vvotecount.defi_id" => $defis[$i]["Defi"]["id"])));
 		}
 		
 		$this->set('defis', $defis);
 	}
-	
+
 	public function view($id = null) {
 		if (!$this->Defi->exists($id) || $this->Defi->field('afficher', array('id' => $id)) != 1 ) {
 			throw new NotFoundException(__('Invalid defi'));

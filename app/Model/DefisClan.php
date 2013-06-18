@@ -37,6 +37,13 @@ class DefisClan extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Vvotecount' => array(
+			'className' => 'Vvotecount',
+			'foreignKey' => 'id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 }

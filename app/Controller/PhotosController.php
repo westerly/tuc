@@ -197,7 +197,7 @@ public function admin_addV() {
 			$urlOk = false;
 			$match;
 			// URL de la forme "[...]www.youtube.[...]v=[token][...]"
-			if ($urlOk = preg_match("#www\.youtube\..*v=([A-Za-z0-9]+)#",$infosUpload,$match)) {
+			if ($urlOk = preg_match("#www\.youtube\..*v=([A-Za-z0-9-]+)#",$infosUpload,$match)) {
 				$this->request->data["Photo"]["chemin_fichier"] = $match[1];
 			}
 			
