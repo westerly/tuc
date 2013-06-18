@@ -26,7 +26,7 @@
 		if ($type == 0 || $type == 1) {
 			if (!empty($defi) && preg_match('#^[0-9]+$#',$defi)
 			     && !empty($clan) && preg_match('#^[0-9]+$#',$clan)) {
-				$db = new PDO('mysql:host=localhost;dbname=tuc','root');
+				include('connect.php');
 				
 				$query = $db->prepare(
 						"SELECT id FROM form_defis_clans WHERE defi_id = '".$defi."' AND clan_id = '".$clan."';");
