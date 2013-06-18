@@ -66,6 +66,13 @@ class Clan extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Vvotecount' => array(
+			'className' => 'Vvotecount',
+			'foreignKey' => 'clan_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 		
 	);
