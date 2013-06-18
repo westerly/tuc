@@ -31,9 +31,11 @@
 
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<?php echo $this->Html->link(__('Editer'), array('controller' => 'Actualites', 'action' => 'edit', $actualite['Actualite']['id'])); ?>
-		<a href="javascript:history.back()">Retour</a> 
-	</ul>
+	<table>
+	<tr>
+		<td><?php echo $this->Html->link(__('Editer'), array('controller' => 'Actualites', 'action' => 'edit', $actualite['Actualite']['id'])); ?></td>
+		<td><a href="javascript:history.back()">Retour</a></td>
+	</tr>
+	</table>
 </div>
 
