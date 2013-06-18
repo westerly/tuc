@@ -60,23 +60,23 @@ header {
     font-size: 12px;
 }
 
-nav {
+.nav  {
     width: 860px;
     height: 25px;
     position: relative;
-    top: -40px;
+    margin-top: -40px;
     left: 33px;
     float: right;
 }
 
-nav ul {
+.nav ul {
     border-collapse: collapse;
     padding: 0px;
     margin: 0px;
     height: 100%;
 }
 
-nav a {
+.nav a {
     width: 100%;
     height: 100%;
     text-align: center;
@@ -84,7 +84,7 @@ nav a {
     cursor: pointer;
     display: block;
 }
-nav li {
+.nav li {
     border-left: 3px solid black;
     border-right: 3px solid black;
     display: inline-block;
@@ -117,43 +117,53 @@ nav li {
     color:#de9535;
 }
 
-nav a:hover {
+.nav a:hover {
     text-decoration: none;
 }
 
-nav li:nth-child(1) {
+.nav li:first-child {
     border-left: 0px;
     background-color: #82c2f9;
 }
 
-nav li:nth-child(2)  {
+.nav li:first-child + li  {
     background-color: #90be3a;
 }
 
-nav li:nth-child(3)  {
+.nav li:first-child + li + li   {
     background-color: #da005e;
 }
 
-nav li:nth-child(4)  {
+.nav li:first-child + li + li + li  {
     background-color: #a11f20;
 }
 
-nav li:nth-child(5)  {
+.nav li:first-child + li + li + li + li  {
     border-right: 0px;
     background-color: #de9535;
 }
 
-nav li:hover {
+.nav li:hover {
+    background-color: white;
+}
+.nav li:first-child + li:hover  {
     background-color: white;
 }
 
-nav li ul {
-    display: none;
-    float: right;
-    width: 100%;
+.nav li:first-child + li + li:hover   {
+    background-color: white;
 }
 
-nav ul li ul li {
+.nav li:first-child + li + li + li:hover  {
+    background-color: white;
+}
+
+.nav li:first-child + li + li + li + li:hover  {
+    background-color: white;
+}
+
+
+.nav ul li ul li {
     display: list-item;
     list-style: none;
     border-left: 3px solid black !important;
@@ -161,6 +171,12 @@ nav ul li ul li {
     width:100%;
     margin-left:-3px;
 
+}
+
+.nav ul li ul {
+    display: none;
+    float: right;
+    width: 100%;
 }
 
 section {
@@ -181,7 +197,7 @@ article {
 }
 
 /* Accueil */
-section.accueil h2 {
+.accueil h2 {
     color:#3a4bb3;
 }
 
@@ -284,11 +300,13 @@ a .content:hover {
     height: 630px;
     width: 90px;
     position: relative;
-    top: -630px;
+    top: -650px;
     background-color: rgb(255, 255, 255);
     z-index: 1000;
     left: 1px;
     opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+
 }
 
 .slidesjs-next {

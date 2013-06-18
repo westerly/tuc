@@ -1,0 +1,18 @@
+.slidesjs-navigation {
+    display: block;
+    height: 630px;
+    width: 90px;
+    position: relative;
+    top: -645px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    left: 1px;
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+
+}
+
+.slidesjs-next {
+    left: 936px;
+    top: -1275px;
+}

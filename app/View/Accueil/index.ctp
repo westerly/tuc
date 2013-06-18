@@ -1,5 +1,6 @@
 		
-			<article class="content-accueil">
+			<article>
+                            <div class="content-accueil">
 				<h2>Quoi ?</h2>
                                 <?php echo $this->Html->image('front/leprojet.png', array('alt'=>'accueil', 'width'=> 640, 'height'=>327)); ?>
                                 
@@ -35,7 +36,7 @@
                                 </p>
 				
 				
-			
+                            </div>
 			</article>
 			
 			
