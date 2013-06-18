@@ -1,5 +1,8 @@
-
-
+<?php
+echo $this->Html->script('ajax');
+echo $this->Html->script('vote');
+echo $this->Html->script('popupYoutube');
+?>
 <div class="defis">
     <div class="paginator">
 <?php echo $this->paginator->numbers(); ?>
@@ -26,34 +29,37 @@ foreach($defis as $defi) { ?>
                 $clans[$photo['Clan']['nom']][] = $photo['Photo']['chemin_fichier'];
                 $ids[$photo['Clan']['nom']]['id'] = $photo['Clan']['id'];
             }
+		
 
+		foreach($clans as $nom => $clan) {
+		$i++;
+		?>   
+		<h4><?php echo $nom ?></h4>
+		<div class="carroussel-defis" id="car_<?php echo $i ?>">
+		    <div>
+		    <?php
+			foreach($clan as $photo) {
+				if(!strpos($photo,'.')) {
+					/*echo $this->Html->link(
+						$this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
+						null,
+						array('id' => $photo, 'escape' => false, 'class'=>'youtube')
+					);*/
+					echo $this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('id' => $photo, 'class'=>'youtube', 'alt' => 'defis', 'width' => '200', 'height'=>'150'));
+					/*echo '<iframe class="video-js vjs-default-skin videoIndex"
+						width="220" height="170" alt="defis"
+						src="http://www.youtube.com/embed/'.$photo.'"></iframe>';*/
+				} else {
+					echo $this->Html->link(
+						$this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
+						'/' . IMAGES_URL .$photo,
+						array('escape' => false, 'class'=>'colorbox')
+					);
+				}
+			}
+			?>
 
-            foreach($clans as $nom => $clan) {
-                $i++;
-            ?>   
-                <h4><?php echo $nom ?></h4>
-                <div class="carroussel-defis" id="car_<?php echo $i ?>">
-                    <div>
-                    <?php
-                    foreach($clan as $photo) {
-                            if(!strpos($photo,'.')) {
-                                    echo '
-                                    <iframe class="video-js vjs-default-skin videoIndex"
-                                            width="220" height="170" alt="defis"
-                                            src="http://www.youtube.com/embed/'.$photo.'">
-                                    </iframe>';
-
-                            } else {
-                                    echo $this->Html->link(
-									    $this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
-									    '/' . IMAGES_URL .$photo,
-									    array('escape' => false, 'class'=>'colorbox')
-									);
-                            }
-                    }
-                    ?>
-
-                    </div>
+		    </div>
                 <?php if(count($clan) > 4) { ?>
                 <span class="prev" item="<?php echo count($clan) - 3; ?>" defis_id="<?php echo $i ?>"><span></span></span>
                 <span class="next" item="1"defis_id="<?php echo $i ?>"><span></span></span>
@@ -62,8 +68,23 @@ foreach($defis as $defi) { ?>
                 
                 <div class="clearfix"></div>
                 <div class="vote-defis">
-                    <span><?php echo $this->Html->link('Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
-                    <span><?php echo $this->Html->link('Pas Bien !',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id'])) ?></span>
+                    <span>
+		    <?php
+			echo $this->Html->link('+',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',0)'));
+			if(!empty($defi['Vote'])) {
+				echo ' ('.$defi['Vote'][0]['Vvotecount']['pour'].')';
+			}
+		    ?>
+		</span>
+		<span> / </span>
+                    <span>
+		    <?php 
+		    echo $this->Html->link('-',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',1)'));
+		    if(!empty($defi['Vote'])) {
+			echo ' ('.$defi['Vote'][0]['Vvotecount']['contre'].')';
+		    }
+		    ?>
+		</span>
 
                 </div>
             </div>

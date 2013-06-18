@@ -73,6 +73,13 @@ class Defi extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Vvotecount' => array(
+			'className' => 'Vvotecount',
+			'foreignKey' => 'defi_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 

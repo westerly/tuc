@@ -394,8 +394,10 @@ echo $this->Session->flash('nok');
 
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<?php echo $this->Html->link(__('Editer'), array('controller' => 'Defis', 'action' => 'edit', $defi['Defi']['id'])); ?>
-		<a href="javascript:history.back()">Retour</a> 
-	</ul>
+	<table>
+	<tr>
+		<td><?php echo $this->Html->link(__('Editer'), array('controller' => 'Defis', 'action' => 'edit', $defi['Defi']['id'])); ?></td>
+		<td><a href="javascript:history.back()">Retour</a></td>
+	</tr>
+	</table>
 </div>
