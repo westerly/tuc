@@ -223,4 +223,15 @@ class DefisController extends AppController {
 		$this->redirect(array('action' => 'index', 'admin' => true)); // Permet de rediriger vers la page appelante
 	
 	}
+	
+	public function video($photo = null) {
+		$this->layout = '';
+		$p = $this->Defi->Photo->find('first',array('chemin_fichier'=>$photo));
+		if (!isset($p)) {
+			echo "erreur";
+			//throw new NotFoundException(__('Cette vidéo n\'existe pas.'));
+		}
+		
+		$this->set("photo", $photo);
+	}
 }

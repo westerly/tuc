@@ -22,7 +22,7 @@ foreach($defis as $defi) { ?>
         
         <div class="content">
             <?php echo $defi['Defi']['principe_orga']; ?>
-            <a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'view', $defi['Defi']['id']), true) ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;">Détails...</a>
+            <a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'view', $defi['Defi']['id']), true) ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;"><h2>Détails...</h2></a>
             <div class="liste-defis">
             <?php
             $clans = array();
@@ -31,58 +31,30 @@ foreach($defis as $defi) { ?>
                 $clans[$photo['Clan']['nom']][] = $photo['Photo']['chemin_fichier'];
                 $ids[$photo['Clan']['nom']]['id'] = $photo['Clan']['id'];
             }
-		
-
-		foreach($clans as $nom => $clan) {
-		$i++;
-		?>   
-		<h4><?php echo $nom ?></h4>
-		<div class="carroussel-defis" id="car_<?php echo $i ?>">
-		    <div>
-		    <?php
-			foreach($clan as $photo) {
-				if(!strpos($photo,'.')) {
-					/*echo $this->Html->link(
-						$this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
-						null,
-						array('id' => $photo, 'escape' => false, 'class'=>'youtube')
-					);*/
-					echo $this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('id' => $photo, 'class'=>'youtube', 'alt' => 'defis', 'width' => '200', 'height'=>'150'));
-					/*echo '<iframe class="video-js vjs-default-skin videoIndex"
-						width="220" height="170" alt="defis"
-						src="http://www.youtube.com/embed/'.$photo.'"></iframe>';*/
-				} else {
-					echo $this->Html->link(
-						$this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
-						'/' . IMAGES_URL .$photo,
-						array('escape' => false, 'class'=>'colorbox')
-					);
-				}
-			}
-			?>
-
-<?php            
+	    
             foreach($clans as $nom => $clan) {
                 $i++;
             ?>   
-                <h4><?php echo $nom ?></h4>
+                <h4><?php echo 'Photo(s) de '.$nom ?></h4>
                 <div class="carroussel-defis" id="car_<?php echo $i ?>">
                     <div>
                     <?php
                     foreach($clan as $photo) {
                             if(!strpos($photo,'.')) {
-                                    echo '
-                                    <iframe class="video-js vjs-default-skin videoIndex"
-                                            width="220" height="170" alt="defis"
-                                            src="http://www.youtube.com/embed/'.$photo.'">
-                                    </iframe>';
-
+			    ?>
+				<a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'video', $photo), false) 
+				     ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;">
+					<?php
+					echo $this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('alt' => 'defis', 'width' => '200', 'height'=>'150'));
+					?>
+				</a>
+			     <?php
                             } else {
                                     echo $this->Html->link(
-									    $this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
-									    '/' . IMAGES_URL .$photo,
-									    array('escape' => false, 'class'=>'colorbox')
-									);
+					    $this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
+					    '/' . IMAGES_URL .$photo,
+					    array('escape' => false, 'class'=>'colorbox')
+					);
                             }
                     }
                     ?>
