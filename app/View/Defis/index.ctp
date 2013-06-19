@@ -1,7 +1,6 @@
 <?php
 echo $this->Html->script('ajax');
 echo $this->Html->script('vote');
-echo $this->Html->script('popupYoutube');
 ?>
 <div class="defis">
     <div class="paginator">
@@ -14,15 +13,23 @@ foreach($defis as $defi) { ?>
         <div>
             <h3><?php echo $defi['Defi']['nom'] ?></h3>
             Proposé par <span style="font-weight: bold"><?php echo $defi['Defi']['demandeur'] ?></span>
-            <div style="float:right">
-                <?php echo $defi['Localisation']['lieu'] ?> <br/>
-                 <?php echo $defi['Horaire']['horaire'] ?> 
-            </div>
+	    <?php if (isset($defi['Localisation']['lieu'])) {?>
+	    <div style="float:right">
+                <?php echo $defi['Localisation']['lieu'] ?>
+              </div>
+	    <?php }
+	    if (isset($defi['Localisation']['horaire'])) { ?>
+	    <div style="float:right">
+                <?php echo $defi['Localisation']['horaire'];?>
+              </div>
+	      <?php 
+	   }?> 
         </div>
         
         <div class="content">
             <?php echo $defi['Defi']['principe_orga']; ?>
-            <a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'view', $defi['Defi']['id']), true) ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;">Détails...</a>
+            <?php echo $defi["Defi"]["valo_citoyenne"]; ?>
+            <a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'view', $defi['Defi']['id']), true) ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;"><h2>Détails...</h2></a>
             <div class="liste-defis">
             <?php
             $clans = array();
@@ -31,7 +38,7 @@ foreach($defis as $defi) { ?>
                 $clans[$photo['Clan']['nom']][] = $photo['Photo']['chemin_fichier'];
                 $ids[$photo['Clan']['nom']]['id'] = $photo['Clan']['id'];
             }
-		
+
 
 		foreach($clans as $nom => $clan) {
 		$i++;
@@ -42,15 +49,14 @@ foreach($defis as $defi) { ?>
 		    <?php
 			foreach($clan as $photo) {
 				if(!strpos($photo,'.')) {
-					/*echo $this->Html->link(
-						$this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
-						null,
-						array('id' => $photo, 'escape' => false, 'class'=>'youtube')
-					);*/
-					echo $this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('id' => $photo, 'class'=>'youtube', 'alt' => 'defis', 'width' => '200', 'height'=>'150'));
-					/*echo '<iframe class="video-js vjs-default-skin videoIndex"
-						width="220" height="170" alt="defis"
-						src="http://www.youtube.com/embed/'.$photo.'"></iframe>';*/
+					?>
+					<a href="<?php echo $this->Html->url(array('controller'=>'defis', 'action'=>'video', $photo), false) 
+					     ?>" class="colorbox linked" style="text-align:right;display: block;margin-top: 25px;">
+						<?php
+						echo $this->Html->image('http://img.youtube.com/vi/'.$photo.'/0.jpg',  array('alt' => 'defis', 'width' => '200', 'height'=>'150'));
+						?>
+					</a>
+					<?php
 				} else {
 					echo $this->Html->link(
 						$this->Html->image($photo,  array('alt' => 'defis', 'width' => '200', 'height'=>'150')),
@@ -72,7 +78,6 @@ foreach($defis as $defi) { ?>
                 <div class="vote-defis">
                     <span>
 		    <?php
-			/*
 			echo $this->Html->link('+',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',0)'));
 			echo ' (';
 			if(!empty($defi['Vote'])) {
@@ -80,14 +85,12 @@ foreach($defis as $defi) { ?>
 			} else {
 				echo '0';
 			}
-			echo ' )';
-			*/
+			echo ')';
 		    ?>
 		</span>
 		<span> / </span>
                     <span>
 		    <?php 
-			/*
 			echo $this->Html->link('-',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',1)'));
 			echo ' (';
 			if(!empty($defi['Vote'])) {
@@ -95,8 +98,7 @@ foreach($defis as $defi) { ?>
 			} else {
 				echo '0';
 			}
-			echo ' )';
-			*/
+			echo ')';
 		    ?>
 		</span>
 

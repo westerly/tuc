@@ -275,7 +275,7 @@ public function admin_addV() {
 		$this->redirect(array('action' => 'index', 'admin' => true));
 	}
 	
-	public function admin_afficher($id = null, $afficher) {
+	public function admin_afficher($id = null, $afficher = false ) {
 	
 		$user = $this->Auth->user();
 		$this->Photo->id = $id;
