@@ -13,7 +13,7 @@ $(function(){
         
      });
      
-     $('nav li').mouseenter(function(event){
+     $('.nav li').mouseenter(function(event){
          var item = $(this).find('ul');
          if(item) {
              item.show();
@@ -21,14 +21,14 @@ $(function(){
          
      });
      
-     $('nav li').mouseleave(function(event){
+     $('.nav li').mouseleave(function(event){
          var item = $(this).find('ul');
          if(item) {
              item.hide();
          }
          
      });
-     $('nav li ul').mouseleave(function(event){
+     $('.nav li ul').mouseleave(function(event){
          var item = $(this);//.parent('ul');
          if(item) {
              item.hide();

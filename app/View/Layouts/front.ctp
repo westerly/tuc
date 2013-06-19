@@ -13,7 +13,11 @@
 		echo $this->fetch('meta');
 		echo $this->fetch('script');
 	?>
-
+        <!--[if IE 8]>
+        <?php
+		echo $this->Html->css('ie');
+        ?>
+        <![endif]-->
 	</head>
 	<body>
 		<header>
@@ -37,6 +41,7 @@
                 
            
 		<nav>
+                    <div class="nav">
 			<ul>
 				<li><?php echo $this->Html->link('News', $this->Html->url(array('controller'=>'actualites', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?></li>
                                 <li><?php echo $this->Html->link('Défis', $this->Html->url(array('controller'=>'defis', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?></li>
@@ -61,7 +66,8 @@
                                     </ul>
                                 </li>
 				<li><?php echo $this->Html->link('Contact', $this->Html->url(array('controller'=>'contacts', 'action'=>'index','admin'=>false), true), array('escape'=>false)) ?></li>
-			</ul>		
+			</ul>	
+                    </div>
 		</nav>
 		<section class="accueil">
 			
@@ -89,7 +95,7 @@
          <?php echo $this->Html->script('jquery.slides.min'); ?>
          <?php echo $this->Html->script('jquery.colorbox-min'); ?>
          <?php echo $this->Html->script('jquery.carouFredSel-6.2.1-packed'); ?>
-
+         <?php echo $this->Html->script('selectivizr-min'); ?>
          <?php echo $this->Html->script('front'); ?>
 
 	</body>
