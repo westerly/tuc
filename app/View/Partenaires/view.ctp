@@ -1,11 +1,14 @@
 <?php
-	echo $this->Html->image($partenaire['Partenaire']['fichierLogo']);
+	echo $this->Html->image($partenaire['Partenaire']['fichierLogo'],array('width'=>'350', 'height' => '270'));
 ?>
 
 <ul>
-    <li><?php echo $partenaire['Partenaire']['partenaire'] ?></li>
-    <li><?php echo $partenaire['Partenaire']['description'] ?></li>    
-    <li><?php echo $partenaire['Partenaire']['adresse'] ?></li>    
-    <li><?php echo $partenaire['Partenaire']['ville'] ?></li>    
-    <li><?php echo $partenaire['Partenaire']['email'] ?></li>    
+	<?php
+	$display = array('partenaire' => 'Nom','description' => 'Description', 'adresse' => 'Adresse', 'ville' => 'Ville', 'email' => 'Email');
+		foreach($display as $key => $val) {
+			if(!empty($partenaire['Partenaire'][$key])) {
+				echo "<li><b>".$val."</b> : ".$partenaire['Partenaire'][$key]."</li>";
+			}
+		}
+	?>
 </ul>
