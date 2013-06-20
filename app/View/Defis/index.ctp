@@ -70,8 +70,9 @@ foreach($defis as $defi) { ?>
                 <div class="vote-defis">
                     <span>
 		    <?php
-			/*
-			echo $this->Html->link('+',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',0)'));
+			echo $this->Html->link('+',
+				$this->Html->url(array('controller'=>'defis', 'action'=>'vote', $defi['Defi']['id'], $ids[$nom]['id'], '0'),true)
+			);
 			echo ' (';
 			if(!empty($defi['Vote'])) {
 				echo $defi['Vote'][0]['Vvotecount']['pour'];
@@ -79,14 +80,14 @@ foreach($defis as $defi) { ?>
 				echo '0';
 			}
 			echo ' )';
-			*/
 		    ?>
 		</span>
 		<span> / </span>
                     <span>
-		    <?php 
-			/*
-			echo $this->Html->link('-',$this->Html->url('#'.$defi['Defi']['id'].'-'.$ids[$nom]['id']),array('onclick' => 'vote('.$defi['Defi']['id'].','.$ids[$nom]['id'].',1)'));
+		    <?php
+			echo $this->Html->link('+',
+				$this->Html->url(array('controller'=>'defis', 'action'=>'vote', $defi['Defi']['id'], $ids[$nom]['id'], '1'),true)
+			);
 			echo ' (';
 			if(!empty($defi['Vote'])) {
 				echo $defi['Vote'][0]['Vvotecount']['contre'];
@@ -94,7 +95,6 @@ foreach($defis as $defi) { ?>
 				echo '0';
 			}
 			echo ' )';
-			*/
 		    ?>
 		</span>
 

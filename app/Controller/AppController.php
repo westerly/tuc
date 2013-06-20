@@ -73,7 +73,7 @@ class AppController extends Controller {
 	
 	// Permet de rendre accessible toutes las actions index, view... de l'ensemble des controllers de l'application
 	public function beforeFilter() {
-        $this->Auth->allow('index', 'view','add', 'confirmation', 'admin_login', 'video');
+        $this->Auth->allow('index', 'view','add', 'confirmation', 'admin_login', 'video', 'vote');
         
 		$this->log("Here: {$this->here}, coming from: " . $this->referer(), LOG_DEBUG);
 		

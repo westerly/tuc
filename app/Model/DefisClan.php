@@ -39,8 +39,25 @@ class DefisClan extends AppModel {
 			'order' => ''
 		),
 		'Vvotecount' => array(
-			'className' => 'Vvotecount',
+			'className' => 'vvotecounts',
 			'foreignKey' => 'id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+	);
+	
+	public $hasMany = array(
+		'Vote' => array(
+			'className' => 'votes',
+			'foreignKey' => 'defi_clan',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'VoteProxy' => array(
+			'className' => 'vote_proxys',
+			'foreignKey' => 'defi_clan',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
