@@ -4,7 +4,7 @@
 
 <ul>
 	<?php
-	$display = array('partenaire' => 'Nom','description' => 'Description', 'adresse' => 'Adresse','cp' => 'Code Postale' 'ville' => 'Ville', 'email' => 'Email');
+	$display = array('partenaire' => 'Nom','description' => 'Description', 'adresse' => 'Adresse','cp' => 'Code Postal', 'ville' => 'Ville', 'email' => 'Email');
 		foreach($display as $key => $val) {
 			if(!empty($partenaire['Partenaire'][$key])) {
 				echo "<li><b>".$val."</b> : ".$partenaire['Partenaire'][$key]."</li>";
