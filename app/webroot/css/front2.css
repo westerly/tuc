@@ -87,9 +87,9 @@ span.prev span, a.next span {
 }
 
 form tr td{
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
 }
-form tr td:first{
+form tr td:first-child{
     min-width: 8em;
 }
 form legend {
