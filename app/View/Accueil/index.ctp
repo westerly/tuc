@@ -1,7 +1,7 @@
 <?php
   $this->set('title_for_layout',"Pade d'accueil");
 ?>
- <div class="span5">
+<div class="span5">
     <p><?php echo $this->Html->image('leprojet.png', array('alt'=>"Le Projet", 'class'=>"aligncenter")); ?></p>
 </div>
 <div class="span7 omega">
