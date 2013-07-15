@@ -1,0 +1,883 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic");
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Mixins */
+/* -------------------------------------------------------------------------*/
+/* Basics */
+/* line 65, ../scss/screen.scss */
+img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+  max-width: 100%;
+}
+
+/* line 69, ../scss/screen.scss */
+.visible-phone {
+  display: none;
+}
+
+/* line 73, ../scss/screen.scss */
+.visible-desktop {
+  display: inherit;
+}
+
+@media (max-width: 700px) {
+  /* line 78, ../scss/screen.scss */
+  .visible-phone {
+    display: inherit;
+  }
+
+  /* line 81, ../scss/screen.scss */
+  .visible-desktop {
+    display: none;
+  }
+}
+/* line 86, ../scss/screen.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #333333;
+  background: url(../img/bg.png);
+  padding: O 0.5em;
+}
+@media (max-width: 700px) {
+  /* line 86, ../scss/screen.scss */
+  body {
+    font-size: 12px;
+  }
+}
+
+/* line 98, ../scss/screen.scss */
+::selection {
+  background-color: #42b8f8;
+  color: #fff;
+}
+
+/* line 103, ../scss/screen.scss */
+p, ul, ol, blockquote {
+  margin-bottom: 1em;
+}
+
+/* line 104, ../scss/screen.scss */
+a {
+  color: #42b8f8;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+
+/* line 108, ../scss/screen.scss */
+a:hover {
+  color: #0777b4;
+  text-decoration: none;
+}
+
+/* line 109, ../scss/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 24px;
+  color: #42b8f8;
+}
+
+/* line 110, ../scss/screen.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 111, ../scss/screen.scss */
+h2 {
+  font-size: 1.325em;
+}
+
+/* line 112, ../scss/screen.scss */
+h3 {
+  font-size: 1.25em;
+}
+
+/* line 113, ../scss/screen.scss */
+h4 {
+  font-size: 1.125em;
+}
+
+/* line 114, ../scss/screen.scss */
+h5, h6 {
+  font-size: 1em;
+}
+
+/* line 116, ../scss/screen.scss */
+ul, ol {
+  margin-left: 1em;
+}
+
+/* line 117, ../scss/screen.scss */
+ul {
+  list-style: square inside;
+}
+
+/* line 118, ../scss/screen.scss */
+ul ul, ol ul {
+  list-style: circle inside;
+  margin-bottom: 0;
+}
+
+/* line 119, ../scss/screen.scss */
+ol {
+  list-style: decimal inside;
+}
+
+/* line 120, ../scss/screen.scss */
+ol ol, ul ol {
+  list-style: lower-roman inside;
+  margin-bottom: 0;
+}
+
+/* line 122, ../scss/screen.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 123, ../scss/screen.scss */
+blockquote {
+  margin: 0 60px 0 45px;
+  border-left: 5px solid #75bf21;
+  padding-left: 10px;
+  font-style: italic;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+
+/* line 132, ../scss/screen.scss */
+blockquote p {
+  margin-bottom: 0.75em;
+}
+
+/* line 134, ../scss/screen.scss */
+img.alignleft {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 137, ../scss/screen.scss */
+img.alignright {
+  float: right;
+  margin-left: 1em;
+}
+
+/* line 140, ../scss/screen.scss */
+img.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 144, ../scss/screen.scss */
+blockquote em {
+  display: block;
+  text-align: right;
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+}
+
+/* line 151, ../scss/screen.scss */
+blockquote em:before {
+  content: "—";
+}
+
+/* line 154, ../scss/screen.scss */
+p {
+  text-align: justify;
+}
+
+/* line 156, ../scss/screen.scss */
+em {
+  font-style: italic;
+}
+
+/* line 160, ../scss/screen.scss */
+.marker {
+  background-color: yellow;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Grid */
+/* line 166, ../scss/screen.scss */
+[class*="span"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 169, ../scss/screen.scss */
+.span2 {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 170, ../scss/screen.scss */
+.span2.omega {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 171, ../scss/screen.scss */
+.span3 {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 172, ../scss/screen.scss */
+.span3.omega {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 173, ../scss/screen.scss */
+.span4 {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 174, ../scss/screen.scss */
+.span4.omega {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 175, ../scss/screen.scss */
+.span5 {
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 176, ../scss/screen.scss */
+.span5.omega {
+  width: 40.67797%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 177, ../scss/screen.scss */
+.span6 {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 178, ../scss/screen.scss */
+.span6.omega {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 179, ../scss/screen.scss */
+.span7 {
+  width: 57.62712%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 180, ../scss/screen.scss */
+.span7.omega {
+  width: 57.62712%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 181, ../scss/screen.scss */
+.span8 {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 182, ../scss/screen.scss */
+.span8.omega {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 183, ../scss/screen.scss */
+.span9 {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 184, ../scss/screen.scss */
+.span9.omega {
+  width: 74.57627%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 185, ../scss/screen.scss */
+.clear {
+  clear: both;
+}
+
+/* line 187, ../scss/screen.scss */
+.push-right {
+  float: right;
+}
+
+/* line 188, ../scss/screen.scss */
+.push-left {
+  float: left;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Body */
+/* line 192, ../scss/screen.scss */
+header {
+  margin-top: 1em;
+  background: #333333;
+  color: #ecf0f1;
+  position: relative;
+}
+/* line 197, ../scss/screen.scss */
+header .mentra {
+  font-size: 1.6em;
+  font-style: italic;
+  line-height: 2em;
+}
+/* line 201, ../scss/screen.scss */
+header .mentra q {
+  quotes: "&#171;" "&#187;" "'" "'";
+}
+@media (max-width: 640px) {
+  /* line 207, ../scss/screen.scss */
+  header .span6, header .span6.omega {
+    font-size: 14px;
+    float: none;
+    display: block;
+    margin: 1em;
+    width: 50%;
+  }
+  /* line 216, ../scss/screen.scss */
+  header .span6 .push-right, header .span6.omega .push-right {
+    float: none;
+  }
+}
+@media (max-width: 640px) and (max-width: 320px) {
+  /* line 207, ../scss/screen.scss */
+  header .span6, header .span6.omega {
+    font-size: 12px;
+  }
+}
+
+/* line 222, ../scss/screen.scss */
+.page {
+  background: white;
+  padding: 4em 0;
+}
+@media (max-width: 640px) {
+  /* line 226, ../scss/screen.scss */
+  .page .span5, .page .span7.omega {
+    float: none;
+    display: block;
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 1em;
+  }
+}
+
+/* line 235, ../scss/screen.scss */
+.container {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  z-index: 500;
+  position: relative;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 242, ../scss/screen.scss */
+footer {
+  margin-bottom: 0.5em;
+  background: #333333;
+  height: 100px;
+  color: #ecf0f1;
+  position: relative;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Navbar */
+/* line 252, ../scss/screen.scss */
+nav {
+  background: white;
+}
+@media (max-width: 640px) {
+  /* line 252, ../scss/screen.scss */
+  nav {
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+}
+/* line 259, ../scss/screen.scss */
+nav .dk-div {
+  padding: 1em;
+  /* Opens the dropdown and holds the menu label */
+  /* Applied when the dropdown is focused */
+  /* Applied whenever the dropdown is open */
+  /* The outer container of the options */
+  /* Inner container for options, this is what makes the scrollbar possible. */
+  /* Set a max-height on the options inner */
+  /******  End Theme ******/
+  /***** Critical to the continued enjoyment of working dropdowns ******/
+}
+/* line 261, ../scss/screen.scss */
+nav .dk-div .dk_container {
+  background-color: #2c3e50;
+  font-weight: bold;
+}
+/* line 264, ../scss/screen.scss */
+nav .dk-div .dk_container:focus {
+  outline: 0;
+  border: 0;
+}
+/* line 268, ../scss/screen.scss */
+nav .dk-div .dk_container a {
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 274, ../scss/screen.scss */
+nav .dk-div .dk_toggle {
+  /**
+  * Help: Arrow image not appearing
+  * Try updating this property to your correct dk_arrows.png path
+  */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("../img/dk_arrows_white.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-color: #2c3e50;
+  border: 1px solid #2c3e50;
+  color: #dcdce6;
+  padding: 7px 10px;
+  width: 100%;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+/* line 290, ../scss/screen.scss */
+nav .dk-div .dk_toggle:hover {
+  border-color: #34495e;
+  background-color: #2c3e50;
+}
+/* line 296, ../scss/screen.scss */
+nav .dk-div .dk_focus .dk_toggle {
+  border-color: #34495e;
+  background-color: #2c3e50;
+}
+/* line 302, ../scss/screen.scss */
+nav .dk-div .dk_open {
+  /**
+  * Help: Dropdown menu is covered by something
+  * Try setting this value higher
+  */
+  z-index: 5000;
+}
+/* line 311, ../scss/screen.scss */
+nav .dk-div .dk_options li {
+  list-style: none;
+}
+/* line 315, ../scss/screen.scss */
+nav .dk-div .dk_options li.dk_child a {
+  border-bottom: 1px solid #f49523;
+  padding-left: 20px;
+}
+/* line 318, ../scss/screen.scss */
+nav .dk-div .dk_options li.dk_child a:hover {
+  background-color: #f49523;
+}
+/* line 323, ../scss/screen.scss */
+nav .dk-div .dk_options a {
+  background-color: white;
+  border-bottom: 1px solid #42b8f8;
+  font-weight: bold;
+  padding: .5em 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 330, ../scss/screen.scss */
+nav .dk-div .dk_options li:last-child a {
+  border-bottom: none;
+}
+/* line 335, ../scss/screen.scss */
+nav .dk-div .dk_options a:hover,
+nav .dk-div .dk_option_current a {
+  background-color: #42b8f8;
+  color: white;
+  text-decoration: none;
+}
+/* line 342, ../scss/screen.scss */
+nav .dk-div .dk_options_inner {
+  border: 1px solid #34495e;
+  border-bottom-width: 1px;
+  max-height: 250px;
+  margin: 0;
+}
+/* line 352, ../scss/screen.scss */
+nav .dk-div .dk_options_inner,
+nav .dk-div .dk_touch .dk_options {
+  max-height: 250px;
+}
+/* line 360, ../scss/screen.scss */
+nav .dk-div .dk_container {
+  display: none;
+  position: relative;
+  width: 18em;
+  margin: 0 auto;
+}
+/* line 366, ../scss/screen.scss */
+nav .dk-div .dk_container a {
+  outline: 0;
+}
+/* line 370, ../scss/screen.scss */
+nav .dk-div .dk_toggle {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  zoom: 1;
+}
+/* line 378, ../scss/screen.scss */
+nav .dk-div .dk_open {
+  position: relative;
+}
+/* line 381, ../scss/screen.scss */
+nav .dk-div .dk_open .dk_options {
+  display: block;
+}
+/* line 384, ../scss/screen.scss */
+nav .dk-div .dk_open .dk_label {
+  color: inherit;
+}
+/* line 388, ../scss/screen.scss */
+nav .dk-div .dk_options {
+  display: none;
+  margin-top: -1px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+/* line 397, ../scss/screen.scss */
+nav .dk-div .dk_options a,
+nav .dk-div .dk_options a:link,
+nav .dk-div .dk_options a:visited {
+  display: block;
+}
+/* line 400, ../scss/screen.scss */
+nav .dk-div .dk_options_inner {
+  overflow: auto;
+  position: relative;
+}
+/* line 405, ../scss/screen.scss */
+nav .dk-div .dk_touch .dk_options {
+  overflow: hidden;
+}
+/* line 409, ../scss/screen.scss */
+nav .dk-div .dk_touch .dk_options_inner {
+  max-height: none;
+  overflow: visible;
+}
+/* line 414, ../scss/screen.scss */
+nav .dk-div .dk_fouc select {
+  position: relative;
+  top: -99999em;
+  visibility: hidden;
+}
+/* line 421, ../scss/screen.scss */
+nav .navbar {
+  position: relative;
+  z-index: 1000;
+  background: #2c3e50;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 427, ../scss/screen.scss */
+nav .navbar ul.navtabs {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 46em;
+}
+/* line 432, ../scss/screen.scss */
+nav .navbar ul.navtabs li.quebec {
+  position: absolute;
+  height: 3px;
+  background: #f49523;
+}
+/* line 436, ../scss/screen.scss */
+nav .navbar ul.navtabs li.quebec.q-t {
+  top: 0;
+}
+/* line 439, ../scss/screen.scss */
+nav .navbar ul.navtabs li.quebec.q-b {
+  bottom: 0;
+}
+/* line 443, ../scss/screen.scss */
+nav .navbar ul.navtabs li {
+  float: left;
+  border: 0;
+  list-style: none;
+  position: relative;
+}
+/* line 448, ../scss/screen.scss */
+nav .navbar ul.navtabs li.navpill a {
+  padding: 0px 13px;
+  width: 1.5em;
+  text-align: center;
+}
+/* line 453, ../scss/screen.scss */
+nav .navbar ul.navtabs li a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0px 23px;
+  font-size: 1.5em;
+  line-height: 3em;
+  display: block;
+}
+/* line 459, ../scss/screen.scss */
+nav .navbar ul.navtabs li a:hover {
+  color: white;
+  background: #42b8f8;
+}
+/* line 463, ../scss/screen.scss */
+nav .navbar ul.navtabs li a div {
+  display: inline-block;
+}
+/* line 467, ../scss/screen.scss */
+nav .navbar ul.navtabs li ul.subnav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  top: 4.5em;
+  left: 1;
+  z-index: 99999;
+  background: #2c3e50;
+}
+/* line 477, ../scss/screen.scss */
+nav .navbar ul.navtabs li ul.subnav li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+/* line 482, ../scss/screen.scss */
+nav .navbar ul.navtabs li ul.subnav li a {
+  padding: 0 1em;
+  font-size: 1em;
+  line-height: 2em;
+  display: block;
+  float: none;
+}
+/* line 489, ../scss/screen.scss */
+nav .navbar ul.navtabs li ul.subnav li:last-child {
+  border-bottom: 3px #f49523 solid;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Buttons */
+/* line 501, ../scss/screen.scss */
+.btn {
+  padding: 0.5em 1em;
+  line-height: 1.75em;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: #969696;
+  color: #565656;
+}
+/* line 56, ../scss/screen.scss */
+.btn:hover {
+  background: #707070;
+  color: white;
+}
+
+/* line 507, ../scss/screen.scss */
+.btn-primary {
+  background: #42b8f8;
+  color: #0777b4;
+}
+/* line 56, ../scss/screen.scss */
+.btn-primary:hover {
+  background: #0897e5;
+  color: white;
+}
+
+/* line 510, ../scss/screen.scss */
+.btn-warning {
+  background: #f49523;
+  color: #905207;
+}
+/* line 56, ../scss/screen.scss */
+.btn-warning:hover {
+  background: #c16e0a;
+  color: white;
+}
+
+/* line 513, ../scss/screen.scss */
+.btn-error {
+  background: #b81919;
+  color: #480a0a;
+}
+/* line 56, ../scss/screen.scss */
+.btn-error:hover {
+  background: #751010;
+  color: #f9d7d7;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Contents */
+/* line 522, ../scss/screen.scss */
+section article {
+  margin-bottom: 1em;
+  position: relative;
+}
+/* line 525, ../scss/screen.scss */
+section article h3 {
+  padding: 0.5em 1em;
+  background-color: #ecf0f1;
+  border: 1px solid #95a5a6;
+}
+/* line 529, ../scss/screen.scss */
+section article h3 .muted {
+  display: block;
+  float: right;
+  font-size: 0.75em;
+  color: #969696;
+  font-weight: normal;
+}
+/* line 537, ../scss/screen.scss */
+section article aside {
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+}
+/* line 542, ../scss/screen.scss */
+section article div.content {
+  padding: 0 1em;
+}
