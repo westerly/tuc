@@ -469,7 +469,7 @@ header .mentra q {
 /* line 222, ../scss/screen.scss */
 .page {
   background: white;
-  padding: 4em 0;
+  padding: 2em 0;
 }
 @media (max-width: 640px) {
   /* line 226, ../scss/screen.scss */
