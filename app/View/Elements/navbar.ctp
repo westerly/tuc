@@ -21,7 +21,7 @@
                    <li <?php echo ($this->request->params['controller'] == 'partenaires') ? 'class="active"': ""; ?>>
                       <?php echo $this->Html->link('Partenaires',array('controller' => 'partenaires', 'action' => 'index', 'full_base' => true, 'admin' => false)); ?>                       
                         <ul class="subnav">
-                            <li><?php echo $this->Html->link("S'inscrire",array('controller' => 'partenaires', 'action' => 'subscribe', 'full_base' => true, 'admin' => false)); ?></li>
+                            <li><?php echo $this->Html->link("S'inscrire",array('controller' => 'partenaires', 'action' => 'add', 'full_base' => true, 'admin' => false)); ?></li>
                         </ul>
                     </li>
                    <li <?php echo ($this->request->params['controller'] == 'contacts') ? 'class="active"': ""; ?>>
