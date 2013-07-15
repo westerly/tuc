@@ -7,9 +7,9 @@
     <meta content="description" name="Parcequ'un étudiant est un potentiel de talent et de générositer à valoriser">
     <meta content="author" name="Hugo Rodde"> 
     <meta name="viewport" content="width=device-width"/>
-    
+    <link href="<?php echo $this->Html->url('favicon.png'); ?>" type="image/x-icon" rel="icon">
     <?php 
-    echo $this->Html->meta('icon');
+    //echo $this->Html->meta('icon');
     echo $this->fetch('meta');
     echo $this->Html->css(array('font','screen','front2','colorbox'));
     echo $this->fetch('css');

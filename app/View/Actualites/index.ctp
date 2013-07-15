@@ -11,7 +11,9 @@
                   <?php echo $v['Actualite']['contenu']; ?>
                 </p>
             </div>
-            
+            <aside>
+                <?php echo $this->Html->link("Lire la suite",array('controller' => 'actualites','action'=>'view',$v['Actualite']['id'], true, 'admin' => false, 'full_base' => true),array('class'=>"colorbox linked btn btn-primary")); ?>
+            </aside>
         </article>
       <?php endforeach ?>
       <div class="clear"></div>
