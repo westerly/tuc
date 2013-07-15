@@ -87,12 +87,14 @@ span.prev span, a.next span {
 }
 
 form tr{
-    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
-
+form legend {
+    margin-bottom: 2em;
+}
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
     border: 2px solid #95A5A6;
     -webkit-appearance: none;
-    line-height: 1.5em;
-    
+    line-height: 2em;
+
 }
