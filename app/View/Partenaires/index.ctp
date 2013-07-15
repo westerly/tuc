@@ -12,7 +12,7 @@ echo $this->Session->flash('nok');
            ?>
     <div class="partenaires">
     	<center>
-        <?php echo $this->Html->image($part['Partenaire']['fichierLogo'], array('height'=>'250','alt'=>$part['Partenaire']['partenaire'],'pop'=>$this->Html->url(array('controller'=>'partenaires', 'action'=>'view', $part['Partenaire']['partenaire_id']), true))) ?>
+        <?php echo $this->Html->image($part['Partenaire']['fichierLogo'], array('height'=>'175','alt'=>$part['Partenaire']['partenaire'],'pop'=>$this->Html->url(array('controller'=>'partenaires', 'action'=>'view', $part['Partenaire']['partenaire_id']), true))) ?>
     	</center>
     </div>
     
