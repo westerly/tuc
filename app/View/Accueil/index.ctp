@@ -1,5 +1,5 @@
 <?php
-  $this->set('title_for_layout',"Pade d'accueil");
+  $this->set('title_for_layout',"Page d'accueil");
 ?>
 <div class="span5">
     <p><?php echo $this->Html->image('leprojet.png', array('alt'=>"Le Projet", 'class'=>"aligncenter")); ?></p>
