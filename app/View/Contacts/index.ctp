@@ -13,7 +13,7 @@ echo $this->Form->create('Contact');
 		
 	
 		echo'<table class="contact"><tr class="input text required">';
-				echo'<td style="width:6em;">Nom<span>*</span></td><td><input type="text" name="data[Contact][nom]" cols="30" maxlength="50" rows="6" id="ContactNom" required="required" ';
+				echo'<td>Nom<span>*</span></td><td><input type="text" name="data[Contact][nom]" cols="30" maxlength="50" rows="6" id="ContactNom" required="required" ';
 				if(isset($datas["nom"])){echo "value='".$datas["nom"]."'";}
 				echo'"/></td>';
 		echo'</tr>';
