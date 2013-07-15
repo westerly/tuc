@@ -2,7 +2,7 @@
     <section id="news">
       <?php foreach ($actualites as $k => $v): ?>
         <article>
-            <h3><?php echo $this->Html->link($v['Actualite']['titre'],array('controller' => 'actualites','action'=>'view',$v['Actualite']['id'], 'admin' => false, 'full_base' => true)); ?>
+            <h3><?php echo $this->Html->link($v['Actualite']['titre'],array('controller' => 'actualites','action'=>'view',$v['Actualite']['id'], true )); ?>
                 <span class="muted"><div class="icon-horloge"></div><?php echo $this->Date->french($v['Actualite']['date_creation']); ?></span>
             </h3>
             <div class="content">
