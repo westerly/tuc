@@ -810,6 +810,8 @@ nav .navbar ul.navtabs li ul.subnav li:last-child {
   transition: all 0.3s ease-in;
   background: #969696;
   color: #565656;
+  border:none;
+  --webkit-appearance: none;
 }
 /* line 56, ../scss/screen.scss */
 .btn:hover {
