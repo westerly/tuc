@@ -70,6 +70,8 @@
             </div>
             <div class="span6 omega">
                 N° SIRET : 39777672500012
+                <br><br>
+                <?php echo  $this->Html->link('Espace Admin', $this->Html->url(array('controller' => 'users', 'action' => 'login','admin'=>true), true));?>
             </div>
             <div class="clear"></div>
         </div>
