@@ -146,10 +146,10 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
     </tr>
 </table>
 </fieldset>
-
+<input type="submit" value="Envoyer" class="btn btn-primary">
 
 <?php
-echo $this->Form->end(__('Envoyer'));
+echo $this->Form->end();
 
 echo '</div>';
 
