@@ -86,8 +86,8 @@ span.prev span, a.next span {
     clear: both;
 }
 
-form tr{
-    padding-bottom: 1em;
+form tr td{
+    margin-bottom: 1em;
 }
 form legend {
     margin-bottom: 2em;
