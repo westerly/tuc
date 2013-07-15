@@ -8,7 +8,7 @@
             <div class="content">
                
                 <p>
-                  <?php echo $this->Text->truncate($v['Actualite']['contenu']), 450); ?>
+                  <?php echo $this->Text->truncate($v['Actualite']['contenu'], 450); ?>
                 </p>
             </div>
             
