@@ -1,6 +1,6 @@
                 <ul class="navtabs visible-desktop">
                     <li class="navpill <?php echo ($this->request->params['controller'] == 'accueil') ? 'active': ''; ?> ">
-                      <a href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => 'display', 'home', 'full_base' => true, 'admin' => false)); ?>">
+                      <a href="<?php echo $this->Html->url(array('controller' => 'accueil', 'action' => 'index', 'full_base' => true, 'admin' => false)); ?>">
                         <div class="icon-home"></div>
                       </a>
                     </li>
