@@ -12,10 +12,10 @@
                     <li <?php echo ($this->request->params['controller'] == 'photos') ? 'class="active"': ""; ?>>
                       <?php echo $this->Html->link('Galerie',array('controller' => 'photos', 'action' => 'index', 'full_base' => true, 'admin' => false)); ?>                          
                         <ul class="subnav">
-                            <li><?php echo $this->Html->link("Varelbor",array('controller' => 'photos', 'action' => 'clan', 1,'full_base' => true, 'admin' => false)) ?></li>
-                            <li><?php echo $this->Html->link("Tampilaguul",array('controller' => 'photos', 'action' => 'clan', 3, 'full_base' => true, 'admin' => false)) ?></li>
-                            <li><?php echo $this->Html->link("Youarille",array('controller' => 'photos', 'action' => 'clan', 4, 'full_base' => true, 'admin' => false)) ?></li>
-                            <li><?php echo $this->Html->link("Klarf Binn",array('controller' => 'photos', 'action' => 'clan', 5,'full_base' => true, 'admin' => false)) ?></li>
+                            <li><?php echo $this->Html->link("Varelbor",array('controller' => 'photos', 'action' => 'index', 1,'full_base' => true, 'admin' => false)) ?></li>
+                            <li><?php echo $this->Html->link("Tampilaguul",array('controller' => 'photos', 'action' => 'index', 3, 'full_base' => true, 'admin' => false)) ?></li>
+                            <li><?php echo $this->Html->link("Youarille",array('controller' => 'photos', 'action' => 'index', 4, 'full_base' => true, 'admin' => false)) ?></li>
+                            <li><?php echo $this->Html->link("Klarf Binn",array('controller' => 'photos', 'action' => 'index', 5,'full_base' => true, 'admin' => false)) ?></li>
                         </ul>
                     </li>
                    <li <?php echo ($this->request->params['controller'] == 'partenaires') ? 'class="active"': ""; ?>>
