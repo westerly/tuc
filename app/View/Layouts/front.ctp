@@ -30,7 +30,7 @@
         <div class="container">
             <div class="span6 omega">
                 <div class="push-right">
-                    <a href="/accueil.html" title="Page d'accueil" >
+                    <a href="<?php echo $this->Html->url('/'); ?>" title="Page d'accueil" >
                         <?php echo $this->Html->image('logo.png'); ?>
                     </a>  
                 </div>

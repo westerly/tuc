@@ -101,3 +101,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     line-height: 2em;
 
 }
+
+.partenaires img {
+    cursor: pointer;
+}
