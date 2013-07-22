@@ -16,7 +16,7 @@
 .slidesjs-navigation {
     display: block;
     position: absolute;
-    top: 200px;
+    top: 215px;
     font-size: 5em;
     z-index: 1000;
     left: 20px;
@@ -24,7 +24,7 @@
 }
 .slidesjs-next {
     left: 735px;
-    top: 230px;
+    top: 215px;
 
 }
 .slidesjs-next:before{
