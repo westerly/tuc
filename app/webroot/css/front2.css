@@ -19,20 +19,14 @@
     width: 50px;
     position: absolute;
     top: 230px;
-    background-color: rgba(255, 255, 255,.3);
+    background-color: rgba(255, 255, 255,.2);
     z-index: 1000;
     left: 0px;
-    opacity: 0.3;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 
-}
-.slidesjs-previous:before {
-    content: '<div class="icon-arrow-left"></div>';
 }
 .slidesjs-next {
     left: 736px;
     top: 230px;
-    content: '<div class="icon-arrow-right"></div>';
 
 }
 .slidesjs-next:before{

@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-home, .icon-pencil, .icon-paint-format, .icon-image, .icon-camera, .icon-music, .icon-play, .icon-camera-2, .icon-tags, .icon-phone-hang-up, .icon-notebook, .icon-envelop, .icon-location, .icon-clock, .icon-calendar, .icon-box-add, .icon-box-remove, .icon-bubble, .icon-bubbles, .icon-user, .icon-user-2, .icon-lock, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-next, .icon-previous, .icon-share, .icon-thumbs-up, .icon-thumbs-up-2, .icon-attachment, .icon-remove, .icon-eye-blocked, .icon-eye, .icon-warning, .icon-info, .icon-cancel-circle, .icon-checkmark-circle, .icon-close, .icon-checkmark, .icon-arrow-right-2, .icon-arrow-left-2, .icon-file-pdf, .icon-file-word, .icon-file-excel, .icon-twitter, .icon-facebook {
+.slidejs-next,.slidejs-previous, .icon-home, .icon-pencil, .icon-paint-format, .icon-image, .icon-camera, .icon-music, .icon-play, .icon-camera-2, .icon-tags, .icon-phone-hang-up, .icon-notebook, .icon-envelop, .icon-location, .icon-clock, .icon-calendar, .icon-box-add, .icon-box-remove, .icon-bubble, .icon-bubbles, .icon-user, .icon-user-2, .icon-lock, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-next, .icon-previous, .icon-share, .icon-thumbs-up, .icon-thumbs-up-2, .icon-attachment, .icon-remove, .icon-eye-blocked, .icon-eye, .icon-warning, .icon-info, .icon-cancel-circle, .icon-checkmark-circle, .icon-close, .icon-checkmark, .icon-arrow-right-2, .icon-arrow-left-2, .icon-file-pdf, .icon-file-word, .icon-file-excel, .icon-twitter, .icon-facebook {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -160,10 +160,10 @@ you can use the generic selector below, but it's slower:
 .icon-checkmark:before {
 	content: "\e028";
 }
-.icon-arrow-right-2:before {
+.icon-arrow-right-2:before, .slidejs-next:before {
 	content: "\e029";
 }
-.icon-arrow-left-2:before {
+.icon-arrow-left-2:before, .slidejs-previous:before{
 	content: "\e02a";
 }
 .icon-file-pdf:before {
