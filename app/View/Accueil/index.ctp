@@ -17,10 +17,13 @@
 </div>
 <div>
     <div id="slider">
-        <iframe width="500" height="400" src="//www.youtube.com/embed/IEfdFNXlWmk" frameborder="0" allowfullscreen></iframe>
-        <?php echo $this->Html->image('front/band1.jpg', array('width'=>826, 'height'=>519)); ?>
-        <?php echo $this->Html->image('front/band2.jpg', array('width'=>826, 'height'=>519)); ?>
-        <?php echo $this->Html->image('front/band3.jpg', array('width'=>826, 'height'=>519)); ?>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/IEfdFNXlWmk" frameborder="0" allowfullscreen></iframe>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/y5gH2vpH3xQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/e0yOLmkhZHM" frameborder="0" allowfullscreen></iframe>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/EFu4kS374QM" frameborder="0" allowfullscreen></iframe>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/X6eEEIjqIBs" frameborder="0" allowfullscreen></iframe>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/1cPK8Um1RMA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="826" height="510" src="//www.youtube.com/embed/4sCaprkpm0g" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="clear"></div>
 </div>
