@@ -17,6 +17,7 @@
 </div>
 <div>
     <div id="slider">
+        <iframe width="826" height="519" src="//www.youtube.com/embed/IEfdFNXlWmk" frameborder="0" allowfullscreen></iframe>
         <?php echo $this->Html->image('front/band1.jpg', array('width'=>826, 'height'=>519)); ?>
         <?php echo $this->Html->image('front/band2.jpg', array('width'=>826, 'height'=>519)); ?>
         <?php echo $this->Html->image('front/band3.jpg', array('width'=>826, 'height'=>519)); ?>
