@@ -9,9 +9,9 @@
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cak
- 
- 
- e Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ *
+ * Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
@@ -73,7 +73,7 @@ class AppController extends Controller {
 	
 	// Permet de rendre accessible toutes las actions index, view... de l'ensemble des controllers de l'application
 	public function beforeFilter() {
-        $this->Auth->allow('index', 'view','add', 'confirmation', 'admin_login', 'video');
+        $this->Auth->allow('index', 'view','add', 'display', 'confirmation', 'admin_login', 'video');
         
 		$this->log("Here: {$this->here}, coming from: " . $this->referer(), LOG_DEBUG);
 		
