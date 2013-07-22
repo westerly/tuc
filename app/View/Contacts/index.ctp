@@ -9,7 +9,7 @@ echo'<div class="contacts form">';
 echo $this->Form->create('Contact');
 
 	echo'<fieldset>';
-		echo"<legend><h3>Nous contactez</h3></legend>";
+		echo"<legend><h3>Nous contacter</h3></legend>";
 		
 	
 		echo'<table class="contact"><tr class="input text required">';
