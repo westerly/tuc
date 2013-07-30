@@ -1,6 +1,6 @@
 <?php
 echo $this->Html->script('ajax');
-echo $this->Html->script('vote');
+echo $this->Html->script('vote',array('charset'=>'utf8'));
 echo $this->Html->script('popupYoutube');
 ?>
 <section id="defis">
