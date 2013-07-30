@@ -5,7 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property Defi $Defi
  */
-class ProxyUser extends AppModel {
+class ProxyUsers extends AppModel {
 
 	
 	public $hasMany = array(
