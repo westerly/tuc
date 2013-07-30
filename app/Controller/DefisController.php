@@ -242,6 +242,8 @@ class DefisController extends AppController {
 		
 		$code = 0;
 		$desc = "Success";
+		$pour = null;
+		$contre = null;
 		
 		if(!isset($defi) || !isset($clan) || !isset($type)) {
 			return;
@@ -251,102 +253,108 @@ class DefisController extends AppController {
 			$code = 4;
 			$desc = "Vous avez déjà voté pour ce défi pour ce clan";
 		} else {
+			// Si les inputs sont corrects
 			if ($type == 0 || $type == 1) {
 				if (!empty($defi) && preg_match('#^[0-9]+$#',$defi)
 				     && !empty($clan) && preg_match('#^[0-9]+$#',$clan)) {
-					$defi_clan = $this->Defi->DefisClan->find(array('defi_id' => $defi, 'clan_id' => $clan));
+					// Recherche du défi clan
+					$defis = $this->Defi->find('first',array('conditions' => array('id' => $defi)));
+					$defi_clan = null;
+					foreach($defis['DefisClan'] as $dc) {
+						if($dc['clan_id'] == $clan) {
+							$defi_clan = $dc['id'];
+						}
+					}
 					// Si le défi existe en BD (normalement oui) :
 					if (isset($defi_clan)) {
 						$ip = check_ip_proxy();
 						// Si proxy :
 						if ($ip[0] == 1) {
-							$user = $defi_clan->VoteProxy->ProxyUser->find(array('ip' => $ip[1], 'proxy' => $ip[2]));
+							// verifier que user existe et recuperer :
+							$this->loadModel('ProxyUsers');
+							$user = $this->ProxyUsers->find('first',array('conditions' => array('ip' => $ip[1], 'proxy' => $ip[2])));
+							$continue = true;
 							
-							$continue = false;
-							// Si l'user n'existe pas :
-							if (!isset($user)) {
-// ###################################################################################################################
-								//TODO
-								$query2 = $db->prepare("INSERT INTO form_proxy_users(ip,proxy) VALUES ('"
-												.$ip[1]."','".$ip[2]."');");
-								$query2->execute();
-								$query->execute();
-								$res = $query->fetchAll();
-								$user = $res['id'];
-								$continue = true;
+							$user_id;
+							$this->loadModel('VoteProxy');
+							if (empty($user)) {
+								// creer l'user
+								$this->ProxyUsers->create();
+								$this->ProxyUsers->set(array('ip' => $ip[1]));
+								$this->ProxyUsers->set(array('proxy' => $ip[2]));
+								$this->ProxyUsers->save();
+								$user_id = $this->ProxyUsers->id;
 							} else {
-								$user = $res['id'];
-								$user->VoteProxy->find()
-								$query = $db->prepare("SELECT max(date_vote) AS 'last_date' FROM form_vote_proxy "
-												."WHERE defi_clan = '".$defi_clan."'  "
-												."AND user = ".$user.";");
-								$query->execute();
-								$res = $query->fetchAll();
+								$user_id = $user['ProxyUsers']['id'];
+								$vote = $this->VoteProxy->find('all',array('conditions' => array('user' => $user_id)));
+								foreach($vote as $v) {
+									if($v['VoteProxy']['defi_clan'] == $defi_clan) {									
+										$code = 5;
+										$desc = "Vous avez déjà voté pour ce défi pour ce clan";
+										// Durée de vie du cookie : 500 jours
+										setcookie("$defi-$clan",'1',time()+3600*24*500);
+										$continue = false;
+									}
+								}
+							}
 							
-								$lastDate = strtotime($res['last_date']);
-								// now - 1h :
-								$limit = time() - 3600;
-								// on limite a un vote par heure pour un ordinateur public (proxy)
-								if($lastDate > $limit) {
-									$code = 3;
-									$desc = "Le dernier vote depuis cet ordinateur est trop récent";
-								} else {
-									$continue = true;
-								}
-								
-								// Si utilisateur existant ET last_vote pas trop récent
-								if($continue) {
-									// Durée de vie du cookie : 500 jours
-									setcookie("$defi-$clan",'1',time()+3600*24*500);
-									// insertion en BD
-									$query = $db->prepare("INSERT INTO form_vote_proxy VALUES ('".$user
-													."','".$defi_clan."','".$type."','".date("d-m-Y H:i",time())
-													."');");
-									$query->execute();
-								}
+							if ($continue) {
+								// Durée de vie du cookie : 500 jours
+								setcookie("$defi-$clan",'1',time()+3600*24*500);
+								$this->VoteProxy->create();
+								$this->VoteProxy->set(array('user' => $user_id));
+								$this->VoteProxy->set(array('defi_clan' => $defi_clan));
+								$this->VoteProxy->set(array('type' => $type));
+								$this->VoteProxy->set(array('date_vote' => date('Y-m-d H:s')));
+								$this->VoteProxy->save();
+								$count = $this->Defi->Vvotecount->find('first', array('conditions' => array("id" => $defi_clan)));
+								$pour = $count['Vvotecount']['pour'];
+								$contre = $count['Vvotecount']['contre'];
+								$code = 0;
+								$desc = "ok";
 							}
 						// si pas proxy :
 						} else if ($ip[0] == 0) {
 							// verifier que user existe et recuperer :
-							$query = $db->prepare("SELECT id FROM form_no_proxy_users "
-											."WHERE ip LIKE '".$ip[1]."'");
-							$query->execute();
-							$res = $query->fetchAll();
-							$continue = false;
+							$this->loadModel('NoProxyUsers');
+							$user = $this->NoProxyUsers->find('first',array('conditions' => array('ip' => $ip[1])));
+							$continue = true;
 							
-							if (empty($res)) {
+							$user_id;
+							$this->loadModel('Vote');
+							if (empty($user)) {
 								// creer l'user
-								$query2 = $db->prepare("INSERT INTO form_no_proxy_users(ip) "
-												 ."VALUES ('".$ip[1]."')");
-								$query2->execute();
-								$query->execute();
-								$res = $query->fetchAll();
-								$user = $res[0]['id'];
-								$continue = true;
+								$this->NoProxyUsers->create();
+								$this->NoProxyUsers->set(array('ip' => $ip[1]));
+								$this->NoProxyUsers->save();
+								$user_id = $this->NoProxyUsers->id;
 							} else {
-								$user = $res[0]['id'];
-								$query = $db->prepare("SELECT * FROM form_vote "
-												."WHERE defi_clan = '".$defi_clan."'  "
-												."AND user = '".$user."';");
-								$query->execute();
-								$res = $query->fetchAll();
-								
-								if (empty($res)) {
-									$continue = true;
-								} else {
-									$code = 5;
-									$desc = "Vous avez déjà voté pour ce défi pour ce clan";
-									// Durée de vie du cookie : 500 jours
-									setcookie("$defi-$clan",'1',time()+3600*24*500);
+								$user_id = $user['NoProxyUsers']['id'];
+								$vote = $this->Vote->find('all',array('conditions' => array('user' => $user_id)));
+								foreach($vote as $v) {
+									if($v['Vote']['defi_clan'] == $defi_clan) {									
+										$code = 5;
+										$desc = "Vous avez déjà voté pour ce défi pour ce clan";
+										// Durée de vie du cookie : 500 jours
+										setcookie("$defi-$clan",'1',time()+3600*24*500);
+										$continue = false;
+									}
 								}
 							}
 								
 							if ($continue) {
+								// process vote
 								// Durée de vie du cookie : 500 jours
 								setcookie("$defi-$clan",'1',time()+3600*24*500);
-								$query = $db->prepare("INSERT INTO form_vote VALUES ('"
-												.$user."','".$defi_clan."','".$type."',NOW());");
-								$query->execute();
+								$this->Vote->create();
+								$this->Vote->set(array('user' => $user_id));
+								$this->Vote->set(array('defi_clan' => $defi_clan));
+								$this->Vote->set(array('type' => $type));
+								$this->Vote->set(array('date_vote' => date('Y-m-d H:s')));
+								$this->Vote->save();
+								$count = $this->Defi->Vvotecount->find('first', array('conditions' => array("id" => $defi_clan)));
+								$pour = $count['Vvotecount']['pour'];
+								$contre = $count['Vvotecount']['contre'];
 								$code = 0;
 								$desc = "ok";
 							}
@@ -369,11 +377,13 @@ class DefisController extends AppController {
 			}
 		}
 
-		
 		$this->set("code", $code);
 		$this->set("desc", $desc);
-	
-	
+		$this->set("pour", $pour);
+		$this->set("contre", $contre);
+		$this->set("defi", $defi);
+		$this->set("clan", $clan);
+		
 	
 	}
 }

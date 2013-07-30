@@ -31,6 +31,11 @@ foreach($defis as $defi) { ?>
                 $clans[$photo['Clan']['nom']][] = $photo['Photo']['chemin_fichier'];
                 $ids[$photo['Clan']['nom']]['id'] = $photo['Clan']['id'];
             }
+	    $votes = array();
+	    foreach($defi['Vote'] as $vvc) {
+		$vvc = $vvc['Vvotecount'];
+		$votes[$vvc['defi_id']][$vvc['clan_id']] = array('pour' => $vvc['pour'], 'contre' => $vvc['contre']);
+	    }
 	    
             foreach($clans as $nom => $clan) {
                 $i++;
@@ -68,35 +73,32 @@ foreach($defis as $defi) { ?>
                 
                 <div class="clearfix"></div>
                 <div class="vote-defis">
-                    <span>
 		    <?php
-			echo $this->Html->link('+',
-				$this->Html->url(array('controller'=>'defis', 'action'=>'vote', $defi['Defi']['id'], $ids[$nom]['id'], '0'),true)
-			);
-			echo ' (';
-			if(!empty($defi['Vote'])) {
-				echo $defi['Vote'][0]['Vvotecount']['pour'];
+		    
+			echo '<a href="javascript:vote('.$defi['Defi']['id'].', '.$ids[$nom]['id'].', 0)">';
+			echo $this->Html->image('up_s.png',  array('alt' => 'voter pour !', 'width' => '10', 'height'=>'15'));
+			echo '</a>';
+			echo ' <span id="count_pour_'.$defi['Defi']['id'].'_'.$ids[$nom]['id'].'">(';
+			if(isset($votes[$defi['Defi']['id']][$ids[$nom]['id']]['pour'])) {
+				echo $votes[$defi['Defi']['id']][$ids[$nom]['id']]['pour'];
 			} else {
 				echo '0';
 			}
-			echo ' )';
+			echo ')</span>';
 		    ?>
-		</span>
-		<span> / </span>
-                    <span>
+		<span>/</span>
 		    <?php
-			echo $this->Html->link('+',
-				$this->Html->url(array('controller'=>'defis', 'action'=>'vote', $defi['Defi']['id'], $ids[$nom]['id'], '1'),true)
-			);
-			echo ' (';
-			if(!empty($defi['Vote'])) {
-				echo $defi['Vote'][0]['Vvotecount']['contre'];
+			echo '<a href="javascript:vote('.$defi['Defi']['id'].', '.$ids[$nom]['id'].', 1)">';
+			echo $this->Html->image('down_s.png',  array('alt' => 'voter pour !', 'width' => '10', 'height'=>'15'));
+			echo '</a>';
+			echo ' <span id="count_contre_'.$defi['Defi']['id'].'_'.$ids[$nom]['id'].'">(';
+			if(isset($votes[$defi['Defi']['id']][$ids[$nom]['id']]['contre'])) {
+				echo $votes[$defi['Defi']['id']][$ids[$nom]['id']]['contre'];
 			} else {
 				echo '0';
 			}
-			echo ' )';
+			echo ')</span>';
 		    ?>
-		</span>
 
                 </div>
             </div>
