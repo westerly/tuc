@@ -1,0 +1,107 @@
+
+/* slider */
+#slider {
+    margin-top: 10px;
+    float:left;
+    height: 519px;
+    width: 826px;
+    display: none;
+    position: relative;
+}
+
+.slidesjs-pagination {
+    display: none;
+}
+
+.slidesjs-navigation {
+    display: block;
+    position: absolute;
+    top: 215px;
+    font-size: 5em;
+    z-index: 1000;
+    left: 20px;
+
+}
+.slidesjs-next {
+    left: 735px;
+    top: 215px;
+
+}
+.slidesjs-next:before{
+
+}
+/* carrousel defis */
+.vote-defis {
+    text-align: center;
+}
+
+.vote-defis span {
+    margin-right: 10px;
+}
+
+.carroussel-defis {
+    padding: 15px 15px 15px 15px;
+    position: relative;
+        overflow: hidden;
+        width: 930px;
+        margin: auto;
+}
+
+.carroussel-defis div {
+    width:10000%;
+    position:relative;
+}
+
+.carroussel-defis img {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 9px;
+    margin: 8px;
+    display: block;
+    float: left;
+}
+span.prev, span.next {
+    background: url(../img/front/miscellaneous_sprite.png) no-repeat transparent;
+    width: 45px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 85px;
+        cursor: pointer;
+}
+span.prev {         left:0px;
+                                background-position: 0 0; }
+span.prev:hover {              background-position: 0 -50px; }
+span.next {         right: -7px;
+                    background-position: -50px 0; }
+span.next:hover {       background-position: -50px -50px; }
+
+span.prev span, a.next span {
+    display: none;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+form tr td{
+    padding-bottom: 0.5em;
+}
+form tr td:first-child{
+    min-width: 8em;
+}
+form legend {
+    margin-bottom: 2em;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border: 2px solid #95A5A6;
+    -webkit-appearance: none;
+    line-height: 2em;
+
+}
+.partenaires {
+    margin-bottom: 1em;
+}
+.partenaires img {
+    cursor: pointer;
+}

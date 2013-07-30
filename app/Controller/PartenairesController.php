@@ -35,8 +35,8 @@ class PartenairesController extends AppController {
         }
 	
 	/**
-		Permet l'ajout d'un partenaire dans la partie publique
-	
+	*	Permet l'ajout d'un partenaire dans la partie publique
+	*
 	**/
 	public function add(){
 	

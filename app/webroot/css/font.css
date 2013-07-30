@@ -1,0 +1,183 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.slidesjs-next,.slidesjs-previous, .icon-home, .icon-pencil, .icon-paint-format, .icon-image, .icon-camera, .icon-music, .icon-play, .icon-camera-2, .icon-tags, .icon-phone-hang-up, .icon-notebook, .icon-envelop, .icon-location, .icon-clock, .icon-calendar, .icon-box-add, .icon-box-remove, .icon-bubble, .icon-bubbles, .icon-user, .icon-user-2, .icon-lock, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-next, .icon-previous, .icon-share, .icon-thumbs-up, .icon-thumbs-up-2, .icon-attachment, .icon-remove, .icon-eye-blocked, .icon-eye, .icon-warning, .icon-info, .icon-cancel-circle, .icon-checkmark-circle, .icon-close, .icon-checkmark, .icon-arrow-right-2, .icon-arrow-left-2, .icon-file-pdf, .icon-file-word, .icon-file-excel, .icon-twitter, .icon-facebook {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-home:before {
+	content: "\e000";
+}
+.icon-pencil:before {
+	content: "\e001";
+}
+.icon-paint-format:before {
+	content: "\e002";
+}
+.icon-image:before {
+	content: "\e003";
+}
+.icon-camera:before {
+	content: "\e004";
+}
+.icon-music:before {
+	content: "\e005";
+}
+.icon-play:before {
+	content: "\e006";
+}
+.icon-camera-2:before {
+	content: "\e007";
+}
+.icon-tags:before {
+	content: "\e008";
+}
+.icon-phone-hang-up:before {
+	content: "\e009";
+}
+.icon-notebook:before {
+	content: "\e00a";
+}
+.icon-envelop:before {
+	content: "\e00b";
+}
+.icon-location:before {
+	content: "\e00c";
+}
+.icon-clock:before {
+	content: "\e00d";
+}
+.icon-calendar:before {
+	content: "\e00e";
+}
+.icon-box-add:before {
+	content: "\e00f";
+}
+.icon-box-remove:before {
+	content: "\e010";
+}
+.icon-bubble:before {
+	content: "\e011";
+}
+.icon-bubbles:before {
+	content: "\e012";
+}
+.icon-user:before {
+	content: "\e013";
+}
+.icon-user-2:before {
+	content: "\e014";
+}
+.icon-lock:before {
+	content: "\e015";
+}
+.icon-arrow-right:before {
+	content: "\e016";
+}
+.icon-arrow-left:before {
+	content: "\e017";
+}
+.icon-arrow-up:before {
+	content: "\e018";
+}
+.icon-arrow-down:before {
+	content: "\e019";
+}
+.icon-next:before {
+	content: "\e01a";
+}
+.icon-previous:before {
+	content: "\e01b";
+}
+.icon-share:before {
+	content: "\e01c";
+}
+.icon-thumbs-up:before {
+	content: "\e01d";
+}
+.icon-thumbs-up-2:before {
+	content: "\e01e";
+}
+.icon-attachment:before {
+	content: "\e01f";
+}
+.icon-remove:before {
+	content: "\e020";
+}
+.icon-eye-blocked:before {
+	content: "\e021";
+}
+.icon-eye:before {
+	content: "\e022";
+}
+.icon-warning:before {
+	content: "\e023";
+}
+.icon-info:before {
+	content: "\e024";
+}
+.icon-cancel-circle:before {
+	content: "\e025";
+}
+.icon-checkmark-circle:before {
+	content: "\e026";
+}
+.icon-close:before {
+	content: "\e027";
+}
+.icon-checkmark:before {
+	content: "\e028";
+}
+.icon-arrow-right-2:before, .slidesjs-next:before {
+	content: "\e029";
+}
+.icon-arrow-left-2:before, .slidesjs-previous:before{
+	content: "\e02a";
+}
+.icon-file-pdf:before {
+	content: "\e02b";
+}
+.icon-file-word:before {
+	content: "\e02c";
+}
+.icon-file-excel:before {
+	content: "\e02d";
+}
+.icon-twitter:before {
+	content: "\e02e";
+}
+.icon-facebook:before {
+	content: "\e02f";
+}

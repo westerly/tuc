@@ -3,10 +3,7 @@ echo $this->Html->script('ajax');
 echo $this->Html->script('vote');
 echo $this->Html->script('popupYoutube');
 ?>
-<div class="defis">
-    <div class="paginator">
-<?php echo $this->paginator->numbers(); ?>
-    </div>
+<section id="defis">
 <?php 
 $i = 0;
 foreach($defis as $defi) { ?>

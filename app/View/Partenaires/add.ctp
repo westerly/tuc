@@ -10,7 +10,7 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
 ?>
 <fieldset>
 <table>
-    <legend> S'inscrire en tant que partenaire </legend>
+    <legend><h3>S'inscrire en tant que partenaire</h3></legend>
     <tr class="input text required">
         <td><label for="PartenairePartenaire">Nom <span style="color: red">*</span></label></td>
         <td><input name="data[Partenaire][partenaire]" maxlength="50" type="text" id="PartenairePartenaire" required="required"></td>
@@ -146,10 +146,10 @@ echo $this->Form->create('Partenaire', array('type' => 'file'));
     </tr>
 </table>
 </fieldset>
-
+<input type="submit" value="Envoyer" class="btn btn-primary">
 
 <?php
-echo $this->Form->end(__('Envoyer'));
+echo $this->Form->end();
 
 echo '</div>';
 
