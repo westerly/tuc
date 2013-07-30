@@ -20,7 +20,13 @@ xhr_obj.onreadystatechange = function() {
 				var desc = response.getElementsByTagName("description").item(0).textContent;
 				alert(desc+' ('+code+')');
 			} else {
-				alert("vote enregistr� !");
+				var defi = response.getElementsByTagName("defi").item(0).textContent;
+				var clan = response.getElementsByTagName("clan").item(0).textContent;
+				var pour = response.getElementsByTagName("pour").item(0).textContent;
+				var contre = response.getElementsByTagName("contre").item(0).textContent;
+				document.getElementById('count_pour_'+defi+'_'+clan).textContent = '('+pour+')';
+				document.getElementById('count_contre_'+defi+'_'+clan).textContent = '('+contre+')';
+				alert("vote enregistré !");
 			}
 		} else {
 			// probleme avec la requète HTTP
@@ -42,8 +48,7 @@ function dump(obj) {
 }
 
 function vote(defi,clan,type) {
-	var data = "defi="+escape(defi)+"&clan="+escape(clan)+"&type="+escape(type);
-	xhr_obj.open('POST','/tuc/app/webroot/process_vote.php',true);
+	xhr_obj.open('GET','/tuc/defis/vote/'+escape(defi)+'/'+escape(clan)+'/'+escape(type),true);
 	xhr_obj.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xhr_obj.send(data);
+	xhr_obj.send(null);
 }
